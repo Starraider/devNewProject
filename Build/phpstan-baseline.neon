@@ -1,0 +1,322 @@
+parameters:
+	ignoreErrors:
+		-
+			message: "#^Property SKom\\\\Cleverreachform\\\\Controller\\\\FormContentController\\:\\:\\$formContentRepository \\(SKom\\\\Cleverreachform\\\\Domain\\\\Repository\\\\FormContentRepository\\) does not accept default value of type null\\.$#"
+			count: 1
+			path: packages/cleverreachform/Classes/Controller/FormContentController.php
+
+		-
+			message: "#^Access to an undefined property SKom\\\\Cleverreachform\\\\Domain\\\\Model\\\\FormContent\\:\\:\\$getName\\.$#"
+			count: 1
+			path: packages/cleverreachform/Classes/Controller/FormContentController.php
+
+		-
+			message: "#^Access to an undefined property SKom\\\\Cleverreachform\\\\Domain\\\\Model\\\\FormContent\\:\\:\\$getSubject\\.$#"
+			count: 1
+			path: packages/cleverreachform/Classes/Controller/FormContentController.php
+
+		-
+			message: "#^Method SKom\\\\Cleverreachform\\\\Controller\\\\FormContentController\\:\\:cleverAddUser\\(\\) has no return typehint specified\\.$#"
+			count: 1
+			path: packages/cleverreachform/Classes/Controller/FormContentController.php
+
+		-
+			message: "#^Caught class SKom\\\\Cleverreachform\\\\Controller\\\\SoapFault not found\\.$#"
+			count: 1
+			path: packages/cleverreachform/Classes/Controller/FormContentController.php
+
+		-
+			message: "#^Access to property \\$faultstring on an unknown class SKom\\\\Cleverreachform\\\\Controller\\\\SoapFault\\.$#"
+			count: 1
+			path: packages/cleverreachform/Classes/Controller/FormContentController.php
+
+		-
+			message: "#^Call to an undefined method SoapClient\\:\\:receiverAdd\\(\\)\\.$#"
+			count: 1
+			path: packages/cleverreachform/Classes/Controller/FormContentController.php
+
+		-
+			message: "#^Variable \\$api might not be defined\\.$#"
+			count: 1
+			path: packages/cleverreachform/Classes/Controller/FormContentController.php
+
+		-
+			message: "#^Method SKom\\\\Cleverreachform\\\\Controller\\\\FormContentController\\:\\:sendTemplateEmail\\(\\) has parameter \\$format with no typehint specified\\.$#"
+			count: 1
+			path: packages/cleverreachform/Classes/Controller/FormContentController.php
+
+		-
+			message: "#^Method SKom\\\\Cleverreachform\\\\Controller\\\\FormContentController\\:\\:sendTemplateEmail\\(\\) has parameter \\$recipient with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/cleverreachform/Classes/Controller/FormContentController.php
+
+		-
+			message: "#^Method SKom\\\\Cleverreachform\\\\Controller\\\\FormContentController\\:\\:sendTemplateEmail\\(\\) has parameter \\$sender with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/cleverreachform/Classes/Controller/FormContentController.php
+
+		-
+			message: "#^Method SKom\\\\Cleverreachform\\\\Controller\\\\FormContentController\\:\\:sendTemplateEmail\\(\\) has parameter \\$variables with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/cleverreachform/Classes/Controller/FormContentController.php
+
+		-
+			message: "#^PHPDoc tag @throws with type SKom\\\\Cleverreachform\\\\Controller\\\\RuntimeException is not subtype of Throwable$#"
+			count: 1
+			path: packages/cleverreachform/Classes/Controller/FormContentController.php
+
+		-
+			message: "#^Call to an undefined method object\\:\\:setTo\\(\\)\\.$#"
+			count: 1
+			path: packages/cleverreachform/Classes/Controller/FormContentController.php
+
+		-
+			message: "#^Call to an undefined method object\\:\\:setBody\\(\\)\\.$#"
+			count: 2
+			path: packages/cleverreachform/Classes/Controller/FormContentController.php
+
+		-
+			message: "#^Call to an undefined method object\\:\\:send\\(\\)\\.$#"
+			count: 1
+			path: packages/cleverreachform/Classes/Controller/FormContentController.php
+
+		-
+			message: "#^Call to an undefined method object\\:\\:isSent\\(\\)\\.$#"
+			count: 1
+			path: packages/cleverreachform/Classes/Controller/FormContentController.php
+
+		-
+			message: "#^Method SKom\\\\Cleverreachform\\\\Controller\\\\FormContentController\\:\\:getTranslationArray\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/cleverreachform/Classes/Controller/FormContentController.php
+
+		-
+			message: "#^Variable \\$translationArray might not be defined\\.$#"
+			count: 1
+			path: packages/cleverreachform/Classes/Controller/FormContentController.php
+
+		-
+			message: "#^Method SKom\\\\Cleverreachform\\\\Domain\\\\Model\\\\FormContent\\:\\:__construct\\(\\) has parameter \\$location with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/cleverreachform/Classes/Domain/Model/FormContent.php
+
+		-
+			message: "#^Property SKom\\\\Cleverreachform\\\\Domain\\\\Model\\\\FormContent\\:\\:\\$childbirthday \\(DateTime\\) does not accept default value of type null\\.$#"
+			count: 1
+			path: packages/cleverreachform/Classes/Domain/Model/FormContent.php
+
+		-
+			message: "#^Property SKom\\\\Cleverreachform\\\\Domain\\\\Model\\\\FormContent\\:\\:\\$startdate \\(DateTime\\) does not accept default value of type null\\.$#"
+			count: 1
+			path: packages/cleverreachform/Classes/Domain/Model/FormContent.php
+
+		-
+			message: "#^Method SKom\\\\Cleverreachform\\\\Domain\\\\Model\\\\FormContent\\:\\:setLocation\\(\\) has parameter \\$location with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/cleverreachform/Classes/Domain/Model/FormContent.php
+
+		-
+			message: "#^Access to an undefined property SKom\\\\Cleverreachform\\\\Validation\\\\Validator\\\\NotNullValidator\\:\\:\\$errors\\.$#"
+			count: 1
+			path: packages/cleverreachform/Classes/Validation/Validator/NotNullValidator.php
+
+		-
+			message: "#^Access to an undefined property SKom\\\\Cleverreachform\\\\Validation\\\\Validator\\\\SelectedOneValidator\\:\\:\\$errors\\.$#"
+			count: 1
+			path: packages/cleverreachform/Classes/Validation/Validator/SelectedOneValidator.php
+
+		-
+			message: "#^Parameter \\#4 \\$mon of function mktime expects int, string given\\.$#"
+			count: 2
+			path: packages/cleverreachform/Configuration/TCA/tx_cleverreachform_domain_model_formcontent.php
+
+		-
+			message: "#^Parameter \\#5 \\$day of function mktime expects int, string given\\.$#"
+			count: 2
+			path: packages/cleverreachform/Configuration/TCA/tx_cleverreachform_domain_model_formcontent.php
+
+		-
+			message: "#^Parameter \\#6 \\$year of function mktime expects int, string given\\.$#"
+			count: 2
+			path: packages/cleverreachform/Configuration/TCA/tx_cleverreachform_domain_model_formcontent.php
+
+		-
+			message: "#^Right side of \\|\\| is always false\\.$#"
+			count: 1
+			path: packages/cleverreachform/ext_tables.php
+
+		-
+			message: "#^Property SKom\\\\KlaroVideo\\\\Hooks\\\\PageLayoutViewDrawItem\\:\\:\\$supportedContentTypes type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/klaro_video/Classes/Hooks/PageLayoutViewDrawItem.php
+
+		-
+			message: "#^Method SKom\\\\KlaroVideo\\\\Hooks\\\\PageLayoutViewDrawItem\\:\\:preProcess\\(\\) has no return typehint specified\\.$#"
+			count: 1
+			path: packages/klaro_video/Classes/Hooks/PageLayoutViewDrawItem.php
+
+		-
+			message: "#^Method SKom\\\\KlaroVideo\\\\Hooks\\\\PageLayoutViewDrawItem\\:\\:preProcess\\(\\) has parameter \\$row with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/klaro_video/Classes/Hooks/PageLayoutViewDrawItem.php
+
+		-
+			message: "#^Method SKom\\\\KlaroVideo\\\\Hooks\\\\PageLayoutViewDrawItem\\:\\:configureView\\(\\) has no return typehint specified\\.$#"
+			count: 1
+			path: packages/klaro_video/Classes/Hooks/PageLayoutViewDrawItem.php
+
+		-
+			message: "#^Method SKom\\\\KlaroVideo\\\\Hooks\\\\PageLayoutViewDrawItem\\:\\:configureView\\(\\) has parameter \\$pageTsConfig with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/klaro_video/Classes/Hooks/PageLayoutViewDrawItem.php
+
+		-
+			message: "#^Method SKom\\\\KlaroVideo\\\\Hooks\\\\PageLayoutViewDrawItem\\:\\:getProcessedData\\(\\) has parameter \\$databaseRow with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/klaro_video/Classes/Hooks/PageLayoutViewDrawItem.php
+
+		-
+			message: "#^Method SKom\\\\KlaroVideo\\\\Hooks\\\\PageLayoutViewDrawItem\\:\\:getProcessedData\\(\\) has parameter \\$processedTcaColumns with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/klaro_video/Classes/Hooks/PageLayoutViewDrawItem.php
+
+		-
+			message: "#^Method SKom\\\\KlaroVideo\\\\Hooks\\\\PageLayoutViewDrawItem\\:\\:getProcessedData\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/klaro_video/Classes/Hooks/PageLayoutViewDrawItem.php
+
+		-
+			message: "#^Right side of \\|\\| is always false\\.$#"
+			count: 1
+			path: packages/klaro_video/Configuration/TCA/Overrides/tt_content.php
+
+		-
+			message: "#^Right side of \\|\\| is always false\\.$#"
+			count: 1
+			path: packages/klaro_video/ext_localconf.php
+
+		-
+			message: "#^Right side of \\|\\| is always false\\.$#"
+			count: 1
+			path: packages/minihaus_sitepackage/Configuration/TCA/Overrides/100_pages.php
+
+		-
+			message: "#^Right side of \\|\\| is always false\\.$#"
+			count: 1
+			path: packages/minihaus_sitepackage/Configuration/TCA/Overrides/101_sys_template.php
+
+		-
+			message: "#^Right side of \\|\\| is always false\\.$#"
+			count: 1
+			path: packages/minihaus_sitepackage/ext_localconf.php
+
+		-
+			message: "#^Variable \\$_EXTKEY might not be defined\\.$#"
+			count: 1
+			path: packages/minihaus_sitepackage/ext_localconf.php
+
+		-
+			message: "#^Right side of \\|\\| is always false\\.$#"
+			count: 1
+			path: packages/minihaus_sitepackage/ext_tables.php
+
+		-
+			message: "#^Property Skom\\\\SkomJobpost\\\\Hooks\\\\PageLayoutViewDrawItem\\:\\:\\$supportedContentTypes type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/skom_jobpost/Classes/Hooks/PageLayoutViewDrawItem.php
+
+		-
+			message: "#^Method Skom\\\\SkomJobpost\\\\Hooks\\\\PageLayoutViewDrawItem\\:\\:preProcess\\(\\) has no return typehint specified\\.$#"
+			count: 1
+			path: packages/skom_jobpost/Classes/Hooks/PageLayoutViewDrawItem.php
+
+		-
+			message: "#^Method Skom\\\\SkomJobpost\\\\Hooks\\\\PageLayoutViewDrawItem\\:\\:preProcess\\(\\) has parameter \\$row with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/skom_jobpost/Classes/Hooks/PageLayoutViewDrawItem.php
+
+		-
+			message: "#^Method Skom\\\\SkomJobpost\\\\Hooks\\\\PageLayoutViewDrawItem\\:\\:configureView\\(\\) has no return typehint specified\\.$#"
+			count: 1
+			path: packages/skom_jobpost/Classes/Hooks/PageLayoutViewDrawItem.php
+
+		-
+			message: "#^Method Skom\\\\SkomJobpost\\\\Hooks\\\\PageLayoutViewDrawItem\\:\\:configureView\\(\\) has parameter \\$pageTsConfig with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/skom_jobpost/Classes/Hooks/PageLayoutViewDrawItem.php
+
+		-
+			message: "#^Method Skom\\\\SkomJobpost\\\\Hooks\\\\PageLayoutViewDrawItem\\:\\:getProcessedData\\(\\) has parameter \\$databaseRow with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/skom_jobpost/Classes/Hooks/PageLayoutViewDrawItem.php
+
+		-
+			message: "#^Method Skom\\\\SkomJobpost\\\\Hooks\\\\PageLayoutViewDrawItem\\:\\:getProcessedData\\(\\) has parameter \\$processedTcaColumns with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/skom_jobpost/Classes/Hooks/PageLayoutViewDrawItem.php
+
+		-
+			message: "#^Method Skom\\\\SkomJobpost\\\\Hooks\\\\PageLayoutViewDrawItem\\:\\:getProcessedData\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/skom_jobpost/Classes/Hooks/PageLayoutViewDrawItem.php
+
+		-
+			message: "#^Right side of \\|\\| is always false\\.$#"
+			count: 1
+			path: packages/skom_jobpost/Configuration/TCA/Overrides/tt_content.php
+
+		-
+			message: "#^Right side of \\|\\| is always false\\.$#"
+			count: 1
+			path: packages/skom_jobpost/ext_localconf.php
+
+		-
+			message: "#^Property SKom\\\\Skomtest\\\\Hooks\\\\PageLayoutViewDrawItem\\:\\:\\$supportedContentTypes type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/skomtest/Classes/Hooks/PageLayoutViewDrawItem.php
+
+		-
+			message: "#^Method SKom\\\\Skomtest\\\\Hooks\\\\PageLayoutViewDrawItem\\:\\:preProcess\\(\\) has no return typehint specified\\.$#"
+			count: 1
+			path: packages/skomtest/Classes/Hooks/PageLayoutViewDrawItem.php
+
+		-
+			message: "#^Method SKom\\\\Skomtest\\\\Hooks\\\\PageLayoutViewDrawItem\\:\\:preProcess\\(\\) has parameter \\$row with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/skomtest/Classes/Hooks/PageLayoutViewDrawItem.php
+
+		-
+			message: "#^Method SKom\\\\Skomtest\\\\Hooks\\\\PageLayoutViewDrawItem\\:\\:configureView\\(\\) has no return typehint specified\\.$#"
+			count: 1
+			path: packages/skomtest/Classes/Hooks/PageLayoutViewDrawItem.php
+
+		-
+			message: "#^Method SKom\\\\Skomtest\\\\Hooks\\\\PageLayoutViewDrawItem\\:\\:configureView\\(\\) has parameter \\$pageTsConfig with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/skomtest/Classes/Hooks/PageLayoutViewDrawItem.php
+
+		-
+			message: "#^Method SKom\\\\Skomtest\\\\Hooks\\\\PageLayoutViewDrawItem\\:\\:getProcessedData\\(\\) has parameter \\$databaseRow with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/skomtest/Classes/Hooks/PageLayoutViewDrawItem.php
+
+		-
+			message: "#^Method SKom\\\\Skomtest\\\\Hooks\\\\PageLayoutViewDrawItem\\:\\:getProcessedData\\(\\) has parameter \\$processedTcaColumns with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/skomtest/Classes/Hooks/PageLayoutViewDrawItem.php
+
+		-
+			message: "#^Method SKom\\\\Skomtest\\\\Hooks\\\\PageLayoutViewDrawItem\\:\\:getProcessedData\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: packages/skomtest/Classes/Hooks/PageLayoutViewDrawItem.php
+
+		-
+			message: "#^Right side of \\|\\| is always false\\.$#"
+			count: 1
+			path: packages/skomtest/Configuration/TCA/Overrides/tt_content.php
+
+		-
+			message: "#^Right side of \\|\\| is always false\\.$#"
+			count: 1
+			path: packages/skomtest/ext_localconf.php
+

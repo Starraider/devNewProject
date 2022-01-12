@@ -1,0 +1,17 @@
+includes:
+	- phpstan-baseline.neon
+
+parameters:
+  level: 8
+
+  paths:
+    - packages
+
+  ignoreErrors:
+    - message: '#Variable \$_EXTKEY might not be defined#'
+      path: '*/ext_emconf.php'
+    - message: '#Parameter .+ expects .+, PHPUnit\\Framework\\MockObject\\MockObject given\.#'
+      path: '*/PaginateViewHelperTest.php'
+    - message: '#Access to protected property .+TypoScriptFrontendController::\$sys_language_uid#'
+      path: '*LoggerFinisher*'
+  reportUnmatchedIgnoredErrors: false

@@ -1,0 +1,45 @@
+{
+	/**
+	 * PHP CS Fixer
+	 * Use composer intalled php-cs-fixer
+	 **/
+	"php-cs-fixer.onsave": true,
+	"php-cs-fixer.showOutput": true,
+	"php-cs-fixer.executablePath": "${workspaceFolder}/vendor/bin/php-cs-fixer",
+	"php-cs-fixer.autoFixByBracket": true,
+	"php-cs-fixer.formatHtml": true,
+
+	/**
+	 * PHPStan
+	 **/
+	"phpstan.enabled": true,
+	//"phpstan.path": null,
+	"phpstan.level": "max",
+	"phpstan.memoryLimit": "2048M",
+	"phpstan.projectFile": "${workspaceFolder}/phpstan.neon",
+	"phpstan.excludeFiles": [],
+	"phpstan.options": [],
+
+	/**
+	 * Prettier
+	 **/
+	"[javascript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.formatOnSave": true
+	},
+	"[jsonc]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.formatOnSave": true
+	},
+	"[json]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.formatOnSave": true
+	},
+	"prettier.requireConfig": true,
+	"prettier.useEditorConfig": false,
+	// Disable ESLint, because we use Prettier
+	"eslint.enable": false,
+
+	"restructuredtext.languageServer.disabled": true,
+	"workbench.activityBar.visible": false
+}

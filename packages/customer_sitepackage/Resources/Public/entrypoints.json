@@ -1,0 +1,13 @@
+{
+  "entrypoints": {
+    "app": {
+      "js": [
+        "/typo3conf/ext/customer_sitepackage/Resources/Public/runtime.js",
+        "/typo3conf/ext/customer_sitepackage/Resources/Public/app.js"
+      ],
+      "css": [
+        "/typo3conf/ext/customer_sitepackage/Resources/Public/app.css"
+      ]
+    }
+  }
+}

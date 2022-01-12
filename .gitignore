@@ -36,6 +36,7 @@
 .php_cs.cache
 /composer.phar
 /Quellen/
+/Build/node_modules/
 
 ### DDEV ###
 .ddev/backup/*
