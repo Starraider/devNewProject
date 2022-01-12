@@ -1,0 +1,18 @@
+{
+  "name": "skom-customer-sitepackage",
+  "description": "This is the default customer sitepackage",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Starraider/customerSitepackage.git"
+  },
+  "homepage": "https://www.skom.de",
+  "author": "Sven Kalbhenn",
+  "version": "1.0.0",
+  "license": "GPL-2.0-or-later",
+  "devDependencies": {
+    "grunt": "^1.0.3",
+    "grunt-contrib-uglify": "^4.0.0",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-contrib-imagemin": "^2.0.1"
+  }
+}

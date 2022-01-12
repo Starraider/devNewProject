@@ -1,0 +1,21 @@
+{
+    "name": "skom/customer-sitepackage",
+    "type": "typo3-cms-extension",
+    "description": "This is the default customer sitepackage",
+    "homepage": "https://www.skom.de",
+    "license": ["GPL-2.0-or-later"],
+    "keywords": ["TYPO3 CMS"],
+    "require": {
+        "bk2k/bootstrap-package": "^12.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Skom\\CustomerSitepackage\\": "Classes/"
+        }
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "customer_sitepackage"
+        }
+    }
+}

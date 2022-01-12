@@ -1,0 +1,60 @@
+######################
+#### DEPENDENCIES ####
+######################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/constants.typoscript">
+
+
+############
+### PAGE ###
+############
+page {
+    logo {
+        file = EXT:customer_sitepackage/Resources/Public/Images/logo.svg
+        fileInverted = EXT:customer_sitepackage/Resources/Public/Images/logo-inverted.svg
+        height = 52
+        width = 192
+        alt = Customer Sitepackage
+        linktitle = Customer Sitepackage
+    }
+    favicon {
+        file = EXT:customer_sitepackage/Resources/Public/Icons/favicon.ico
+    }
+    fluidtemplate {
+        layoutRootPath = EXT:customer_sitepackage/Resources/Private/Layouts/Page/
+        partialRootPath = EXT:customer_sitepackage/Resources/Private/Partials/Page/
+        templateRootPath = EXT:customer_sitepackage/Resources/Private/Templates/Page/
+    }
+}
+
+
+##################
+### EXTENSIONS ###
+##################
+plugin.bootstrap_package {
+    view {
+        layoutRootPath = EXT:customer_sitepackage/Resources/Private/Layouts/
+        partialRootPath = EXT:customer_sitepackage/Resources/Private/Partials/
+        templateRootPath = EXT:customer_sitepackage/Resources/Private/Templates/
+    }
+}
+
+
+########################
+### CONTENT ELEMENTS ###
+########################
+plugin.bootstrap_package_contentelements {
+    view {
+        layoutRootPath = EXT:customer_sitepackage/Resources/Private/Layouts/ContentElements/
+        partialRootPath = EXT:customer_sitepackage/Resources/Private/Partials/ContentElements/
+        templateRootPath = EXT:customer_sitepackage/Resources/Private/Templates/ContentElements/
+    }
+}
+
+
+################################
+### BOOTSTRAP SCSS CONSTANTS ###
+################################
+plugin.bootstrap_package.settings.scss {
+    primary = #eb3e4a
+    secondary = #013859
+}

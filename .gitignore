@@ -1,0 +1,58 @@
+# Packages #
+############
+*.7z
+*.dmg
+*.gz
+*.bz2
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+*.tgz
+
+### macOS ###
+.DS_Store
+*.swp
+*.old
+*.ld
+*.icloud
+
+### VisualStudioCode ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+### Project ###
+.idea
+/node_modules/
+/var/
+/vendor/
+/.phpunit.cache
+.phpunit.result.cache
+.php_cs.cache
+/composer.phar
+/Quellen/
+
+### DDEV ###
+.ddev/backup/*
+!.ddev/backup/fileadmin.tar.gz
+!.ddev/backup/mysql-db.sql.gz
+.ddev/php-profiles/*
+.ddev/data/*
+
+### TYPO3 ###
+/public/*
+!/public/typo3conf
+/public/typo3conf/*
+!/public/typo3conf/LocalConfiguration.php
+!/public/typo3conf/AdditionalConfiguration.php
+!/public/typo3conf/PackageStates.php
+!/public/.htaccess
+
+/packages/skomtest
+
+.env
