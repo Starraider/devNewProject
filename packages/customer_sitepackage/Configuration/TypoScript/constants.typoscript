@@ -3,6 +3,47 @@
 ######################
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/constants.typoscript">
 
+##############################
+#### DEVELOPMENT SETTINGS ####
+##############################
+[applicationContext = Development*]
+config {
+    no_cache = 1
+    sendCacheHeaders = 0
+    compressJs = 0
+    concatenateCss = 0
+    concatenateJs = 0
+    compressCss = 0
+    admPanel = 1
+}
+sourceopt {
+    formatHtml = 4
+    removeComments = 0
+}
+plugin {
+    tx_min.tinysource.enable = 0
+    bootstrap_package.settings.cssSourceMapping = 1
+}
+[end]
+[applicationContext = Production*]
+config {
+    no_cache = 0
+    sendCacheHeaders = 1
+    compressJs = 1
+    concatenateCss = 1
+    concatenateJs = 1
+    compressCss = 1
+    admPanel = 0
+}
+sourceopt {
+    formatHtml = 1
+    removeComments = 1
+}
+plugin {
+    tx_min.tinysource.enable = 1
+    bootstrap_package.settings.cssSourceMapping = 0
+}
+[end]
 
 ############
 ### PAGE ###

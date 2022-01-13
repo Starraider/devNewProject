@@ -20,15 +20,13 @@ import '../styles/main.scss'
 /*
  * Include Bootstrap in your Sass-file. You can here specify which plugins you need
  */
-// import { Tooltip, Toast, Popover } from 'bootstrap'
+import { Tooltip, Toast, Popover } from 'bootstrap'
 
-/*
- * Sprite Loader
- */
-// function requireAll(r) {
-//    r.keys().forEach(r)
-// }
-// requireAll(require.context('../icons/', true, /\.svg$/))
+// Sprite Loader
+function requireAll(r) {
+    r.keys().forEach(r)
+}
+requireAll(require.context('../icons/', true, /\.svg$/))
 
 /*
  * Put your own javascript code here

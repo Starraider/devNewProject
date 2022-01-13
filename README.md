@@ -1,57 +1,101 @@
-# TYPO3 CMS Base Distribution
+# TYPO3 Development Site for demonstrating Webpack Encore
 
-Get going quickly with TYPO3 CMS.
+This project was build, to test and demonstrate the use of Webpack Encore with TYPO3-CMS.
 
-## Prerequisites
+## System requirements
 
-* PHP 7.4
-* [Composer](https://getcomposer.org/download/)
+1. Docker installed and running
+2. DDEV installed
 
-## Quickstart
-
-* `composer create-project typo3/cms-base-distribution project-name ^11`
-* `cd project-name`
-
-### Setup
-
-To start an interactive installation, you can do so by executing the following
-command and then follow the wizard:
+## DDEV
 
 ```bash
-composer exec typo3cms install:setup
+ddev start
+ddev composer update
+ddev stop
+ddev describe
 ```
 
-### Setup unattended (optional)
-
-If you're a more advanced user, you might want to leverage the unattended installation.
-To do this, you need to execute the following command and substitute the arguments
-with your own environment configuration.
+## Opening the website
 
 ```bash
-composer exec typo3cms install:setup \
-    --no-interaction \
-    --database-user-name=typo3 \
-    --database-user-password=typo3 \
-    --database-host-name=127.0.0.1 \
-    --database-port=3306 \
-    --database-name=typo3 \
-    --use-existing-database \
-    --admin-user-name=admin \
-    --admin-password=password \
-    --site-setup-type=site
+ddev launch
 ```
 
-### Development server
+or go to [https://devwebpack.ddev.site](https://devwebpack.ddev.site)
 
-While it's advised to use a more sophisticated web server such as
-Apache 2 or Nginx, you can instantly run the project by using PHPs` built-in
-[web server](https://secure.php.net/manual/en/features.commandline.webserver.php).
+### Webpack Encore
 
-* `TYPO3_CONTEXT=Development php -S localhost:8000 -t public`
-* open your browser at "http://localhost:8000"
+#### compile assets once
 
-Please be aware that the built-in web server is single threaded and only meant
-to be used for development.
+```bash
+yarn encore dev
+```
+
+#### or, recompile assets automatically when files change
+
+```bash
+yarn encore dev --watch
+```
+
+#### on deploy, create a production build
+
+```bash
+yarn encore production
+```
+
+### Backup
+
+```bash
+ddev export-db --file=/Quellen/backup/db.sql.gz
+ddev db-backup
+ddev db-restore
+ddev fileadmin-backup
+ddev fileadmin-restore
+
+//ddev export-db >./Quellen/backup/2021-11-27_db.sql.gz
+```
+
+## typo3-console
+
+Attention: The typo3-console runs only inside the container!
+
+```bash
+ddev typo3cms cache:flush
+ddev typo3cms database:updateschema "safe"
+```
+
+## TYPO3 CLI Commands
+
+```bash
+ddev typo3 --help
+ddev typo3 list (lists all commands)
+ddev typo3 language:update
+```
+
+### Debug Mode
+
+You can change the TYPO3_CONTEXT in the file `docker-compose.typo3.yaml`
+
+To see error messages in the frontend put in Setup:
+
+```bash
+config.contentObjectExceptionHandler = 0
+```
+
+## Testing & Linting
+
+### Prettier
+
+Prettier will auto format all JavaScript files.
+
+### PHP CS Fixer
+
+Right click on file and chose "Dokument formatieren" oder "php-cs-fixer: diff" oder "php-cs-fixer: fix"
+
+### PHPStan
+
+Right click on file or folder and chose "PHPStan: Scan for Errors"
 
 ## License
 

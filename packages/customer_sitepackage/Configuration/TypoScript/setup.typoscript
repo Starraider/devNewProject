@@ -3,6 +3,12 @@
 ######################
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/setup.typoscript">
 
+plugin.tx_typo3encore {
+    settings {
+        entrypointJsonPath = EXT:customer_sitepackage/Resources/Public/entrypoints.json
+        manifestJsonPath = EXT:customer_sitepackage/Resources/Public/manifest.json
+    }
+}
 
 ##############
 #### PAGE ####

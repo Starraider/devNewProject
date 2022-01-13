@@ -1,6 +1,7 @@
 var Encore = require('@symfony/webpack-encore')
+const WebpackNotifierPlugin = require('webpack-notifier')
 const SpriteLoaderPlugin = require('svg-sprite-loader/plugin')
-const ESLintPlugin = require('eslint-webpack-plugin')
+//const ESLintPlugin = require('eslint-webpack-plugin')
 
 Encore
     // the directory where compiled assets will be stored
@@ -13,12 +14,6 @@ Encore
 
     // only needed for CDN's or sub-directory deploy
     // .setManifestKeyPrefix('build/')
-
-    .configureImageRule({
-        // tell Webpack it should consider inlining
-        type: 'asset',
-        //maxSize: 4 * 1024, // 4 kb - the default is 8kb
-    })
 
     .configureFontRule({
         type: 'asset',
@@ -37,7 +32,9 @@ Encore
     .addPlugin(new SpriteLoaderPlugin())
 
     // ESLint
-    .addPlugin(new ESLintPlugin())
+    //.addPlugin(new ESLintPlugin())
+    // WebpackNotifier
+    .addPlugin(new WebpackNotifierPlugin({ emoji: true }))
 
     // Copy some static images to your -> https://symfony.com/doc/current/frontend/encore/copy-files.html
     .copyFiles({
@@ -50,7 +47,11 @@ Encore
         // only copy files matching this pattern
         pattern: /\.(png|jpg|jpeg)$/,
     })
-
+    .configureImageRule({
+        // tell Webpack it should consider inlining
+        type: 'asset',
+        //maxSize: 4 * 1024, // 4 kb - the default is 8kb
+    })
     /*
      * ENTRY CONFIG
      *
@@ -85,17 +86,17 @@ Encore
     // uncomment if you use the postcss -> https://symfony.com/doc/current/frontend/encore/postcss.html
     .enablePostCssLoader()
 
-// uncomment if you want to use vue -> https://symfony.com/doc/current/frontend/encore/vuejs.html
-// .enableVueLoader()
+    // uncomment if you want to use vue -> https://symfony.com/doc/current/frontend/encore/vuejs.html
+    // .enableVueLoader()
 
-// uncomment if you´re want to lint your sources
-//.enableEslintLoader()
+    // uncomment if you´re want to lint your sources
+    //.enableEslintLoader()
 
-// uncomment if you´re want to have integrity hashes for your script tags, the extension takes care of it
-// .enableIntegrityHashes()
+    // uncomment if you´re want to have integrity hashes for your script tags, the extension takes care of it
+    // .enableIntegrityHashes()
 
-// uncomment if you´re want to share general code for the different entries -> https://symfony.com/doc/current/frontend/encore/split-chunks.html
-// .splitEntryChunks()
+    // uncomment if you´re want to share general code for the different entries -> https://symfony.com/doc/current/frontend/encore/split-chunks.html
+    .splitEntryChunks()
 
 // Uncomment if you are going to use a CDN -> https://symfony.com/doc/current/frontend/encore/cdn.html
 // if (Encore.isProduction()) {

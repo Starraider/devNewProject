@@ -6,14 +6,8 @@ env:
 globals:
     $: true
     jQuery: true
-plugins:
-    - yaml
-    - html
-    - md
 extends:
     - eslint:recommended
-    - plugin:yaml/recommended
-    - plugin:md/recommended
 parserOptions:
     ecmaVersion: 2020
     sourceType: 'module'

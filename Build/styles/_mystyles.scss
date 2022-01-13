@@ -1,0 +1,20 @@
+//
+// My own Styles
+// Overwrite Bootstrap styles here
+//
+
+/* pt-sans-regular - latin */
+@font-face {
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+        url('../fonts/pt-sans-v12-latin-regular.woff2') format('woff2'),
+        url('../fonts/pt-sans-v12-latin-regular.woff') format('woff');
+}
+
+
+body {
+    font-family: 'PT Sans', sans-serif;
+    background-color: $secondary;
+}

@@ -3,6 +3,7 @@
     "app": {
       "js": [
         "/typo3conf/ext/customer_sitepackage/Resources/Public/runtime.js",
+        "/typo3conf/ext/customer_sitepackage/Resources/Public/vendors-node_modules_bootstrap_dist_js_bootstrap_esm_js.js",
         "/typo3conf/ext/customer_sitepackage/Resources/Public/app.js"
       ],
       "css": [
