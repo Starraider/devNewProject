@@ -46,7 +46,13 @@
         "typo3/cms-viewpage": "^11.5.0"
     },
     "require-dev": {
-        "ergebnis/composer-normalize": "^2.18.0"
+        "ergebnis/composer-normalize": "^2.18.0",
+        "helmich/typo3-typoscript-lint": "^2.5"
+    },
+    "conflict": {
+        "doctrine/dbal": "2.13.1",
+        "friendsofphp/php-cs-fixer": "3.5.0",
+        "typo3/class-alias-loader": "< 1.1.0"
     },
     "repositories": [
         {
@@ -74,7 +80,15 @@
         "post-autoload-dump": [
             "@typo3-cms-scripts"
         ],
+        "ci": [
+            "@ci:static"
+        ],
         "ci:composer:normalize": "@composer normalize --dry-run",
+        "ci:static": [
+            "@ci:composer:normalize",
+            "@ci:ts:lint"
+        ],
+        "ci:ts:lint": "exec vendor/bin/typoscript-lint -c Build/TsLint.yml --ansi -n --fail-on-warnings -vvv packages",
         "typo3-cms-scripts": [
             "typo3cms install:fixfolderstructure"
         ]
