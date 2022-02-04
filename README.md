@@ -26,6 +26,13 @@ or go to [https://devwebpack.ddev.site](https://devwebpack.ddev.site)
 
 ### Webpack Encore
 
+Be aware: Webpack Encore needs Node.js Version 16.8!
+You can switch Node.js Version with:
+
+```bash
+nvm use system
+```
+
 #### compile assets once
 
 ```bash
