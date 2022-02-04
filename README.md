@@ -85,17 +85,37 @@ config.contentObjectExceptionHandler = 0
 
 ## Testing & Linting
 
-### Prettier
+### Static Linters
+
+Run all static linters at once:
+
+```bash
+ddev composer ci:static
+```
+
+#### Prettier
 
 Prettier will auto format all JavaScript files.
 
-### PHP CS Fixer
+#### PHP CS Fixer
 
 Right click on file and chose "Dokument formatieren" oder "php-cs-fixer: diff" oder "php-cs-fixer: fix"
 
-### PHPStan
+#### PHPStan
 
 Right click on file or folder and chose "PHPStan: Scan for Errors"
+
+#### TypoScript Lint
+
+```bash
+ddev composer ci:ts:lint
+```
+
+#### Normalize composer.json
+
+```bash
+ddev composer ci:composer:normalize
+```
 
 ## License
 
