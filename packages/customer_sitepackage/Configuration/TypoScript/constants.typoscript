@@ -7,7 +7,7 @@
 #### DEVELOPMENT SETTINGS ####
 ##############################
 [applicationContext = Development*]
-config {
+  config {
     no_cache = 1
     sendCacheHeaders = 0
     compressJs = 0
@@ -15,18 +15,18 @@ config {
     concatenateJs = 0
     compressCss = 0
     admPanel = 1
-}
-sourceopt {
+  }
+  sourceopt {
     formatHtml = 4
     removeComments = 0
-}
-plugin {
+  }
+  plugin {
     tx_min.tinysource.enable = 0
     bootstrap_package.settings.cssSourceMapping = 1
-}
+  }
 [end]
 [applicationContext = Production*]
-config {
+  config {
     no_cache = 0
     sendCacheHeaders = 1
     compressJs = 1
@@ -34,68 +34,67 @@ config {
     concatenateJs = 1
     compressCss = 1
     admPanel = 0
-}
-sourceopt {
+  }
+  sourceopt {
     formatHtml = 1
     removeComments = 1
-}
-plugin {
+  }
+  plugin {
     tx_min.tinysource.enable = 1
     bootstrap_package.settings.cssSourceMapping = 0
-}
+  }
 [end]
 
 ############
 ### PAGE ###
 ############
 page {
-    logo {
-        file = EXT:customer_sitepackage/Resources/Public/Images/logo.svg
-        fileInverted = EXT:customer_sitepackage/Resources/Public/Images/logo-inverted.svg
-        height = 52
-        width = 192
-        alt = Customer Sitepackage
-        linktitle = Customer Sitepackage
-    }
-    favicon {
-        file = EXT:customer_sitepackage/Resources/Public/Icons/favicon.ico
-    }
-    fluidtemplate {
-        layoutRootPath = EXT:customer_sitepackage/Resources/Private/Layouts/Page/
-        partialRootPath = EXT:customer_sitepackage/Resources/Private/Partials/Page/
-        templateRootPath = EXT:customer_sitepackage/Resources/Private/Templates/Page/
-    }
+  logo {
+    file = EXT:customer_sitepackage/Resources/Public/Images/logo.svg
+    fileInverted = EXT:customer_sitepackage/Resources/Public/Images/logo-inverted.svg
+    height = 52
+    width = 192
+    alt = Customer Sitepackage
+    linktitle = Customer Sitepackage
+  }
+  favicon {
+    file = EXT:customer_sitepackage/Resources/Public/Icons/favicon.ico
+  }
+  fluidtemplate {
+    layoutRootPath = EXT:customer_sitepackage/Resources/Private/Layouts/Page/
+    partialRootPath = EXT:customer_sitepackage/Resources/Private/Partials/Page/
+    templateRootPath = EXT:customer_sitepackage/Resources/Private/Templates/Page/
+  }
 }
 
 
 ##################
 ### EXTENSIONS ###
 ##################
-plugin.bootstrap_package {
+plugin {
+  bootstrap_package {
     view {
-        layoutRootPath = EXT:customer_sitepackage/Resources/Private/Layouts/
-        partialRootPath = EXT:customer_sitepackage/Resources/Private/Partials/
-        templateRootPath = EXT:customer_sitepackage/Resources/Private/Templates/
+      layoutRootPath = EXT:customer_sitepackage/Resources/Private/Layouts/
+      partialRootPath = EXT:customer_sitepackage/Resources/Private/Partials/
+      templateRootPath = EXT:customer_sitepackage/Resources/Private/Templates/
     }
-}
+    ################################
+    ### BOOTSTRAP SCSS CONSTANTS ###
+    ################################
+    settings.scss {
+      primary = #eb3e4a
+      secondary = #013859
+    }
+  }
 
-
-########################
-### CONTENT ELEMENTS ###
-########################
-plugin.bootstrap_package_contentelements {
+  ########################
+  ### CONTENT ELEMENTS ###
+  ########################
+  bootstrap_package_contentelements {
     view {
-        layoutRootPath = EXT:customer_sitepackage/Resources/Private/Layouts/ContentElements/
-        partialRootPath = EXT:customer_sitepackage/Resources/Private/Partials/ContentElements/
-        templateRootPath = EXT:customer_sitepackage/Resources/Private/Templates/ContentElements/
+      layoutRootPath = EXT:customer_sitepackage/Resources/Private/Layouts/ContentElements/
+      partialRootPath = EXT:customer_sitepackage/Resources/Private/Partials/ContentElements/
+      templateRootPath = EXT:customer_sitepackage/Resources/Private/Templates/ContentElements/
     }
-}
-
-
-################################
-### BOOTSTRAP SCSS CONSTANTS ###
-################################
-plugin.bootstrap_package.settings.scss {
-    primary = #eb3e4a
-    secondary = #013859
+  }
 }

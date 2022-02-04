@@ -4,33 +4,33 @@
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/setup.typoscript">
 
 plugin.tx_typo3encore {
-    settings {
-        entrypointJsonPath = EXT:customer_sitepackage/Resources/Public/entrypoints.json
-        manifestJsonPath = EXT:customer_sitepackage/Resources/Public/manifest.json
-    }
+  settings {
+    entrypointJsonPath = EXT:customer_sitepackage/Resources/Public/entrypoints.json
+    manifestJsonPath = EXT:customer_sitepackage/Resources/Public/manifest.json
+  }
 }
 
 ##############
 #### PAGE ####
 ##############
 page {
-    includeCSS {
-        theme = EXT:customer_sitepackage/Resources/Public/Scss/Theme/theme.scss
-    }
+  includeCSS {
+    theme = EXT:customer_sitepackage/Resources/Public/Scss/Theme/theme.scss
+  }
 
-    includeJSLibs {
+  includeJSLibs {
 
-    }
+  }
 
-    includeJS {
+  includeJS {
 
-    }
+  }
 
-    includeJSFooterlibs {
+  includeJSFooterlibs {
 
-    }
+  }
 
-    includeJSFooter {
-        customer_sitepackage_scripts = EXT:customer_sitepackage/Resources/Public/JavaScript/Dist/scripts.js
-    }
+  includeJSFooter {
+    customer_sitepackage_scripts = EXT:customer_sitepackage/Resources/Public/JavaScript/Dist/scripts.js
+  }
 }
