@@ -11,21 +11,9 @@
             "role": "Developer"
         }
     ],
-    "repositories": [
-        {
-            "type": "path",
-            "url": "packages/*"
-        },
-        {
-            "type": "composer",
-            "url": "https://composer.typo3.org/"
-        }
-    ],
-    "config": {
-        "platform": {
-            "php": "7.4.1"
-        },
-        "sort-packages": true
+    "support": {
+        "issues": "https://github.com/Starraider/devNewProject/issues",
+        "source": "https://github.com/Starraider/devNewProject"
     },
     "require": {
         "bk2k/bootstrap-package": "^12.0",
@@ -57,12 +45,41 @@
         "typo3/cms-tstemplate": "^11.5.0",
         "typo3/cms-viewpage": "^11.5.0"
     },
+    "require-dev": {
+        "ergebnis/composer-normalize": "^2.18.0"
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "packages/*"
+        },
+        {
+            "type": "composer",
+            "url": "https://composer.typo3.org/"
+        }
+    ],
+    "config": {
+        "allow-plugins": {
+            "ergebnis/composer-normalize": true,
+            "phpstan/extension-installer": true,
+            "typo3/class-alias-loader": true,
+            "typo3/cms-composer-installers": true
+        },
+        "platform": {
+            "php": "7.4.1"
+        },
+        "sort-packages": true
+    },
     "scripts": {
-        "typo3-cms-scripts": [
-            "typo3cms install:fixfolderstructure"
-        ],
         "post-autoload-dump": [
             "@typo3-cms-scripts"
+        ],
+        "ci:composer:normalize": "@composer normalize --dry-run",
+        "typo3-cms-scripts": [
+            "typo3cms install:fixfolderstructure"
         ]
+    },
+    "scripts-descriptions": {
+        "ci:composer:normalize": "Checks the composer.json."
     }
 }
