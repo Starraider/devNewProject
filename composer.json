@@ -21,6 +21,7 @@
         "helhum/dotenv-connector": "^3.0",
         "helhum/typo3-console": "^7.0.2",
         "skom/customer-sitepackage": "@dev",
+        "sourcebroker/deployer-extended-typo3": "^18.0",
         "ssch/typo3-encore": "^4.0",
         "typo3/cms-backend": "^11.5.0",
         "typo3/cms-belog": "^11.5.0",
