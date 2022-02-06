@@ -16,5 +16,15 @@
 
 body {
     font-family: 'PT Sans', sans-serif;
-    background-color: $secondary;
+    background-color: $body-bg;
+}
+
+.klaro {
+    .cookie-modal {
+        .title {
+            .text-primary {
+                color: $headings-color !important;
+            }
+        }
+    }
 }

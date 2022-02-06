@@ -1,10 +1,11 @@
-/* assets/styles/app.css */
+/* Build/styles/main.scss */
 
 // customized Bootstrap variables
 @import "variables";
 
 // the ~ allows you to reference things in node_modules
 @import "~bootstrap/scss/bootstrap";
+@import "~klaro/src/scss/klaro";
 
 //
 // Compat
