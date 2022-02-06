@@ -124,6 +124,26 @@ ddev composer ci:ts:lint
 ddev composer ci:composer:normalize
 ```
 
+### Acceptance Tests
+
+#### Prerequisite
+
+You must have installed Chrome and Chrome Driver. Both must be accecible from the CLI (path).
+
+#### Run the tests
+
+First start Chrome Driver in seperate Terminal:
+
+```bash
+chromedriver
+```
+
+Then run the tests:
+
+```bash
+php vendor/bin/codecept run --steps
+```
+
 ## License
 
 GPL-2.0 or later
