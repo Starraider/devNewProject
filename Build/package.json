@@ -21,5 +21,8 @@
     },
     "browserslist": [
         "defaults"
-    ]
+    ],
+    "dependencies": {
+        "klaro": "^0.7.18"
+    }
 }
