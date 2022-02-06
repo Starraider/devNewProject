@@ -82,12 +82,12 @@ ddev typo3 language:update
 
 ### Debug Mode
 
-You can change the TYPO3_CONTEXT in the file `docker-compose.typo3.yaml`
+You can change the TYPO3_CONTEXT in the file `.ddev/config.yaml`
 
 To see error messages in the frontend put in Setup:
 
 ```bash
-config.contentObjectExceptionHandler = 0
+- TYPO3_CONTEXT=Development
 ```
 
 ## Testing & Linting
