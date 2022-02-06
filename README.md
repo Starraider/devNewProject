@@ -69,7 +69,7 @@ Attention: The typo3-console runs only inside the container!
 
 ```bash
 ddev typo3cms cache:flush
-ddev typo3cms database:updateschema "safe"
+ddev typo3cms database:updateschema
 ```
 
 ## TYPO3 CLI Commands
