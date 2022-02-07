@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "24343b864a8edd4d82b9c33ab606cf0d",
+    "content-hash": "22c28c3833f9cbff2de64bce7f7a5eeb",
     "packages": [
         {
             "name": "b13/container",
@@ -229,6 +229,89 @@
                 }
             ],
             "time": "2021-11-19T12:35:43+00:00"
+        },
+        {
+            "name": "causal/image_autoresize",
+            "version": "2.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/xperseguers/t3ext-image_autoresize.git",
+                "reference": "a7dfde49ac5dfaee0cacd14cef37c5cc2807ff77"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/xperseguers/t3ext-image_autoresize/zipball/a7dfde49ac5dfaee0cacd14cef37c5cc2807ff77",
+                "reference": "a7dfde49ac5dfaee0cacd14cef37c5cc2807ff77",
+                "shasum": ""
+            },
+            "require": {
+                "ext-exif": "*",
+                "ext-json": "*",
+                "php": ">= 7.2.0, <= 7.4.99",
+                "typo3/cms-core": "^8.7 || ^9.5 || ^10 || ^11"
+            },
+            "replace": {
+                "typo3-ter/image-autoresize": "self.version"
+            },
+            "type": "typo3-cms-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.1.x-dev"
+                },
+                "typo3/cms": {
+                    "extension-key": "image_autoresize",
+                    "cms-package-dir": "{$vendor-dir}/typo3/cms"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Causal\\ImageAutoresize\\": "Classes/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later",
+                "GPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Xavier Perseguers",
+                    "email": "xavier@causal.ch",
+                    "homepage": "https://www.causal.ch",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Simplify the way your editors may upload their images: no complex local procedure needed, let TYPO3 automatically resize down their huge images/pictures on-the-fly during upload (or using a scheduler task for batch processing) and according to your own business rules (directory/groups). This will highly reduce the footprint on your server and speed-up response time if lots of images are rendered (e.g., in a gallery). Features an EXIF/IPTC extractor to ensure metadata may be used by the FAL indexer even if not preserved upon resizing.",
+            "homepage": "https://github.com/xperseguers/t3ext-image_autoresize",
+            "keywords": [
+                "IPTC",
+                "TYPO3 CMS",
+                "auto-resize",
+                "autoresize",
+                "batch",
+                "exif",
+                "fal",
+                "footprint",
+                "image",
+                "performance",
+                "picture",
+                "upload"
+            ],
+            "support": {
+                "issues": "https://github.com/xperseguers/t3ext-image_autoresize/issues",
+                "source": "https://github.com/xperseguers/t3ext-image_autoresize/tree/2.1.1"
+            },
+            "funding": [
+                {
+                    "url": "https://www.paypal.me/xperseguers/10",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/xperseguers",
+                    "type": "github"
+                }
+            ],
+            "time": "2021-05-22T08:08:01+00:00"
         },
         {
             "name": "christian-riesen/base32",
