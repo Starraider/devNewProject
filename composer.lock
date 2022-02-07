@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5455fb731ae57dd0e535779d39ad5dac",
+    "content-hash": "412cf612758465a17e37b9a1cc7c69e3",
     "packages": [
         {
             "name": "b13/container",
@@ -6152,6 +6152,52 @@
                 }
             ],
             "time": "2022-01-26T16:32:32+00:00"
+        },
+        {
+            "name": "tritum/form-element-linked-checkbox",
+            "version": "2.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tritum/form_element_linked_checkbox.git",
+                "reference": "4fcd2bfdda3aaf888c10bfd4f8c52a33b9bcc79a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tritum/form_element_linked_checkbox/zipball/4fcd2bfdda3aaf888c10bfd4f8c52a33b9bcc79a",
+                "reference": "4fcd2bfdda3aaf888c10bfd4f8c52a33b9bcc79a",
+                "shasum": ""
+            },
+            "require": {
+                "typo3/cms-core": "^9.5.30 || ^10.4.20 || ^11.5.0",
+                "typo3/cms-form": "^9.5.30 || ^10.4.20 || ^11.5.0",
+                "typo3/cms-frontend": "^9.5.30 || ^10.4.20 || ^11.5.0"
+            },
+            "type": "typo3-cms-extension",
+            "extra": {
+                "typo3/cms": {
+                    "extension-key": "form_element_linked_checkbox"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "TRITUM\\FormElementLinkedCheckbox\\": "Classes/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Björn Jacob TRITUM GmbH",
+                    "email": "bjoern.jacob@tritum.de"
+                }
+            ],
+            "support": {
+                "issues": "https://github.com/tritum/form_element_linked_checkbox/issues",
+                "source": "https://github.com/tritum/form_element_linked_checkbox/tree/2.3.0"
+            },
+            "time": "2022-01-12T09:12:23+00:00"
         },
         {
             "name": "typo3/class-alias-loader",

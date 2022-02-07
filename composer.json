@@ -25,6 +25,7 @@
 		"skom/customer-sitepackage": "@dev",
 		"sourcebroker/deployer-extended-typo3": "^18.0",
 		"ssch/typo3-encore": "^4.0",
+		"tritum/form-element-linked-checkbox": "^2.3",
 		"typo3/cms-backend": "^11.5.0",
 		"typo3/cms-belog": "^11.5.0",
 		"typo3/cms-beuser": "^11.5.0",
