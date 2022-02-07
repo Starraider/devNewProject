@@ -26,7 +26,7 @@ Encore
     loader: 'svg-sprite-loader',
     options: {
       extract: true,
-      spriteFilename: './icons.svg',
+      spriteFilename: './sprite.svg',
     },
   })
   .addPlugin(new SpriteLoaderPlugin())

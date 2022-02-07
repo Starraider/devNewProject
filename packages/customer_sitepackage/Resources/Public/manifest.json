@@ -7,6 +7,6 @@
   "typo3conf/ext/customer_sitepackage/Resources/Public/fonts/pt-sans-v12-latin-regular.woff2": "/typo3conf/ext/customer_sitepackage/Resources/Public/fonts/pt-sans-v12-latin-regular.24ffc6b2.woff2",
   "typo3conf/ext/customer_sitepackage/Resources/Public/Images/SKom_Logo_Top.jpg": "/typo3conf/ext/customer_sitepackage/Resources/Public/Images/SKom_Logo_Top.jpg",
   "typo3conf/ext/customer_sitepackage/Resources/Public/Images/youtube-placeholder.png": "/typo3conf/ext/customer_sitepackage/Resources/Public/Images/youtube-placeholder.png",
-  "typo3conf/ext/customer_sitepackage/Resources/Public/./icons.svg": "/typo3conf/ext/customer_sitepackage/Resources/Public/./icons.svg",
+  "typo3conf/ext/customer_sitepackage/Resources/Public/./sprite.svg": "/typo3conf/ext/customer_sitepackage/Resources/Public/./sprite.svg",
   "typo3conf/ext/customer_sitepackage/Resources/Public/Images/logo.svg": "/typo3conf/ext/customer_sitepackage/Resources/Public/Images/logo.svg"
 }
