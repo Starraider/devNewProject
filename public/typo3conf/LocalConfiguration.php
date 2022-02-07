@@ -17,6 +17,13 @@ return [
             ],
         ],
     ],
+    'EXTCONF' => [
+        'lang' => [
+            'availableLanguages' => [
+                'de',
+            ],
+        ],
+    ],
     'EXTENSIONS' => [
         'backend' => [
             'backendFavicon' => '',
@@ -40,6 +47,30 @@ return [
         'extensionmanager' => [
             'automaticInstallation' => '1',
             'offlineMode' => '0',
+        ],
+        'imageoptimizer' => [
+            'gifBinary' => 'gifsicle',
+            'gifCheck' => 'gif',
+            'gifOnProcessing' => '0',
+            'gifOnUpload' => '0',
+            'gifParametersOnProcessing' => '--batch -O2 %s',
+            'gifParametersOnUpload' => '--batch -O2 %s',
+            'jpgBinary' => 'jpegoptim',
+            'jpgCheck' => 'jpg',
+            'jpgOnProcessing' => '0',
+            'jpgOnUpload' => '0',
+            'jpgParametersOnProcessing' => '--strip-all %s',
+            'jpgParametersOnUpload' => '--strip-all %s',
+            'pngBinary' => 'optipng',
+            'pngCheck' => 'png',
+            'pngOnProcessing' => '0',
+            'pngOnUpload' => '0',
+            'pngParametersOnProcessing' => '-o2 %s',
+            'pngParametersOnUpload' => '-o2 %s',
+            'svgBinary' => 'svgo',
+            'svgCheck' => 'svg',
+            'svgOnUpload' => '0',
+            'svgParametersOnUpload' => '--pretty %s',
         ],
     ],
     'FE' => [
