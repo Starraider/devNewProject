@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "22c28c3833f9cbff2de64bce7f7a5eeb",
+    "content-hash": "5455fb731ae57dd0e535779d39ad5dac",
     "packages": [
         {
             "name": "b13/container",
@@ -371,6 +371,64 @@
                 "source": "https://github.com/ChristianRiesen/base32/tree/1.6.0"
             },
             "time": "2021-02-26T10:19:33+00:00"
+        },
+        {
+            "name": "christophlehmann/imageoptimizer",
+            "version": "3.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/christophlehmann/imageoptimizer.git",
+                "reference": "f4db545d345e6cfd709d16ba86f00dcf3c0efc5c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/christophlehmann/imageoptimizer/zipball/f4db545d345e6cfd709d16ba86f00dcf3c0efc5c",
+                "reference": "f4db545d345e6cfd709d16ba86f00dcf3c0efc5c",
+                "shasum": ""
+            },
+            "require": {
+                "typo3/cms-core": "^10.4 || ^11.5"
+            },
+            "replace": {
+                "christophlehmann/imageoptimizer": "self.version",
+                "typo3-ter/imageoptimizer": "self.version"
+            },
+            "require-dev": {
+                "friendsoftypo3/phpstan-typo3": "^0.8.1",
+                "typo3/cms-reports": "^10.4 || ^11.5"
+            },
+            "type": "typo3-cms-extension",
+            "extra": {
+                "typo3/cms": {
+                    "extension-key": "imageoptimizer",
+                    "cms-package-dir": "{$vendor-dir}/typo3/cms",
+                    "app-dir": ".Build",
+                    "web-dir": ".Build/public"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Lemming\\Imageoptimizer\\": "Classes/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "description": "Optimize uploaded/processed images with binaries of your choice",
+            "keywords": [
+                "extension",
+                "jpegoptim",
+                "lossless",
+                "optipng",
+                "progressive",
+                "typo3"
+            ],
+            "support": {
+                "issues": "https://github.com/christophlehmann/imageoptimizer/issues",
+                "source": "https://github.com/christophlehmann/imageoptimizer/tree/3.1.0"
+            },
+            "time": "2021-12-21T21:18:02+00:00"
         },
         {
             "name": "dasprid/enum",
