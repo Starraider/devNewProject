@@ -2,7 +2,7 @@
 #### DEPENDENCIES ####
 ######################
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/constants.typoscript">
-
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:customer_sitepackage/Configuration/TypoScript/Extension/Form/constants.typoscript" condition="extension.isLoaded('form') == 1">
 ##############################
 #### DEVELOPMENT SETTINGS ####
 ##############################
