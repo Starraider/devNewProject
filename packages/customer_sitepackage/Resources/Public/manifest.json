@@ -1,12 +1,16 @@
 {
   "typo3conf/ext/customer_sitepackage/Resources/Public/app.css": "/typo3conf/ext/customer_sitepackage/Resources/Public/app.css",
   "typo3conf/ext/customer_sitepackage/Resources/Public/app.js": "/typo3conf/ext/customer_sitepackage/Resources/Public/app.js",
+  "typo3conf/ext/customer_sitepackage/Resources/Public/head.js": "/typo3conf/ext/customer_sitepackage/Resources/Public/head.js",
   "typo3conf/ext/customer_sitepackage/Resources/Public/runtime.js": "/typo3conf/ext/customer_sitepackage/Resources/Public/runtime.js",
-  "typo3conf/ext/customer_sitepackage/Resources/Public/vendors-node_modules_bootstrap_dist_js_bootstrap_esm_js-node_modules_klaro_dist_klaro-no-css_js.js": "/typo3conf/ext/customer_sitepackage/Resources/Public/vendors-node_modules_bootstrap_dist_js_bootstrap_esm_js-node_modules_klaro_dist_klaro-no-css_js.js",
+  "typo3conf/ext/customer_sitepackage/Resources/Public/vendors-node_modules_bootstrap_dist_js_bootstrap_esm_js-node_modules_jquery_dist_jquery_js-no-7d884b.js": "/typo3conf/ext/customer_sitepackage/Resources/Public/vendors-node_modules_bootstrap_dist_js_bootstrap_esm_js-node_modules_jquery_dist_jquery_js-no-7d884b.js",
   "typo3conf/ext/customer_sitepackage/Resources/Public/fonts/pt-sans-v12-latin-regular.woff": "/typo3conf/ext/customer_sitepackage/Resources/Public/fonts/pt-sans-v12-latin-regular.ab33818f.woff",
   "typo3conf/ext/customer_sitepackage/Resources/Public/fonts/pt-sans-v12-latin-regular.woff2": "/typo3conf/ext/customer_sitepackage/Resources/Public/fonts/pt-sans-v12-latin-regular.24ffc6b2.woff2",
   "typo3conf/ext/customer_sitepackage/Resources/Public/Images/SKom_Logo_Top.jpg": "/typo3conf/ext/customer_sitepackage/Resources/Public/Images/SKom_Logo_Top.jpg",
   "typo3conf/ext/customer_sitepackage/Resources/Public/Images/youtube-placeholder.png": "/typo3conf/ext/customer_sitepackage/Resources/Public/Images/youtube-placeholder.png",
   "typo3conf/ext/customer_sitepackage/Resources/Public/./sprite.svg": "/typo3conf/ext/customer_sitepackage/Resources/Public/./sprite.svg",
-  "typo3conf/ext/customer_sitepackage/Resources/Public/Images/logo.svg": "/typo3conf/ext/customer_sitepackage/Resources/Public/Images/logo.svg"
+  "typo3conf/ext/customer_sitepackage/Resources/Public/Images/logo.svg": "/typo3conf/ext/customer_sitepackage/Resources/Public/Images/logo.svg",
+  "typo3conf/ext/customer_sitepackage/Resources/Public/Images/default-skin.svg": "/typo3conf/ext/customer_sitepackage/Resources/Public/Images/default-skin.svg",
+  "typo3conf/ext/customer_sitepackage/Resources/Public/Images/preloader.gif": "/typo3conf/ext/customer_sitepackage/Resources/Public/Images/preloader.gif",
+  "typo3conf/ext/customer_sitepackage/Resources/Public/Images/default-skin.png": "/typo3conf/ext/customer_sitepackage/Resources/Public/Images/default-skin.png"
 }
