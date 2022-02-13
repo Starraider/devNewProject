@@ -14,13 +14,32 @@ import '../styles/main.scss'
 /*
  * Need jQuery? Install it with "yarn add jquery",
  * then uncomment to import it.
-/*
-// import $ from 'jquery';
+ */
+import $ from 'jquery'
 
 /*
  * Include Bootstrap in your Sass-file. You can here specify which plugins you need
  */
-import { Tooltip, Toast, Popover } from 'bootstrap'
+import {
+  Accordion,
+  Popover,
+  Stickyheader,
+  Smoothscroll,
+  Lightbox,
+  Navbar,
+} from 'bootstrap'
+
+// require('bootstrap/js/dist/lightbox')
+
+$(document).ready(function () {
+  $('[data-toggle="popover"]').popover()
+})
+
+//photoswipe
+//import PhotoSwipe from 'photoswipe'
+//import PhotoSwipeUI_Default from 'photoswipe/dist/photoswipe-ui-default'
+//global.PhotoSwipe = PhotoSwipe
+//global.PhotoSwipeUI_Default = PhotoSwipeUI_Default
 
 // Sprite Loader
 function requireAll(r) {
