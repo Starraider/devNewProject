@@ -13,10 +13,88 @@
         url('../fonts/pt-sans-v12-latin-regular.woff') format('woff');
 }
 
-
 body {
     font-family: 'PT Sans', sans-serif;
     background-color: $body-bg;
+}
+
+@keyframes root {
+    0% {
+        font-size: 0%;
+        line-height: 1.15;
+    }
+    100% {
+        font-size: 120%;
+        line-height: 1.5;
+    }
+}
+:root {
+    --tt-key: root;
+    --tt-max: 1600;
+    --tt-ease: cubic-bezier(0, 0.75, 0.1, 0.9);
+    font-size: 115%;
+    line-height: 1.4;
+}
+
+h1, .h1 p {
+    color: red;
+    font-size: 3rem;
+    --tt-key: h1;
+    --tt-ease: ease-in;
+    font-variation-settings: 'wght' 700, 'wdth' .7;
+}
+@keyframes h1 {
+    0%,20% {
+        color: blue;
+        font-size: 1.2rem;
+        font-variation-settings: 'wght' 100, 'wdth' 1;
+    }
+}
+
+h2, .h2 p {
+    color: purple;
+    font-size: 2rem;
+    --tt-key: h2;
+    font-variation-settings: 'wght' 1, 'wdth' .9;
+}
+@keyframes h2 {
+    0%,20% {
+        color: green;
+        font-size: 1.1rem;
+        font-variation-settings: 'wght' 1.8, 'wdth' 1;
+    }
+}
+
+h3, .h3 p {
+    color: teal;
+    font-size: 1.6rem;
+    --tt-key: h3;
+    font-variation-settings: 'wght' 1, 'wdth' .9;
+}
+@keyframes h3 {
+    0%,20% {
+        color: rebeccapurple;
+        font-size: 1rem;
+        font-variation-settings: 'wght' 1.8, 'wdth' 1;
+    }
+}
+
+p {
+    --tt-key: p;
+    font-size: 1rem;
+    line-height: 1.7;
+    font-weight: 100;
+}
+
+@keyframes p {
+    0%, 20% {
+        font-size: 0.8rem;
+        line-height: 1.4;
+    }
+    100% {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
 }
 
 .klaro {
@@ -27,4 +105,8 @@ body {
             }
         }
     }
+}
+
+.language-menu-item {
+    padding-top: 6px;
 }
