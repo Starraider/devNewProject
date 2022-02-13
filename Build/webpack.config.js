@@ -37,16 +37,20 @@ Encore
   .addPlugin(new WebpackNotifierPlugin({ emoji: true }))
 
   // Copy some static images to your -> https://symfony.com/doc/current/frontend/encore/copy-files.html
-  .copyFiles({
-    from: './images',
-    // Optional target path, relative to the output dir
-    to: 'Images/[path][name].[ext]',
-    includeSubdirectories: false,
-    // if versioning is enabled, add the file hash too
-    //to: 'Images/[path][name].[hash:8].[ext]',
-    // only copy files matching this pattern
-    pattern: /\.(png|jpg|jpeg|svg)$/,
-  })
+  .copyFiles([
+    {
+      from: './images',
+      to: 'Images/[path][name].[ext]',
+      includeSubdirectories: false,
+      pattern: /\.(png|jpg|jpeg|svg)$/,
+    },
+    {
+      from: './node_modules/photoswipe/dist/default-skin/',
+      to: 'Images/[path][name].[ext]',
+      includeSubdirectories: false,
+      pattern: /\.(png|jpg|gif|svg)$/,
+    },
+  ])
   .configureImageRule({
     // tell Webpack it should consider inlining
     type: 'asset',
@@ -62,7 +66,7 @@ Encore
    * and one CSS file (e.g. app.css) if you JavaScript imports CSS.
    */
   .addEntry('app', './js/app.js')
-  //.addEntry('homepage', './assets/js/homepage.js')
+  .addEntry('head', './js/head.js')
 
   // will require an extra script tag for runtime.js
   // but, you probably want this, unless you're building a single-page app
