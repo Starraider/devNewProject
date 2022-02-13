@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "412cf612758465a17e37b9a1cc7c69e3",
+    "content-hash": "5fe2f84d253541a2058e5bd122465ba8",
     "packages": [
         {
             "name": "b13/container",
@@ -1746,6 +1746,74 @@
                 }
             ],
             "time": "2021-12-02T15:26:47+00:00"
+        },
+        {
+            "name": "jweiland/sync-crop-areas",
+            "version": "2.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jweiland-net/sync_crop_areas.git",
+                "reference": "4b30132bc60eacc76b7775c74b24540f0ac09b1d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jweiland-net/sync_crop_areas/zipball/4b30132bc60eacc76b7775c74b24540f0ac09b1d",
+                "reference": "4b30132bc60eacc76b7775c74b24540f0ac09b1d",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "php": "^7.4 || ^8.0",
+                "typo3/cms-core": "^10.4.19 || ^11.5.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^3.0",
+                "nimut/testing-framework": "^6.0",
+                "phpspec/prophecy-phpunit": "^2.0",
+                "roave/security-advisories": "dev-latest"
+            },
+            "type": "typo3-cms-extension",
+            "extra": {
+                "typo3/cms": {
+                    "extension-key": "sync_crop_areas",
+                    "app-dir": ".build",
+                    "web-dir": ".build/public"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "JWeiland\\SyncCropAreas\\": "Classes"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Stefan Froemken",
+                    "email": "sfroemken@jweiland.net",
+                    "role": "Lead Developer"
+                }
+            ],
+            "description": "Sync first found crop area to all other CropVariants",
+            "homepage": "http://www.jweiland.net",
+            "keywords": [
+                "TYPO3 CMS",
+                "area",
+                "crop",
+                "jweiland.net",
+                "sync",
+                "synchronize",
+                "typo3",
+                "variants"
+            ],
+            "support": {
+                "email": "projects@jweiland.net",
+                "issues": "https://github.com/jweiland-net/sync_crop_areas/issues",
+                "source": "https://github.com/jweiland-net/sync_crop_areas/tree/2.2.1"
+            },
+            "time": "2022-02-04T12:48:19+00:00"
         },
         {
             "name": "lolli42/finediff",
