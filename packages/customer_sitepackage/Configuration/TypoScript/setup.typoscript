@@ -16,11 +16,17 @@ plugin.tx_typo3encore {
 ##############
 page {
   includeCSS {
-    theme = EXT:customer_sitepackage/Resources/Public/Scss/Theme/theme.scss
+    theme >
+  }
+  includeCSSLibs {
+    googlewebfont >
+    bootstrappackageicon >
   }
 
   includeJSLibs {
-
+    head = typo3_encore:head
+    head.forceOnTop = 1
+    modernizr >
   }
 
   includeJS {
@@ -28,10 +34,22 @@ page {
   }
 
   includeJSFooterlibs {
+    jquery >
+    #photoswipe_core >
+    #photoswipe_ui >
+
+    popper >
+    bootstrap >
+    bootstrap_accordion >
+    bootstrap_popover >
+    bootstrap_stickyheader >
+    bootstrap_smoothscroll >
+    bootstrap_lightbox >
+    bootstrap_navbar >
 
   }
 
   includeJSFooter {
-    customer_sitepackage_scripts = EXT:customer_sitepackage/Resources/Public/JavaScript/Dist/scripts.js
+    customer_sitepackage_scripts >
   }
 }
