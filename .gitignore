@@ -37,6 +37,8 @@
 /composer.phar
 /Quellen/
 /Build/node_modules/
+/Build/cypress/demo-tests/
+/Build/cypress/screenshots/
 
 ### DDEV ###
 .ddev/backup/*
