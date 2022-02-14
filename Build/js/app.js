@@ -31,9 +31,9 @@ import {
 
 // require('bootstrap/js/dist/lightbox')
 
-$(document).ready(function () {
-  $('[data-toggle="popover"]').popover()
-})
+// $(document).ready(function () {
+//   $('[data-toggle="popover"]').popover()
+// })
 
 //photoswipe
 //import PhotoSwipe from 'photoswipe'
@@ -146,7 +146,7 @@ const config = {
       title: 'YouTube Videos',
       purposes: ['externalmedia'],
       contextualConsentOnly: false,
-      callback: function (consent, service) {
+      callback: function(consent, service) {
         if (consent === true) {
           $('.embed-responsive').css('padding-top', '56.25%')
         } else {
