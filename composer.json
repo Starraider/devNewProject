@@ -53,9 +53,6 @@
 		"typo3/cms-viewpage": "^11.5.0"
 	},
 	"require-dev": {
-		"codeception/codeception": "^4.1",
-		"codeception/module-phpbrowser": "^2.0",
-		"codeception/module-webdriver": "^1.0.0",
 		"ergebnis/composer-normalize": "^2.18.0",
 		"helmich/typo3-typoscript-lint": "^2.5",
 		"seld/jsonlint": "^1.8"
