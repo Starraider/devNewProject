@@ -132,16 +132,10 @@ You must have installed Chrome and Chrome Driver. Both must be accecible from th
 
 #### Run the tests
 
-First start Chrome Driver in seperate Terminal:
+Inside the ```Build``` folder run:
 
 ```bash
-chromedriver
-```
-
-Then run the tests:
-
-```bash
-php vendor/bin/codecept run --steps
+yarn run cypress open
 ```
 
 ## License
