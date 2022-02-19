@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# This assumes that the rector command will be in vendor/bin/
+
+## Description: Run rector command
+## Usage: rector [args]
+## Example: "ddev rector process packages/my-extension --dry-run"
+
+ddev exec ./vendor/bin/rector "$@"
