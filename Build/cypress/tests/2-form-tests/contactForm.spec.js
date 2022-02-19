@@ -18,6 +18,5 @@ describe('tests the contact form', () => {
       'have.class',
       'error'
     )
-    c
   })
 })
