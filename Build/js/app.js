@@ -41,13 +41,36 @@ import {
 //global.PhotoSwipe = PhotoSwipe
 //global.PhotoSwipeUI_Default = PhotoSwipeUI_Default
 
-// Sprite Loader
+/*
+ * ScrollMagic
+ */
+import ScrollMagic from 'scrollmagic/scrollmagic/uncompressed/ScrollMagic'
+import 'scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap'
+import 'scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators'
+//import TweenMax from 'gsap/dist/gsap'
+import TimelineMax from 'gsap/dist/gsap'
+
+// init controller
+const controller = new ScrollMagic.Controller()
+
+new ScrollMagic.Scene({
+  duration: 100, // the scene should last for a scroll distance of 100px
+  offset: 50, // start this scene after scrolling for 50px
+})
+  .setPin('#testbutton') // pins the element for the the scene's duration
+  .addTo(controller) // assign the scene to the controller
+
+/*
+ * Sprite Loader
+ */
 function requireAll(r) {
   r.keys().forEach(r)
 }
 requireAll(require.context('../icons/', true, /\.svg$/))
 
-// Klaro
+/*
+ * Klaro
+ */
 import * as Klaro from 'klaro/dist/klaro-no-css'
 const config = {
   styling: {

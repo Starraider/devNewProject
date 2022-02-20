@@ -1,6 +1,7 @@
 var Encore = require('@symfony/webpack-encore')
 const WebpackNotifierPlugin = require('webpack-notifier')
 const SpriteLoaderPlugin = require('svg-sprite-loader/plugin')
+const path = require('path')
 //const ESLintPlugin = require('eslint-webpack-plugin')
 
 Encore
@@ -67,6 +68,7 @@ Encore
    */
   .addEntry('app', './js/app.js')
   .addEntry('head', './js/head.js')
+  .addEntry('config', './js/config.js')
 
   // will require an extra script tag for runtime.js
   // but, you probably want this, unless you're building a single-page app
@@ -102,14 +104,33 @@ Encore
   // uncomment if you´re want to share general code for the different entries -> https://symfony.com/doc/current/frontend/encore/split-chunks.html
   .splitEntryChunks()
 
-// Uncomment if you are going to use a CDN -> https://symfony.com/doc/current/frontend/encore/cdn.html
-// if (Encore.isProduction()) {
-//Encore.setPublicPath('https://my-cool-app.com.global.prod.fastly.net');
+  // Uncomment if you are going to use a CDN -> https://symfony.com/doc/current/frontend/encore/cdn.html
+  // if (Encore.isProduction()) {
+  //Encore.setPublicPath('https://my-cool-app.com.global.prod.fastly.net');
 
-// guarantee that the keys in manifest.json are *still*
-// prefixed with build/
-// (e.g. "build/dashboard.js": "https://my-cool-app.com.global.prod.fastly.net/dashboard.js")
-// Encore.setManifestKeyPrefix('build/');
-// }
+  // guarantee that the keys in manifest.json are *still*
+  // prefixed with build/
+  // (e.g. "build/dashboard.js": "https://my-cool-app.com.global.prod.fastly.net/dashboard.js")
+  // Encore.setManifestKeyPrefix('build/');
+  // }
+
+  .addAliases({
+    TweenMax: path.resolve('node_modules', 'gsap/dist/gsap.js'),
+    TimelineMax: path.resolve('node_modules', 'gsap/dist/gsap.js'),
+    TweenLite: path.resolve('node_modules', 'gsap/dist/gsap.js'),
+    TimelineLite: path.resolve('node_modules', 'gsap/dist/gsap.js'),
+    ScrollMagic: path.resolve(
+      'node_modules',
+      'scrollmagic/scrollmagic/uncompressed/ScrollMagic.js'
+    ),
+    'animation.gsap': path.resolve(
+      'node_modules',
+      'scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js'
+    ),
+    'debug.addIndicators': path.resolve(
+      'node_modules',
+      'scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js'
+    ),
+  })
 
 module.exports = Encore.getWebpackConfig()
