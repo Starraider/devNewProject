@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "53e5d1280261569d2b1a2c48cf3e6e6e",
+    "content-hash": "d73574e73208da32658b6b74745b6abb",
     "packages": [
         {
             "name": "b13/container",
@@ -1814,6 +1814,67 @@
                 "source": "https://github.com/jweiland-net/sync_crop_areas/tree/2.2.1"
             },
             "time": "2022-02-04T12:48:19+00:00"
+        },
+        {
+            "name": "lochmueller/sourceopt",
+            "version": "4.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/lochmueller/sourceopt.git",
+                "reference": "a31fdddcdd5c4299d93ec907bcd818f0fea4a00a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/lochmueller/sourceopt/zipball/a31fdddcdd5c4299d93ec907bcd818f0fea4a00a",
+                "reference": "a31fdddcdd5c4299d93ec907bcd818f0fea4a00a",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.4||^8.0",
+                "typo3/cms-core": "^9.5||^10.4||^11.5"
+            },
+            "replace": {
+                "typo3-ter/sourceopt": "self.version"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^3.3",
+                "phpmd/phpmd": "^2.10",
+                "typo3/testing-framework": "^6.4"
+            },
+            "type": "typo3-cms-extension",
+            "extra": {
+                "typo3/cms": {
+                    "extension-key": "sourceopt",
+                    "cms-package-dir": "{$vendor-dir}/typo3/cms",
+                    "web-dir": ".Build/Web"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "HTML\\Sourceopt\\": "Classes/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "description": "Optimization of the final page: reformatting the (x)html output, removal of new lines, quotes and optional combine referenced SVGs into one symbol-file via <use/>.",
+            "homepage": "https://github.com/lochmueller/sourceopt",
+            "support": {
+                "issues": "https://github.com/lochmueller/sourceopt/issues",
+                "source": "https://github.com/lochmueller/sourceopt/tree/4.0.3"
+            },
+            "funding": [
+                {
+                    "url": "https://paypal.me/lochmueller",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/lochmueller",
+                    "type": "github"
+                }
+            ],
+            "time": "2021-12-22T14:40:31+00:00"
         },
         {
             "name": "lolli42/finediff",
