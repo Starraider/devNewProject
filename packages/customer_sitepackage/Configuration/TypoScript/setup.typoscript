@@ -103,12 +103,12 @@ page {
 
     popper >
     bootstrap >
-    bootstrap_accordion >
-    bootstrap_popover >
-    bootstrap_stickyheader >
-    bootstrap_smoothscroll >
-    bootstrap_lightbox >
-    bootstrap_navbar >
+    #bootstrap_accordion >
+    #bootstrap_popover >
+    #bootstrap_stickyheader >
+    #bootstrap_smoothscroll >
+    #bootstrap_lightbox >
+    #bootstrap_navbar >
 
   }
 
