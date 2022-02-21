@@ -2,10 +2,16 @@
 # TCEFORM
 #
 TCEFORM {
-    pages {
+  pages {
 
+  }
+  tt_content {
+    layout {
+      altLabels {
+        1 = Wave Bottom
+        2 = Line Bottom
+      }
+      removeItems = 3,4,5,6,7,9,10
     }
-    tt_content {
-
-    }
+  }
 }
