@@ -12,3 +12,20 @@ editor:
             - { name: 'wie h2', element: 'div', attributes: { 'class': 'h2' } }
             - { name: 'wie h3', element: 'div', attributes: { 'class': 'h3' } }
             - { name: 'wie h4', element: 'div', attributes: { 'class': 'h4' } }
+        extraPlugins:
+            - find
+            - wordcount
+            - autolink
+            - autogrow
+            - codesnippet
+        codeSnippet_theme: 'obsidian'
+        codeSnippet_languages:
+            bash: 'Bash'
+            html: 'HTML'
+            javascript: 'JavaScript'
+            php: 'PHP'
+            css: 'CSS'
+            scss: 'SCSS'
+            typoscript: 'TypoScript'
+            yaml: 'Yaml'
+            xml: 'XML'
