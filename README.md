@@ -128,7 +128,7 @@ ddev composer ci:composer:normalize
 
 #### Prerequisite
 
-You must have installed Chrome and Chrome Driver. Both must be accecible from the CLI (path).
+You must have installed Cypress.
 
 #### Run the tests
 
