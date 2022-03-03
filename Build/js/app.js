@@ -171,9 +171,9 @@ const config = {
       contextualConsentOnly: false,
       callback: function(consent, service) {
         if (consent === true) {
-          $('.embed-responsive').css('padding-top', '56.25%')
+          //$('.embed-responsive').css('padding-top', '56.25%')
         } else {
-          $('.embed-responsive').css('padding-top', '0')
+          //$('.embed-responsive').css('padding-top', '0')
         }
       },
     },

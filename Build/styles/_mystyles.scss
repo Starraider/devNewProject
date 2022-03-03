@@ -346,6 +346,7 @@ p {
     }
 }
 
+/* klaro cookie banner */
 .klaro {
     .cookie-modal {
         .title {
@@ -354,12 +355,22 @@ p {
             }
         }
     }
+    &.cm-as-context-notice {
+        height: 170px;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+    }
 }
 
+
+/* language menu */
 .language-menu-item {
     padding-top: 6px;
 }
 
+
+/* SVG Waves */
 svg.layout-svg {
     position: absolute;
     left: 0;
@@ -375,5 +386,25 @@ svg.layout-svg {
 .frame-background-light,
 .frame-background-dark,
 .frame-has-backgroundimage {
-    padding-bottom: 2px;
+    padding-bottom: 3px;
+}
+.custom-shape-divider-bottom-1645791247 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1645791247 svg {
+    position: relative;
+    display: block;
+    width: calc(148% + 1.3px);
+    height: 116px;
+}
+
+.custom-shape-divider-bottom-1645791247 .shape-fill {
+    fill: $white;
 }
