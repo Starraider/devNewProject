@@ -25,6 +25,7 @@
 		"jweiland/sync-crop-areas": "^2.2",
 		"lochmueller/sourceopt": "^4.0",
 		"skom/customer-sitepackage": "@dev",
+		"skom/klaro-video": "@dev",
 		"sourcebroker/deployer-extended-typo3": "^18.0",
 		"ssch/typo3-encore": "^4.0",
 		"tritum/form-element-linked-checkbox": "^2.3",
