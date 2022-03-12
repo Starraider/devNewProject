@@ -72,6 +72,13 @@ return [
             'svgOnUpload' => '0',
             'svgParametersOnUpload' => '--pretty %s',
         ],
+        'sluggi' => [
+            'last_segment_only' => '0',
+            'pages_fields' => '[["nav_title","title"]]',
+            'slash_replacement' => '1',
+            'synchronize' => '1',
+            'whitelist' => '',
+        ],
     ],
     'FE' => [
         'debug' => true,
