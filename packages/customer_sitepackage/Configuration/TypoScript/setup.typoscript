@@ -78,6 +78,7 @@ plugin.tx_typo3encore {
 page {
   includeCSS {
     theme >
+    app = typo3_encore:app
   }
   includeCSSLibs {
     googlewebfont >
@@ -88,7 +89,7 @@ page {
     config = /fileadmin/typetura.config.js
     config.forceOnTop = 1
     typetura = /fileadmin/typetura.js
-    head = typo3_encore:head
+    #head = typo3_encore:head
     modernizr >
   }
 
@@ -98,18 +99,19 @@ page {
 
   includeJSFooterlibs {
     jquery >
-    #photoswipe_core >
-    #photoswipe_ui >
-
     popper >
     bootstrap >
-    #bootstrap_accordion >
-    #bootstrap_popover >
-    #bootstrap_stickyheader >
-    #bootstrap_smoothscroll >
-    #bootstrap_lightbox >
-    #bootstrap_navbar >
-
+    #### Custom Modules
+    photoswipe_core = EXT:bootstrap_package/Resources/Public/Contrib/photoswipe/photoswipe.min.js
+    photoswipe_ui = EXT:bootstrap_package/Resources/Public/Contrib/photoswipe/photoswipe-ui-default.min.js
+    bootstrap_accordion = EXT:bootstrap_package/Resources/Public/JavaScript/Dist/bootstrap.accordion.min.js
+    bootstrap_popover = EXT:bootstrap_package/Resources/Public/JavaScript/Dist/bootstrap.popover.min.js
+    bootstrap_stickyheader = EXT:bootstrap_package/Resources/Public/JavaScript/Dist/bootstrap.stickyheader.min.js
+    bootstrap_smoothscroll = EXT:bootstrap_package/Resources/Public/JavaScript/Dist/bootstrap.smoothscroll.min.js
+    bootstrap_lightbox = EXT:bootstrap_package/Resources/Public/JavaScript/Dist/bootstrap.lightbox.min.js
+    bootstrap_navbar = EXT:bootstrap_package/Resources/Public/JavaScript/Dist/bootstrap.navbar.min.js
+    app = typo3_encore:app
+    app.forceOnTop = 1
   }
 
   includeJSFooter {
