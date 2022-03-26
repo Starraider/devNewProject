@@ -104,33 +104,14 @@ Encore
   // uncomment if you´re want to share general code for the different entries -> https://symfony.com/doc/current/frontend/encore/split-chunks.html
   .splitEntryChunks()
 
-  // Uncomment if you are going to use a CDN -> https://symfony.com/doc/current/frontend/encore/cdn.html
-  // if (Encore.isProduction()) {
-  //Encore.setPublicPath('https://my-cool-app.com.global.prod.fastly.net');
+// Uncomment if you are going to use a CDN -> https://symfony.com/doc/current/frontend/encore/cdn.html
+// if (Encore.isProduction()) {
+//Encore.setPublicPath('https://my-cool-app.com.global.prod.fastly.net');
 
-  // guarantee that the keys in manifest.json are *still*
-  // prefixed with build/
-  // (e.g. "build/dashboard.js": "https://my-cool-app.com.global.prod.fastly.net/dashboard.js")
-  // Encore.setManifestKeyPrefix('build/');
-  // }
-
-  .addAliases({
-    TweenMax: path.resolve('node_modules', 'gsap/dist/gsap.js'),
-    TimelineMax: path.resolve('node_modules', 'gsap/dist/gsap.js'),
-    TweenLite: path.resolve('node_modules', 'gsap/dist/gsap.js'),
-    TimelineLite: path.resolve('node_modules', 'gsap/dist/gsap.js'),
-    ScrollMagic: path.resolve(
-      'node_modules',
-      'scrollmagic/scrollmagic/uncompressed/ScrollMagic.js'
-    ),
-    'animation.gsap': path.resolve(
-      'node_modules',
-      'scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js'
-    ),
-    'debug.addIndicators': path.resolve(
-      'node_modules',
-      'scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js'
-    ),
-  })
+// guarantee that the keys in manifest.json are *still*
+// prefixed with build/
+// (e.g. "build/dashboard.js": "https://my-cool-app.com.global.prod.fastly.net/dashboard.js")
+// Encore.setManifestKeyPrefix('build/');
+// }
 
 module.exports = Encore.getWebpackConfig()

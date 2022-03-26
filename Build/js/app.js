@@ -16,18 +16,13 @@ import '../styles/main.scss'
  * then uncomment to import it.
  */
 import $ from 'jquery'
+window.jQuery = $
+window.$ = $
 
 /*
  * Include Bootstrap in your Sass-file. You can here specify which plugins you need
  */
-import {
-  Accordion,
-  Popover,
-  Stickyheader,
-  Smoothscroll,
-  Lightbox,
-  Navbar,
-} from 'bootstrap'
+import 'bootstrap'
 
 // require('bootstrap/js/dist/lightbox')
 
@@ -41,24 +36,26 @@ import {
 //global.PhotoSwipe = PhotoSwipe
 //global.PhotoSwipeUI_Default = PhotoSwipeUI_Default
 
-/*
- * ScrollMagic
- */
-import ScrollMagic from 'scrollmagic/scrollmagic/uncompressed/ScrollMagic'
-import 'scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap'
-import 'scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators'
-//import TweenMax from 'gsap/dist/gsap'
-import TimelineMax from 'gsap/dist/gsap'
+import lax from 'lax.js'
 
-// init controller
-const controller = new ScrollMagic.Controller()
+window.onload = function() {
+  lax.init()
 
-new ScrollMagic.Scene({
-  duration: 100, // the scene should last for a scroll distance of 100px
-  offset: 50, // start this scene after scrolling for 50px
-})
-  .setPin('#testbutton') // pins the element for the the scene's duration
-  .addTo(controller) // assign the scene to the controller
+  // Add a driver that we use to control our animations
+  lax.addDriver('scrollY', function() {
+    return window.scrollY
+  })
+
+  // Add animation bindings to elements
+  lax.addElements('#testbutton', {
+    scrollY: {
+      translateX: [
+        ['elInY', 'elCenterY', 'elOutY'],
+        [0, 'screenWidth/2', 'screenWidth'],
+      ],
+    },
+  })
+}
 
 /*
  * Sprite Loader
