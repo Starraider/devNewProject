@@ -44,6 +44,11 @@ return [
             'disablePageTsTCEFORM' => '0',
             'disablePageTsTCEMAIN' => '0',
         ],
+        'content_animations' => [
+            'disableAddAnimationsTab' => '0',
+            'extendedAnimationSettings' => '0',
+            'hideFooterAnimationLabel' => '0',
+        ],
         'extensionmanager' => [
             'automaticInstallation' => '1',
             'offlineMode' => '0',
