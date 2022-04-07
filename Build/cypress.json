@@ -1,0 +1,19 @@
+{
+	"$schema": "https://on.cypress.io/cypress.schema.json",
+	"integrationFolder": "cypress/tests",
+	"baseUrl": "https://devnewproject.ddev.site",
+	"experimentalStudio": true,
+	"ignoreTestFiles": ["**/__snapshots__/*", "**/__image_snapshots__/*"],
+	"env": {
+		"cypress-plugin-snapshots": {
+			"autoCleanUp": false,
+			"autopassNewSnapshots": true,
+			"imageConfig": {
+				"createDiffImage": true,
+				"resizeDevicePixelRatio": true,
+				"threshold": 0.01,
+				"thresholdType": "percent"
+			}
+		}
+	}
+}

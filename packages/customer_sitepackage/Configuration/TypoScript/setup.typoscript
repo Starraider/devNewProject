@@ -2,29 +2,135 @@
 #### DEPENDENCIES ####
 ######################
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/setup.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:customer_sitepackage/Configuration/TypoScript/Extension/Form/setup.typoscript" condition="extension.isLoaded('form') == 1">
 
+[applicationContext == "Development"]
+  config {
+    no_cache = 1
+    sendCacheHeaders = 0
+    compressJs = 0
+    concatenateCss = 0
+    concatenateJs = 0
+    compressCss = 0
+    admPanel = 1
+  }
+  page {
+    meta.robots = noindex,nofollow
+  }
+  sourceopt {
+    enabled = 0
+    formatHtml = 4
+    removeComments = 0
+  }
+  plugin {
+    tx_min.tinysource.enable = 0
+    bootstrap_package.settings.cssSourceMapping = 1
+  }
+[END]
+[applicationContext == "Production"]
+  config {
+    no_cache = 0
+    sendCacheHeaders = 1
+    compressJs = 1
+    concatenateCss = 1
+    concatenateJs = 1
+    compressCss = 1
+    admPanel = 0
+
+  }
+  page {
+    meta.robots = index,follow
+  }
+  sourceopt {
+    enabled = 1
+    removeGenerator = 1
+    formatHtml = 2
+    removeComments = 1
+  }
+  plugin {
+    tx_min.tinysource.enable = 1
+    bootstrap_package.settings.cssSourceMapping = 0
+  }
+[END]
+
+################
+#### config ####
+################
+config {
+  xmlprologue = none
+  xhtml_cleaning = all
+  disablePrefixComment = 1
+  headerComment = Development by Sven Kalbhenn (sven@skom.de)
+}
+
+#############################################
+#### overwrite content_animations layout ####
+#############################################
+lib.contentElement {
+  layoutRootPaths.0 = EXT:customer_sitepackage/Resources/Private/Layouts/ContentElements/
+  layoutRootPaths.100 = EXT:customer_sitepackage/Resources/Private/Layouts/ContentElements/
+}
+tt_content {
+  container_1_columns.layoutRootPaths.100. = EXT:customer_sitepackage/Resources/Private/Layouts/ContentElements/
+  container_2_columns.layoutRootPaths.100. = EXT:customer_sitepackage/Resources/Private/Layouts/ContentElements/
+  container_2_columns_right.layoutRootPaths.100. = EXT:customer_sitepackage/Resources/Private/Layouts/ContentElements/
+  container_2_columns_left.layoutRootPaths.100. = EXT:customer_sitepackage/Resources/Private/Layouts/ContentElements/
+  container_3_columns.layoutRootPaths.100. = EXT:customer_sitepackage/Resources/Private/Layouts/ContentElements/
+  container_4_columns.layoutRootPaths.100. = EXT:customer_sitepackage/Resources/Private/Layouts/ContentElements/
+}
+################
+#### Encore ####
+################
+plugin.tx_typo3encore {
+  settings {
+    entrypointJsonPath = EXT:customer_sitepackage/Resources/Public/entrypoints.json
+    manifestJsonPath = EXT:customer_sitepackage/Resources/Public/manifest.json
+  }
+}
 
 ##############
 #### PAGE ####
 ##############
 page {
-    includeCSS {
-        theme = EXT:customer_sitepackage/Resources/Public/Scss/Theme/theme.scss
-    }
+  includeCSS {
+    theme >
+    app = typo3_encore:app
+  }
+  includeCSSLibs {
+    googlewebfont >
+    bootstrappackageicon >
+  }
 
-    includeJSLibs {
+  includeJSLibs {
+    config = /fileadmin/typetura.config.js
+    config.forceOnTop = 1
+    typetura = /fileadmin/typetura.js
+    #head = typo3_encore:head
+    modernizr >
+  }
 
-    }
+  includeJS {
 
-    includeJS {
+  }
 
-    }
+  includeJSFooterlibs {
+    jquery >
+    popper >
+    bootstrap >
+    #### Custom Modules
+    photoswipe_core = EXT:bootstrap_package/Resources/Public/Contrib/photoswipe/photoswipe.min.js
+    photoswipe_ui = EXT:bootstrap_package/Resources/Public/Contrib/photoswipe/photoswipe-ui-default.min.js
+    bootstrap_accordion = EXT:bootstrap_package/Resources/Public/JavaScript/Dist/bootstrap.accordion.min.js
+    bootstrap_popover = EXT:bootstrap_package/Resources/Public/JavaScript/Dist/bootstrap.popover.min.js
+    bootstrap_stickyheader = EXT:bootstrap_package/Resources/Public/JavaScript/Dist/bootstrap.stickyheader.min.js
+    bootstrap_smoothscroll = EXT:bootstrap_package/Resources/Public/JavaScript/Dist/bootstrap.smoothscroll.min.js
+    bootstrap_lightbox = EXT:bootstrap_package/Resources/Public/JavaScript/Dist/bootstrap.lightbox.min.js
+    bootstrap_navbar = EXT:bootstrap_package/Resources/Public/JavaScript/Dist/bootstrap.navbar.min.js
+    app = typo3_encore:app
+    app.forceOnTop = 1
+  }
 
-    includeJSFooterlibs {
-
-    }
-
-    includeJSFooter {
-        customer_sitepackage_scripts = EXT:customer_sitepackage/Resources/Public/JavaScript/Dist/scripts.js
-    }
+  includeJSFooter {
+    customer_sitepackage_scripts >
+  }
 }

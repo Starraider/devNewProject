@@ -1,0 +1,65 @@
+/* Build/styles/main.scss */
+
+// customized Bootstrap variables
+@import "variables";
+
+// the ~ allows you to reference things in node_modules
+@import "~bootstrap/scss/bootstrap";
+@import "~klaro/src/scss/klaro";
+
+//
+// Compat
+//
+@import "../../public/typo3conf/ext/bootstrap_package/Resources/Public/Scss/bootstrap5/compat/text";
+@import "../../public/typo3conf/ext/bootstrap_package/Resources/Public/Scss/bootstrap5/compat/form";
+@import "../../public/typo3conf/ext/bootstrap_package/Resources/Public/Scss/bootstrap5/compat/embed";
+
+//
+// Components
+//
+@import "../../public/typo3conf/ext/bootstrap_package/Resources/Public/Scss/components/button";
+@import "../../public/typo3conf/ext/bootstrap_package/Resources/Public/Scss/components/navbar";
+@import "../../public/typo3conf/ext/bootstrap_package/Resources/Public/Scss/components/backendlayout";
+@import "../../public/typo3conf/ext/bootstrap_package/Resources/Public/Scss/components/section";
+@import "../../public/typo3conf/ext/bootstrap_package/Resources/Public/Scss/components/frame";
+@import "../../public/typo3conf/ext/bootstrap_package/Resources/Public/Scss/components/breadcrumb";
+@import "../../public/typo3conf/ext/bootstrap_package/Resources/Public/Scss/components/subnav";
+@import "../../public/typo3conf/ext/bootstrap_package/Resources/Public/Scss/components/footer";
+@import "../../public/typo3conf/ext/bootstrap_package/Resources/Public/Scss/components/carousel";
+@import "../../public/typo3conf/ext/bootstrap_package/Resources/Public/Scss/components/accordion";
+@import "../../public/typo3conf/ext/bootstrap_package/Resources/Public/Scss/components/tab";
+@import "../../public/typo3conf/ext/bootstrap_package/Resources/Public/Scss/components/card";
+@import "../../public/typo3conf/ext/bootstrap_package/Resources/Public/Scss/components/audio";
+@import "../../public/typo3conf/ext/bootstrap_package/Resources/Public/Scss/components/link";
+@import "../../public/typo3conf/ext/bootstrap_package/Resources/Public/Scss/components/figure";
+@import "../../public/typo3conf/ext/bootstrap_package/Resources/Public/Scss/components/gallery";
+@import "../../public/typo3conf/ext/bootstrap_package/Resources/Public/Scss/components/address";
+@import "../../public/typo3conf/ext/bootstrap_package/Resources/Public/Scss/components/table";
+@import "../../public/typo3conf/ext/bootstrap_package/Resources/Public/Scss/components/list";
+@import "../../public/typo3conf/ext/bootstrap_package/Resources/Public/Scss/components/filelink";
+@import "../../public/typo3conf/ext/bootstrap_package/Resources/Public/Scss/components/blockquote";
+@import "../../public/typo3conf/ext/bootstrap_package/Resources/Public/Scss/components/icongroup";
+@import "../../public/typo3conf/ext/bootstrap_package/Resources/Public/Scss/components/timeline";
+@import "../../public/typo3conf/ext/bootstrap_package/Resources/Public/Scss/components/textpic";
+@import "../../public/typo3conf/ext/bootstrap_package/Resources/Public/Scss/components/textteaser";
+@import "../../public/typo3conf/ext/bootstrap_package/Resources/Public/Scss/components/texticon";
+@import "../../public/typo3conf/ext/bootstrap_package/Resources/Public/Scss/components/text";
+@import "../../public/typo3conf/ext/bootstrap_package/Resources/Public/Scss/components/thumbnail-menu";
+@import "../../public/typo3conf/ext/bootstrap_package/Resources/Public/Scss/components/sociallink";
+@import "../../public/typo3conf/ext/bootstrap_package/Resources/Public/Scss/components/well";
+@import "../../public/typo3conf/ext/bootstrap_package/Resources/Public/Scss/components/pagination";
+@import "../../public/typo3conf/ext/bootstrap_package/Resources/Public/Scss/components/scrolltop";
+@import "../../public/typo3conf/ext/bootstrap_package/Resources/Public/Scss/components/misc";
+@import "../../public/typo3conf/ext/bootstrap_package/Resources/Public/Scss/components/contentcontainer";
+
+//
+// Plugins
+//
+@import "../../public/typo3conf/ext/bootstrap_package/Resources/Public/Scss/plugins/cookieconsent";
+@import "../../public/typo3conf/ext/bootstrap_package/Resources/Public/Scss/plugins/photoswipe";
+
+//
+// My own Styles
+//
+@import "bootstrappackageicon";
+@import "mystyles";

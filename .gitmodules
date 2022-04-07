@@ -1,0 +1,3 @@
+[submodule "packages/klaro_video"]
+	path = packages/klaro_video
+	url = https://github.com/Starraider/klaro_video.git

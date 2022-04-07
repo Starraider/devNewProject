@@ -1,36 +1,35 @@
 {
 	"name": "typo3/cms-base-distribution",
-	"description" : "TYPO3 CMS Base Distribution",
+	"description": "TYPO3 CMS Base Distribution",
 	"license": "GPL-2.0-or-later",
-    "version": "9.5.4",
-    "authors": [
-        {
-            "name": "Sven Kalbhenn",
-            "email": "sven@skom.de",
-            "homepage": "https://www.skom.de",
-            "role": "Developer"
-        }
-    ],
-    "repositories": [
-        {
-            "type": "path",
-            "url": "packages/*"
-        },
-        {
-            "type": "composer",
-            "url": "https://composer.typo3.org/"
-        }
-    ],
-	"config": {
-		"platform": {
-			"php": "7.4.1"
-		},
-		"sort-packages": true
+	"version": "11.0.0",
+	"authors": [
+		{
+			"name": "Sven Kalbhenn",
+			"email": "sven@skom.de",
+			"homepage": "https://www.skom.de",
+			"role": "Developer"
+		}
+	],
+	"support": {
+		"issues": "https://github.com/Starraider/devNewProject/issues",
+		"source": "https://github.com/Starraider/devNewProject"
 	},
 	"require": {
-        "skom/customer-sitepackage": "@dev",
+		"b13/container": "^1.5",
+		"baschte/content-animations": "^2.3",
 		"bk2k/bootstrap-package": "^12.0",
+		"causal/image_autoresize": "^2.1",
+		"christophlehmann/imageoptimizer": "^3.1",
+		"helhum/dotenv-connector": "^3.0",
 		"helhum/typo3-console": "^7.0.2",
+		"jweiland/sync-crop-areas": "^2.2",
+		"lochmueller/sourceopt": "^4.0",
+		"skom/customer-sitepackage": "@dev",
+		"skom/klaro-video": "@dev",
+		"sourcebroker/deployer-extended-typo3": "^18.0",
+		"ssch/typo3-encore": "^4.0",
+		"tritum/form-element-linked-checkbox": "^2.3",
 		"typo3/cms-backend": "^11.5.0",
 		"typo3/cms-belog": "^11.5.0",
 		"typo3/cms-beuser": "^11.5.0",
@@ -54,14 +53,72 @@
 		"typo3/cms-sys-note": "^11.5.0",
 		"typo3/cms-t3editor": "^11.5.0",
 		"typo3/cms-tstemplate": "^11.5.0",
-		"typo3/cms-viewpage": "^11.5.0"
+		"typo3/cms-viewpage": "^11.5.0",
+		"wazum/sluggi": "^3.0"
 	},
-	"scripts":{
-		"typo3-cms-scripts": [
-			"typo3cms install:fixfolderstructure"
-		],
+	"require-dev": {
+		"ergebnis/composer-normalize": "^2.18.0",
+		"helmich/typo3-typoscript-lint": "^2.5",
+		"seld/jsonlint": "^1.8"
+	},
+	"conflict": {
+		"doctrine/dbal": "2.13.1",
+		"friendsofphp/php-cs-fixer": "3.5.0",
+		"typo3/class-alias-loader": "< 1.1.0"
+	},
+	"repositories": [
+		{
+			"type": "path",
+			"url": "packages/*"
+		},
+		{
+			"type": "composer",
+			"url": "https://composer.typo3.org/"
+		}
+	],
+	"config": {
+		"allow-plugins": {
+			"ergebnis/composer-normalize": true,
+			"phpstan/extension-installer": true,
+			"typo3/class-alias-loader": true,
+			"typo3/cms-composer-installers": true,
+			"helhum/dotenv-connector": true
+		},
+		"platform": {
+			"php": "7.4.1"
+		},
+		"sort-packages": true
+	},
+	"scripts": {
 		"post-autoload-dump": [
 			"@typo3-cms-scripts"
+		],
+		"ci": [
+			"@ci:static",
+			"@ci:dynamic"
+		],
+		"ci:dynamic": [
+			"@ci:tests"
+		],
+		"ci:composer:normalize": "@composer normalize --dry-run",
+		"ci:static": [
+			"@ci:composer:normalize",
+			"@ci:ts:lint",
+			"@ci:json:lint"
+		],
+		"ci:tests:accept": "php vendor/bin/codecept run --steps",
+		"ci:tests": [
+			"@ci:tests:accept"
+		],
+		"ci:ts:lint": "exec tslint -c Build/TsLint.yml --ansi -n --fail-on-warnings -vvv packages",
+		"ci:json:lint": "find . ! -path '*public/*' ! -path '*vendor/*' ! -path '*.vscode/*' ! -path '*var/*' ! -path '*Build/node_modules/*' -name '*.json' | xargs -r php vendor/bin/jsonlint -q",
+		"dep:beta": "exec php ./vendor/bin/dep deploy beta",
+		"dep:live": "exec php ./vendor/bin/dep deploy live",
+		"typo3-cms-scripts": [
+			"typo3cms install:fixfolderstructure"
 		]
+	},
+	"scripts-descriptions": {
+		"ci:composer:normalize": "Checks the composer.json."
 	}
 }

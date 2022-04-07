@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2013-09-19T09:11:39Z"
+          product-name="customer_sitepackage">
+        <header/>
+        <body>
+
+            <trans-unit id="element.contactform.renderingOptions.submitButtonLabel">
+                <source>Submit</source>
+            </trans-unit>
+             <trans-unit id="contactform.element.mandatory.properties.label">
+                <source>Contact Form</source>
+            </trans-unit>
+            <trans-unit id="contactform.element.mandatory.properties.text">
+                <source>* Mandatory fields</source>
+            </trans-unit>
+            <trans-unit id="contactform.element.fullname.properties.label">
+                <source>Full name and surname</source>
+            </trans-unit>
+            <trans-unit id="contactform.element.fullname.properties.placeholder">
+                <source>Full name and surname</source>
+            </trans-unit>
+            <trans-unit id="contactform.element.company.properties.label">
+                <source>Company</source>
+            </trans-unit>
+            <trans-unit id="contactform.element.company.properties.placeholder">
+                <source>Company</source>
+            </trans-unit>
+            <trans-unit id="contactform.element.email.properties.label">
+                <source>Email</source>
+            </trans-unit>
+            <trans-unit id="contactform.element.email.properties.placeholder">
+                <source>Email</source>
+            </trans-unit>
+            <trans-unit id="contactform.element.subject.properties.label">
+                <source>Subject</source>
+            </trans-unit>
+            <trans-unit id="contactform.element.subject.properties.placeholder">
+                <source>Subject</source>
+            </trans-unit>
+            <trans-unit id="contactform.element.message.properties.label">
+                <source>Message</source>
+            </trans-unit>
+            <trans-unit id="contactform.element.message.properties.placeholder">
+                <source>Message</source>
+            </trans-unit>
+			<trans-unit id="contactform.element.privacy.properties.label">
+                <source>Yes, I have read the %s and agree that the data I have provided may be collected and stored electronically. My data will only be used strictly for the purpose of processing and responding to my request. By sending the contact form, I agree to the processing.</source>
+            </trans-unit>
+			<trans-unit id="contactform.element.privacy.properties.linkText">
+                <source>privacy policy</source>
+            </trans-unit>
+            <trans-unit id="contactform.element.summary.properties.label">
+                <source>Summary</source>
+            </trans-unit>
+
+
+        </body>
+    </file>
+</xliff>

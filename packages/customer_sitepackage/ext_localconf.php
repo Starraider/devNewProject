@@ -5,6 +5,26 @@ defined('TYPO3') or die('Access denied.');
  */
 $GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['customer_sitepackage'] = 'EXT:customer_sitepackage/Configuration/RTE/Default.yaml';
 
+// Register custom EXT:form configuration
+if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('form')) {
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScriptSetup(trim('
+        module.tx_form {
+            settings {
+                yamlConfigurations {
+                    210 = EXT:customer_sitepackage/Configuration/Form/Setup.yaml
+                }
+            }
+        }
+        plugin.tx_form {
+            settings {
+                yamlConfigurations {
+                    210 = EXT:customer_sitepackage/Configuration/Form/Setup.yaml
+                }
+            }
+        }
+    '));
+}
+
 /***************
  * PageTS
  */

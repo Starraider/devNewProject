@@ -1,0 +1,247 @@
+<html
+    xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    xmlns:bk2k="http://typo3.org/ns/BK2K/BootstrapPackage/ViewHelpers"
+    data-namespace-typo3-fluid="true"
+>
+    <f:spaceless>
+        <bk2k:data.imageVariants
+            as="variants"
+            variants="{settings.responsiveimages.variants}"
+        />
+        <f:variable name="backendlayoutConfig">
+            {settings.responsiveimages.backendlayout.{backendlayout}}
+        </f:variable>
+        <f:variable name="columnConfig">
+            {backendlayoutConfig.{data.colPos}}
+        </f:variable>
+        <f:if condition="{columnConfig}">
+            <bk2k:data.imageVariants
+                as="variants"
+                variants="{variants}"
+                multiplier="{columnConfig.multiplier}"
+                gutters="{columnConfig.gutters}"
+                corrections="{columnConfig.corrections}"
+            />
+        </f:if>
+
+        <f:if condition="{containerContext}">
+            <f:for each="{containerContext}" as="context">
+                <f:variable name="containerConfig">
+                    {settings.responsiveimages.container.{context.CType}}
+                </f:variable>
+                <f:variable name="containerColumnConfig">
+                    {containerConfig.{data.colPos}}
+                </f:variable>
+                <f:if condition="{containerColumnConfig}">
+                    <bk2k:data.imageVariants
+                        as="variants"
+                        variants="{variants}"
+                        multiplier="{containerColumnConfig.multiplier}"
+                        gutters="{containerColumnConfig.gutters}"
+                        corrections="{containerColumnConfig.corrections}"
+                    />
+                </f:if>
+            </f:for>
+        </f:if>
+
+        <f:variable name="frameSize">frame-size-default</f:variable>
+        <f:variable name="frameClass">frame-{data.frame_class}</f:variable>
+        <f:variable name="typeClass">frame-type-{data.CType}</f:variable>
+        <f:variable name="layoutClass">
+            frame-layout-{data.frame_layout}
+        </f:variable>
+        <f:variable name="backgroundClass">
+            frame-background-{f:if(condition: data.background_color_class, else:
+            'none', then: data.background_color_class)}
+        </f:variable>
+        <f:variable name="spaceBeforeClass">
+            frame-space-before-{f:if(condition: data.space_before_class, else:
+            'none', then: data.space_before_class)}
+        </f:variable>
+        <f:variable name="spaceAfterClass">
+            frame-space-after-{f:if(condition: data.space_after_class, else:
+            'none', then: data.space_after_class)}
+        </f:variable>
+
+        <f:if condition="{data.frame_class} != none">
+            <f:then>
+                <f:variable name="backgroundImageClass">
+                    {f:if(condition: backgroundImage.0, then:
+                    'frame-has-backgroundimage', else:
+                    'frame-no-backgroundimage')}
+                </f:variable>
+                <div id="c{data.uid}" class="customer frame {frameSize} {frameClass} layout-{data.layout} {typeClass} {layoutClass} {backgroundClass} {backgroundImageClass} {spaceBeforeClass} {spaceAfterClass}"{f:if(condition: animationSettings, then: '{animationSettings -> f:format.raw()}')}>
+                    <div class="frame-group-container">
+                        <div class="frame-group-inner">
+                            <f:render
+                                partial="Frame/General/BackgroundImage"
+                                arguments="{_all}"
+                            />
+                            <div
+                                class="frame-container frame-container-default"
+                            >
+                                <div class="frame-inner">
+                                    <f:if condition="{data._LOCALIZED_UID}">
+                                        <a id="c{data._LOCALIZED_UID}"></a>
+                                    </f:if>
+                                    <f:render section="Before" optional="true">
+                                        <f:render
+                                            partial="DropIn/Before/All"
+                                            arguments="{_all}"
+                                        />
+                                    </f:render>
+                                    <f:render section="Header" optional="true">
+                                        <f:render
+                                            partial="Header/All"
+                                            arguments="{_all}"
+                                        />
+                                    </f:render>
+                                    <f:render section="Main" optional="true" />
+                                    <f:render section="Footer" optional="true">
+                                        <f:render
+                                            partial="Footer/All"
+                                            arguments="{_all}"
+                                        />
+                                    </f:render>
+                                    <f:render section="After" optional="true">
+                                        <f:render
+                                            partial="DropIn/After/All"
+                                            arguments="{_all}"
+                                        />
+                                    </f:render>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <f:if condition="{data.layout} == 1">
+                        <f:then>
+                            <svg
+                                class="layout-svg layout-1"
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 1440 320"
+                            >
+                                <path
+                                    fill="#ffffff"
+                                    fill-opacity="1"
+                                    d="M0,160L120,176C240,192,480,224,720,245.3C960,267,1200,277,1320,282.7L1440,288L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"
+                                ></path>
+                            </svg>
+                        </f:then>
+                    </f:if>
+                    <f:if condition="{data.layout} == 2">
+                        <f:then>
+                            <svg
+                                class="layout-svg layout-2"
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 1440 320"
+                            >
+                                <path
+                                    fill="#ffffff"
+                                    fill-opacity="0.6"
+                                    d="M0,320L120,314.7C240,309,480,299,720,266.7C960,235,1200,181,1320,154.7L1440,128L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"
+                                ></path>
+                            </svg>
+                        </f:then>
+                    </f:if>
+                    <f:if condition="{data.layout} == 3">
+                        <f:then>
+                            <div class="custom-shape-divider-bottom-1645791247">
+                                <svg
+                                    class="layout-svg layout-3"
+                                    data-name="Layer 1"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 1200 120"
+                                    preserveAspectRatio="none"
+                                >
+                                    <path
+                                        d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+                                        opacity=".25"
+                                        class="shape-fill"
+                                    ></path>
+                                    <path
+                                        d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
+                                        opacity=".5"
+                                        class="shape-fill"
+                                    ></path>
+                                    <path
+                                        d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
+                                        class="shape-fill"
+                                    ></path>
+                                </svg>
+                            </div>
+                        </f:then>
+                    </f:if>
+                    <f:if condition="{data.layout} == 4">
+                        <f:then>
+                            <svg
+                                class="layout-svg layout-4"
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 1440 320"
+                            >
+                                <path
+                                    fill="#ffffff"
+                                    fill-opacity="1"
+                                    d="M0,320L1440,224L1440,320L0,320Z"
+                                ></path>
+                            </svg>
+                        </f:then>
+                    </f:if>
+                    <f:if condition="{data.layout} == 5">
+                        <f:then>
+                            <svg
+                                class="layout-svg-top layout-5"
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 1440 320">
+                                <path
+                                    fill="#ffffff"
+                                    fill-opacity="1"
+                                    d="M0,64L120,74.7C240,85,480,107,720,96C960,85,1200,43,1320,21.3L1440,0L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z"
+                                ></path>
+                            </svg>
+                        </f:then>
+                    </f:if>
+                    <f:if condition="{data.layout} == 6">
+                        <f:then>
+                            <div class="custom-shape-divider-bottom-book">
+                                <svg
+                                    class="layout-svg layout-3"
+                                    data-name="Layer 1"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                                    preserveAspectRatio="none"
+                                >
+                                    <path d="M1200,0H0V120H281.94C572.9,116.24,602.45,3.86,602.45,3.86h0S632,116.24,923,120h277Z" class="shape-fill"></path>
+                                </svg>
+                            </div>
+                        </f:then>
+                    </f:if>
+
+                </div>
+            </f:then>
+            <f:else>
+                <a id="c{data.uid}"></a>
+                <f:if condition="{data._LOCALIZED_UID}">
+                    <a id="c{data._LOCALIZED_UID}"></a>
+                </f:if>
+                <f:if condition="{data.space_before_class}">
+                    <div class="frame-space-before {spaceBeforeClass}"></div>
+                </f:if>
+                <f:render section="Before" optional="true">
+                    <f:render partial="DropIn/Before/All" arguments="{_all}" />
+                </f:render>
+                <f:render section="Header" optional="true">
+                    <f:render partial="Header/All" arguments="{_all}" />
+                </f:render>
+                <f:render section="Main" optional="true" />
+                <f:render section="Footer" optional="true">
+                    <f:render partial="Footer/All" arguments="{_all}" />
+                </f:render>
+                <f:render section="After" optional="true">
+                    <f:render partial="DropIn/After/All" arguments="{_all}" />
+                </f:render>
+                <f:if condition="{data.space_after_class}">
+                    <div class="frame-space-after {spaceAfterClass}"></div>
+                </f:if>
+            </f:else>
+        </f:if>
+    </f:spaceless>
+</html>

@@ -1,0 +1,43 @@
+env:
+    browser: true
+    node: true
+    es6: true
+    es2020: true
+globals:
+    $: true
+    jQuery: true
+extends:
+    - eslint:recommended
+parserOptions:
+    ecmaVersion: 2020
+    sourceType: 'module'
+rules: {
+    indent: [2, 4, { SwitchCase: 0 }],
+    quotes: [2, 'single', 'avoid-escape'],
+    'brace-style': [2, '1tbs'],
+    'comma-dangle': [2, 'only-multiline'],
+    'consistent-return': 2,
+    'linebreak-style': [2, 'unix'],
+    semi: 0,
+    'no-console': 0,
+    'no-undef': 2,
+    'no-shadow': 0,
+    'no-unused-vars': 0,
+    'no-bitwise': 2,
+    'eol-last': 2,
+    'dot-notation': 2,
+    'dot-location': [2, 'property'],
+    eqeqeq: [2, 'allow-null'],
+    'no-inner-declarations': [2, 'functions'],
+    'no-multi-spaces': 2,
+    'no-unused-expressions': 2,
+    'keyword-spacing': 2,
+    'space-before-blocks': 2,
+    'require-atomic-updates': 'off',
+    'space-before-function-paren': [
+        2,
+        { anonymous: 'never', named: 'never' },
+    ],
+    strict: [2, 'global'],
+    'require-await': 2,
+}

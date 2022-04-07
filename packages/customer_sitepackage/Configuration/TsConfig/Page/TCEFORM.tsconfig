@@ -2,10 +2,22 @@
 # TCEFORM
 #
 TCEFORM {
-    pages {
+  pages {
 
+  }
+  tt_content {
+    layout {
+      altLabels {
+        1 = Wave Bottom 1
+        2 = Wave Bottom 2
+        3 = Wave Bottom 3
+      }
+      addItems {
+        4 = Line Bottom 1
+        5 = Wave Top 1
+        6 = Book Bottom
+      }
+      removeItems = 8,9,10
     }
-    tt_content {
-
-    }
+  }
 }

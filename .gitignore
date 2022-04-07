@@ -36,6 +36,9 @@
 .php_cs.cache
 /composer.phar
 /Quellen/
+/Build/node_modules/
+/Build/cypress/demo-tests/
+/Build/cypress/screenshots/
 
 ### DDEV ###
 .ddev/backup/*
@@ -53,6 +56,5 @@
 !/public/typo3conf/PackageStates.php
 !/public/.htaccess
 
-/packages/skomtest
-
+/packages/customer_sitepackage/Resources/Public/*
 .env

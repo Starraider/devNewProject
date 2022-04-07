@@ -1,17 +1,51 @@
-base: 'https://devnewproject.ddev.site/'
-errorHandling: {  }
+base: '%env(SITE_BASE)%'
+errorHandling:
+  -
+    errorCode: 404
+    errorHandler: Page
+    errorContentSource: 't3://page?uid=7'
 languages:
   -
-    title: English
+    title: Deutsch
     enabled: true
     languageId: 0
     base: /
+    typo3Language: de
+    locale: de_DE.UTF-8
+    iso-639-1: de
+    navigationTitle: Deutsch
+    hreflang: de-DE
+    direction: ltr
+    flag: de
+  -
+    title: English
+    enabled: true
+    languageId: 1
+    base: /en/
     typo3Language: default
     locale: en_US.UTF-8
     iso-639-1: en
     navigationTitle: English
-    hreflang: en-us
+    hreflang: en-US
     direction: ltr
-    flag: us
+    fallbackType: fallback
+    fallbacks: '0'
+    flag: en-us-gb
 rootPageId: 1
-routes: {  }
+routeEnhancers:
+  PageTypeSuffix:
+    type: PageType
+    default: /
+    map:
+      /: 0
+      sitemap.xml: 1533906435
+routes:
+  -
+    route: robots.txt
+    type: staticText
+    content: "User-agent: *\r\nDisallow: /typo3/\r\nDisallow: /typo3_src/\r\nDisallow: /content-examples/\r\nDisallow: /en/content-examples/\r\n# Keine Backups \r\nDisallow: *.tar.gz\r\nDisallow: *.sql\r\nDisallow: *.sql.gz\r\nAllow: /typo3/sysext/frontend/Resources/Public/*\r\n"
+  -
+    route: sitemap.xml
+    type: uri
+    source: 't3://page?uid=1&type=1533906435'
+websiteTitle: ''

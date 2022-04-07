@@ -1,0 +1,26 @@
+TYPO3:
+    CMS:
+        Form:
+            persistenceManager:
+                allowedExtensionPaths:
+                    110: null
+                    210: EXT:customer_sitepackage/Resources/Private/Forms/
+            prototypes:
+                standard:
+                    formElementsDefinition:
+                        Form:
+                            renderingOptions:
+                                translation:
+                                    translationFiles:
+                                        210: 'EXT:customer_sitepackage/Resources/Private/Language/Form/locallang.xlf'
+                                layoutRootPaths:
+                                    30: 'EXT:customer_sitepackage/Resources/Private/Layouts/Form/'
+                                templateRootPaths:
+                                    30: 'EXT:customer_sitepackage/Resources/Private/Templates/Form/'
+                                partialRootPaths:
+                                    30: 'EXT:customer_sitepackage/Resources/Private/Partials/Form/'
+                        ImageUpload:
+                            properties:
+                                imageLinkMaxWidth: 1200
+                                imageMaxWidth: 200
+                                imageMaxHeight: 200
