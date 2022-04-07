@@ -1,21 +1,34 @@
 {
-    "name": "skom/customer-sitepackage",
-    "type": "typo3-cms-extension",
-    "description": "This is the default customer sitepackage",
-    "homepage": "https://www.skom.de",
-    "license": ["GPL-2.0-or-later"],
-    "keywords": ["TYPO3 CMS"],
-    "require": {
-        "bk2k/bootstrap-package": "^12.0"
-    },
-    "autoload": {
-        "psr-4": {
-            "Skom\\CustomerSitepackage\\": "Classes/"
-        }
-    },
-    "extra": {
-        "typo3/cms": {
-            "extension-key": "customer_sitepackage"
-        }
-    }
+	"name": "skom/customer-sitepackage",
+	"type": "typo3-cms-extension",
+	"description": "This is the default customer sitepackage",
+	"homepage": "https://www.skom.de",
+	"license": [
+		"GPL-2.0-or-later"
+	],
+	"version": "11.0.0",
+	"authors": [
+		{
+			"name": "Sven Kalbhenn",
+			"email": "sven@skom.de",
+			"homepage": "https://www.skom.de",
+			"role": "Developer"
+		}
+	],
+	"keywords": [
+		"TYPO3 CMS"
+	],
+	"require": {
+		"bk2k/bootstrap-package": "^12.0"
+	},
+	"autoload": {
+		"psr-4": {
+			"Skom\\CustomerSitepackage\\": "Classes/"
+		}
+	},
+	"extra": {
+		"typo3/cms": {
+			"extension-key": "customer_sitepackage"
+		}
+	}
 }
