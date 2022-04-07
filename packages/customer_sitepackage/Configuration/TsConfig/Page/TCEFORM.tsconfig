@@ -14,8 +14,10 @@ TCEFORM {
       }
       addItems {
         4 = Line Bottom 1
+        5 = Wave Top 1
+        6 = Book Bottom
       }
-      removeItems = 6,7,9,10
+      removeItems = 8,9,10
     }
   }
 }
