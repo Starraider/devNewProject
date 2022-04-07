@@ -62,6 +62,22 @@ config {
   disablePrefixComment = 1
   headerComment = Development by Sven Kalbhenn (sven@skom.de)
 }
+
+#############################################
+#### overwrite content_animations layout ####
+#############################################
+lib.contentElement {
+  layoutRootPaths.0 = EXT:customer_sitepackage/Resources/Private/Layouts/ContentElements/
+  layoutRootPaths.100 = EXT:customer_sitepackage/Resources/Private/Layouts/ContentElements/
+}
+tt_content {
+  container_1_columns.layoutRootPaths.100. = EXT:customer_sitepackage/Resources/Private/Layouts/ContentElements/
+  container_2_columns.layoutRootPaths.100. = EXT:customer_sitepackage/Resources/Private/Layouts/ContentElements/
+  container_2_columns_right.layoutRootPaths.100. = EXT:customer_sitepackage/Resources/Private/Layouts/ContentElements/
+  container_2_columns_left.layoutRootPaths.100. = EXT:customer_sitepackage/Resources/Private/Layouts/ContentElements/
+  container_3_columns.layoutRootPaths.100. = EXT:customer_sitepackage/Resources/Private/Layouts/ContentElements/
+  container_4_columns.layoutRootPaths.100. = EXT:customer_sitepackage/Resources/Private/Layouts/ContentElements/
+}
 ################
 #### Encore ####
 ################

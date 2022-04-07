@@ -17,6 +17,7 @@
 	},
 	"require": {
 		"b13/container": "^1.5",
+		"baschte/content-animations": "^2.3",
 		"bk2k/bootstrap-package": "^12.0",
 		"causal/image_autoresize": "^2.1",
 		"christophlehmann/imageoptimizer": "^3.1",
