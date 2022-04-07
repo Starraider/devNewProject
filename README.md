@@ -4,10 +4,74 @@ This project was build, to test and demonstrate the use of Webpack Encore with T
 
 ## System requirements
 
-1. Docker installed and running
-2. DDEV installed
+- Docker installed and running
+- DDEV installed
+- Node.js installed
 
-## DDEV
+## How to start a new project
+
+1. Make a new project directory and change into it
+
+```bash
+mkdir myProject
+cd myProject
+```
+
+2. Clone this repository
+
+```bash
+git clone --single-branch --branch main git@github.com:Starraider/devNewProject.git .
+git submodule update --init --recursive
+```
+
+3. Disconnect your project from original github and git
+
+```bash
+git remote rm origin
+rm -rf .git
+```
+
+4. Initialize your own git repository
+
+```bash
+git init
+```
+
+5. Push your git repository to Github
+
+6. Change project name from newProject to your own name
+
+7. Install node dependencies
+
+```bash
+cd Build
+yarn install
+```
+
+8. Start DDEV and install dependencies
+
+```bash
+ddev composer install
+```
+9. Restore database and files
+
+```bash
+ddev db-restore
+ddev fileadmin-restore
+```
+10. Launch website
+
+```bash
+ddev start
+ddev launch typo3
+```
+11. Login
+
+Username:
+Passwort:
+
+
+## How to use DDEV
 
 ```bash
 ddev start
@@ -24,7 +88,7 @@ ddev launch
 
 or go to [https://devwebpack.ddev.site](https://devwebpack.ddev.site)
 
-### Webpack Encore
+### How to use Webpack Encore
 
 Be aware: Webpack Encore needs Node.js Version 16.8!
 You can switch Node.js Version with:
