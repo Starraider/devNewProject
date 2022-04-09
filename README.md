@@ -129,7 +129,7 @@ Change all credentials in deploy.php to your own deployment data.
 
 18. Setup GitHub Action for automated deployment
 
-I. Generate ssh keys for cloning of your private repository to your server
+a. Generate ssh keys for cloning of your private repository to your server
 
 Generate ssh keys on your server with:
 
@@ -145,7 +145,7 @@ Make a test connection to GitHub to update the known_hosts file, with:
 ssh -T git@github.com
 ```
 
-II. Generate ssh keys for the deployment from GitHub to your server
+b. Generate ssh keys for the deployment from GitHub to your server
 
 Generate ssh keys on your local machine:
 
