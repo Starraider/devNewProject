@@ -98,21 +98,21 @@
 			"@ci:static",
 			"@ci:dynamic"
 		],
+		"ci:composer:normalize": "@composer normalize --dry-run",
 		"ci:dynamic": [
 			"@ci:tests"
 		],
-		"ci:composer:normalize": "@composer normalize --dry-run",
+		"ci:json:lint": "find . ! -path '*public/*' ! -path '*vendor/*' ! -path '*.vscode/*' ! -path '*var/*' ! -path '*Build/node_modules/*' -name '*.json' | xargs -r php vendor/bin/jsonlint -q",
 		"ci:static": [
 			"@ci:composer:normalize",
 			"@ci:ts:lint",
 			"@ci:json:lint"
 		],
-		"ci:tests:accept": "php vendor/bin/codecept run --steps",
 		"ci:tests": [
 			"@ci:tests:accept"
 		],
+		"ci:tests:accept": "php vendor/bin/codecept run --steps",
 		"ci:ts:lint": "exec tslint -c Build/TsLint.yml --ansi -n --fail-on-warnings -vvv packages",
-		"ci:json:lint": "find . ! -path '*public/*' ! -path '*vendor/*' ! -path '*.vscode/*' ! -path '*var/*' ! -path '*Build/node_modules/*' -name '*.json' | xargs -r php vendor/bin/jsonlint -q",
 		"dep:beta": "exec php ./vendor/bin/dep deploy beta",
 		"dep:live": "exec php ./vendor/bin/dep deploy live",
 		"typo3-cms-scripts": [
