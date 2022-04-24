@@ -3,6 +3,9 @@
 ######################
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/setup.typoscript">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:customer_sitepackage/Configuration/TypoScript/Extension/Form/setup.typoscript" condition="extension.isLoaded('form') == 1">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:customer_sitepackage/Configuration/TypoScript/Extension/News/setup.typoscript">
+
+
 
 [applicationContext == "Development"]
   config {

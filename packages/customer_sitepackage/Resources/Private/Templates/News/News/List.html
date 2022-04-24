@@ -1,0 +1,119 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="General" />
+<!--
+=====================
+customer_sitepackage: News/Templates/News/List.html
+-->
+
+<f:section name="content">
+    <!--TYPO3SEARCH_end-->
+    <f:if condition="{news}">
+        <f:then>
+            <div class="news-list-view" id="news-container-{contentObjectData.uid}">
+                <f:if condition="{settings.hidePagination}">
+                    <f:then>
+                        <h3>Hide Pagination</h3>
+                        <f:if condition="{settings.templateLayout} == 8">
+                            <f:then>
+                                <div class="row row-cols-1 row-cols-md-3 news-list-item">
+                                    <f:for each="{news}" as="newsItem" iteration="iterator">
+                                        <f:render partial="List/Item"
+                                            arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+                                    </f:for>
+                                </div>
+                            </f:then>
+                            <f:else>
+                                <f:for each="{news}" as="newsItem" iteration="iterator">
+                                    <div class="row news-list-item">
+                                        <f:render partial="List/Item"
+                                            arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+                                    </div>
+                                </f:for>
+                            </f:else>
+                        </f:if>
+                    </f:then>
+                    <f:else>
+                        <h3>Show Pagination</h3>
+                        <f:if condition="{settings.list.paginate.insertAbove}">
+                            <f:render partial="List/Pagination"
+                                arguments="{pagination: pagination.pagination, paginator: pagination.paginator}" />
+                        </f:if>
+                        <!-- Layout 2: Bild links -->
+                        <f:if condition="{settings.templateLayout} == 2">
+                            <f:then>
+                                <f:for each="{pagination.paginator.paginatedItems}" as="newsItem" iteration="iterator">
+                                    <f:render partial="List/Item_img_left"
+                                        arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+                                </f:for>
+                            </f:then>
+                            <!-- Layout 3: Bild rechts -->
+                            <f:else if="{settings.templateLayout} == 3">
+                                <f:for each="{pagination.paginator.paginatedItems}" as="newsItem" iteration="iterator">
+                                    <f:render partial="List/Item_img_right"
+                                        arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+                                </f:for>
+                            </f:else>
+                            <!-- Layout 4: Bild oben -->
+                            <f:else if="{settings.templateLayout} == 4">
+                                <f:for each="{pagination.paginator.paginatedItems}" as="newsItem" iteration="iterator">
+                                    <f:render partial="List/Item_img_top"
+                                        arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+                                </f:for>
+                            </f:else>
+                            <!-- Layout 5: ohne Bild -->
+                            <f:else if="{settings.templateLayout} == 5">
+                                <f:for each="{pagination.paginator.paginatedItems}" as="newsItem" iteration="iterator">
+                                    <f:render partial="List/Item_no_img"
+                                        arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+                                </f:for>
+                            </f:else>
+                            <!-- Layout 6: Card links -->
+                            <f:else if="{settings.templateLayout} == 6">
+                                <f:for each="{pagination.paginator.paginatedItems}" as="newsItem" iteration="iterator">
+                                    <f:render partial="List/Item_card_left"
+                                        arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+                                </f:for>
+                            </f:else>
+                            <!-- Layout 7: Card right -->
+                            <f:else if="{settings.templateLayout} == 7">
+                                <f:for each="{pagination.paginator.paginatedItems}" as="newsItem" iteration="iterator">
+                                    <f:render partial="List/Item_card_right"
+                                        arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+                                </f:for>
+                            </f:else>
+                            <!-- Layout 8: Card Grid -->
+                            <f:else if="{settings.templateLayout} == 8">
+                                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 news-list-item">
+                                    <f:for each="{pagination.paginator.paginatedItems}" as="newsItem"
+                                        iteration="iterator">
+                                        <f:render partial="List/Item_card_grid"
+                                            arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+                                    </f:for>
+                                </div>
+                            </f:else>
+                            <f:else>
+                                <f:for each="{pagination.paginator.paginatedItems}" as="newsItem" iteration="iterator">
+                                    <f:render partial="List/Item"
+                                        arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+                                </f:for>
+                            </f:else>
+                        </f:if>
+                        <f:if condition="{settings.list.paginate.insertBelow}">
+                            <f:render partial="List/Pagination"
+                                arguments="{pagination: pagination.pagination, paginator: pagination.paginator}" />
+                        </f:if>
+                    </f:else>
+                </f:if>
+            </div>
+        </f:then>
+        <f:else>
+            <div class="no-news-found">
+                <f:translate key="list_nonewsfound" />
+            </div>
+        </f:else>
+    </f:if>
+    <!--TYPO3SEARCH_begin-->
+</f:section>
+
+</html>

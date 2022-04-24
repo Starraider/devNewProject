@@ -1,0 +1,308 @@
+<html
+    xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+    data-namespace-typo3-fluid="true"
+>
+    <!--
+	=====================
+		custom_sitepackage: /Partials/News/List/Item.html
+-->
+    <h1>Test</h1>
+    <f:if condition="{settings.templateLayout} == 2">
+        <!-- Bild links -->
+        <div class="news-list-image--left">
+            <n:link
+                newsItem="{newsItem}"
+                settings="{settings}"
+                title="{newsItem.title}"
+            >
+                <f:if condition="{newsItem.mediaPreviews}">
+                    <f:then>
+                        <f:media
+                            class="news-image"
+                            file="{newsItem.mediaPreviews.0}"
+                            title="{mediaElement.originalResource.title}"
+                            alt="{mediaElement.originalResource.alternative}"
+                            width="{f:if(condition: settings.media.maxWidth, then: settings.media.maxWidth, else: settings.list.media.image.width)}"
+                            height="{f:if(condition: settings.media.maxHeight, then: settings.media.maxHeight, else:'')}"
+                        />
+                    </f:then>
+                    <f:else>
+                        <f:if condition="{settings.displayDummyIfNoMedia}">
+                            <f:image
+                                class="img-dummy news-image"
+                                src="{settings.list.media.dummyImage}"
+                                title=""
+                                alt=""
+                                maxWidth="{settings.list.media.image.maxWidth}"
+                                maxHeight="{settings.list.media.image.maxHeight}"
+                            />
+                        </f:if>
+                    </f:else>
+                </f:if>
+            </n:link>
+        </div>
+        <div
+            class="news-list-article--right articletype-{newsItem.type}{f:if(condition: newsItem.istopnews, then: ' topnews')}"
+            itemscope="itemscope"
+            itemtype="http://schema.org/Article"
+        >
+            <f:render
+                partial="List/ItemBody"
+                arguments="{settings:settings,newsItem:newsItem}"
+            />
+        </div>
+    </f:if>
+
+    <f:if condition="{settings.templateLayout} == 3">
+        <!-- Bild rechts -->
+        <div
+            class="news-list-article--left articletype-{newsItem.type}{f:if(condition: newsItem.istopnews, then: ' topnews')}"
+            itemscope="itemscope"
+            itemtype="http://schema.org/Article"
+        >
+            <f:render
+                partial="List/ItemBody"
+                arguments="{settings:settings,newsItem:newsItem}"
+            />
+        </div>
+        <div class="news-list-image--right">
+            <n:link
+                newsItem="{newsItem}"
+                settings="{settings}"
+                title="{newsItem.title}"
+            >
+                <f:if condition="{newsItem.mediaPreviews}">
+                    <f:then>
+                        <f:media
+                            class="news-image"
+                            file="{newsItem.mediaPreviews.0}"
+                            title="{mediaElement.originalResource.title}"
+                            alt="{mediaElement.originalResource.alternative}"
+                            width="{f:if(condition: settings.media.maxWidth, then: settings.media.maxWidth, else: settings.list.media.image.width)}"
+                            height="{f:if(condition: settings.media.maxHeight, then: settings.media.maxHeight, else:'')}"
+                        />
+                    </f:then>
+                    <f:else>
+                        <f:if condition="{settings.displayDummyIfNoMedia}">
+                            <f:image
+                                class="img-dummy news-image"
+                                src="{settings.list.media.dummyImage}"
+                                title=""
+                                alt=""
+                                maxWidth="{settings.list.media.image.maxWidth}"
+                                maxHeight="{settings.list.media.image.maxHeight}"
+                            />
+                        </f:if>
+                    </f:else>
+                </f:if>
+            </n:link>
+        </div>
+    </f:if>
+
+    <f:if condition="{settings.templateLayout} == 4">
+        <!-- Bild oben -->
+        <div class="news-list-image--row">
+            <n:link
+                newsItem="{newsItem}"
+                settings="{settings}"
+                title="{newsItem.title}"
+            >
+                <f:if condition="{newsItem.mediaPreviews}">
+                    <f:then>
+                        <f:media
+                            class="news-image"
+                            file="{newsItem.mediaPreviews.0}"
+                            title="{mediaElement.originalResource.title}"
+                            alt="{mediaElement.originalResource.alternative}"
+                            width="{f:if(condition: settings.media.maxWidth, then: settings.media.maxWidth, else: settings.list.media.image.width)}"
+                            height="{f:if(condition: settings.media.maxHeight, then: settings.media.maxHeight, else:'')}"
+                        />
+                    </f:then>
+                    <f:else>
+                        <f:if condition="{settings.displayDummyIfNoMedia}">
+                            <f:image
+                                class="img-dummy news-image"
+                                src="{settings.list.media.dummyImage}"
+                                title=""
+                                alt=""
+                                maxWidth="{settings.list.media.image.maxWidth}"
+                                maxHeight="{settings.list.media.image.maxHeight}"
+                            />
+                        </f:if>
+                    </f:else>
+                </f:if>
+            </n:link>
+        </div>
+        <div
+            class="news-list-article--row articletype-{newsItem.type}{f:if(condition: newsItem.istopnews, then: ' topnews')}"
+            itemscope="itemscope"
+            itemtype="http://schema.org/Article"
+        >
+            <f:render
+                partial="List/ItemBody"
+                arguments="{settings:settings,newsItem:newsItem}"
+            />
+        </div>
+    </f:if>
+
+    <f:if condition="{settings.templateLayout} == 5">
+        <!-- ohne Bild -->
+        <div
+            class="news-list-article--row articletype-{newsItem.type}{f:if(condition: newsItem.istopnews, then: ' topnews')}"
+            itemscope="itemscope"
+            itemtype="http://schema.org/Article"
+        >
+            <f:render
+                partial="List/ItemBody"
+                arguments="{settings:settings,newsItem:newsItem}"
+            />
+        </div>
+    </f:if>
+
+    <f:if condition="{settings.templateLayout} == 6">
+        <!-- Card left -->
+        <div class="card">
+            <div class="row no-gutters">
+                <div class="news-list-image--card-left">
+                    <n:link
+                        newsItem="{newsItem}"
+                        settings="{settings}"
+                        title="{newsItem.title}"
+                    >
+                        <f:if condition="{newsItem.mediaPreviews}">
+                            <f:then>
+                                <f:media
+                                    class="news-image card-img"
+                                    file="{newsItem.mediaPreviews.0}"
+                                    title="{mediaElement.originalResource.title}"
+                                    alt="{mediaElement.originalResource.alternative}"
+                                    width="{f:if(condition: settings.media.maxWidth, then: settings.media.maxWidth, else: settings.list.media.image.width)}"
+                                    height=""
+                                />
+                            </f:then>
+                            <f:else>
+                                <f:if
+                                    condition="{settings.displayDummyIfNoMedia}"
+                                >
+                                    <f:image
+                                        class="img-dummy news-image"
+                                        src="{settings.list.media.dummyImage}"
+                                        title=""
+                                        alt=""
+                                        maxWidth="{settings.list.media.image.maxWidth}"
+                                        maxHeight="{settings.list.media.image.maxHeight}"
+                                    />
+                                </f:if>
+                            </f:else>
+                        </f:if>
+                    </n:link>
+                </div>
+                <div
+                    class="news-list-article--card-left articletype-{newsItem.type}{f:if(condition: newsItem.istopnews, then: ' topnews')}"
+                    itemscope="itemscope"
+                    itemtype="http://schema.org/Article"
+                >
+                    <f:render
+                        partial="List/ItemBodyCard"
+                        arguments="{settings:settings,newsItem:newsItem}"
+                    />
+                </div>
+            </div>
+        </div>
+    </f:if>
+
+    <f:if condition="{settings.templateLayout} == 7">
+        <!-- Card right -->
+        <div class="card">
+            <div class="row no-gutters">
+                <div
+                    class="news-list-article--card-right articletype-{newsItem.type}{f:if(condition: newsItem.istopnews, then: ' topnews')}"
+                    itemscope="itemscope"
+                    itemtype="http://schema.org/Article"
+                >
+                    <f:render
+                        partial="List/ItemBodyCard"
+                        arguments="{settings:settings,newsItem:newsItem}"
+                    />
+                </div>
+                <div class="news-list-image--card-right">
+                    <n:link
+                        newsItem="{newsItem}"
+                        settings="{settings}"
+                        title="{newsItem.title}"
+                    >
+                        <f:if condition="{newsItem.mediaPreviews}">
+                            <f:then>
+                                <f:media
+                                    class="news-image card-img"
+                                    file="{newsItem.mediaPreviews.0}"
+                                    title="{mediaElement.originalResource.title}"
+                                    alt="{mediaElement.originalResource.alternative}"
+                                    width="{f:if(condition: settings.media.maxWidth, then: settings.media.maxWidth, else: settings.list.media.image.width)}"
+                                    height=""
+                                />
+                            </f:then>
+                            <f:else>
+                                <f:if
+                                    condition="{settings.displayDummyIfNoMedia}"
+                                >
+                                    <f:image
+                                        class="img-dummy news-image"
+                                        src="{settings.list.media.dummyImage}"
+                                        title=""
+                                        alt=""
+                                        maxWidth="{settings.list.media.image.maxWidth}"
+                                        maxHeight="{settings.list.media.image.maxHeight}"
+                                    />
+                                </f:if>
+                            </f:else>
+                        </f:if>
+                    </n:link>
+                </div>
+            </div>
+        </div>
+    </f:if>
+
+    <f:if condition="{settings.templateLayout} == 8">
+        <!-- Card Deck -->
+        <div class="col mb-4 news-list-item">
+            <div class="card h-100">
+                <n:link
+                    newsItem="{newsItem}"
+                    settings="{settings}"
+                    title="{newsItem.title}"
+                >
+                    <f:if condition="{newsItem.mediaPreviews}">
+                        <f:then>
+                            <f:media
+                                class="news-image card-img-top"
+                                file="{newsItem.mediaPreviews.0}"
+                                title="{mediaElement.originalResource.title}"
+                                alt="{mediaElement.originalResource.alternative}"
+                                width="{f:if(condition: settings.media.maxWidth, then: settings.media.maxWidth, else: settings.list.media.image.width)}"
+                                height=""
+                            />
+                        </f:then>
+                        <f:else>
+                            <f:if condition="{settings.displayDummyIfNoMedia}">
+                                <f:image
+                                    class="img-dummy news-image card-img-top"
+                                    src="{settings.list.media.dummyImage}"
+                                    title=""
+                                    alt=""
+                                    maxWidth="{settings.list.media.image.maxWidth}"
+                                    maxHeight="{settings.list.media.image.maxHeight}"
+                                />
+                            </f:if>
+                        </f:else>
+                    </f:if>
+                </n:link>
+                <f:render
+                    partial="List/ItemBodyCard"
+                    arguments="{settings:settings,newsItem:newsItem}"
+                />
+            </div>
+        </div>
+    </f:if>
+</html>

@@ -1,0 +1,41 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers" data-namespace-typo3-fluid="true">
+<!--
+=====================
+skom_sitepackage: /Partials/News/List/ItemBody.html
+-->
+
+
+<div class="card-body articletype-{newsItem.type}{f:if(condition: newsItem.istopnews, then: ' topnews')}"
+    itemscope="itemscope" itemtype="http://schema.org/Article">
+    <h4 class="card-title" itemprop="headline">
+        <n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
+            {newsItem.title}
+        </n:link>
+    </h4>
+    <p class="card-text news-information">
+        <f:render partial="General/AdditionalInformation" arguments="{settings:settings,newsItem:newsItem}" />
+    </p>
+    <!-- teaser -->
+    <p class="card-text news-teaser" itemprop="description">
+        <n:removeMediaTags>
+            <f:if condition="{newsItem.teaser}">
+                <f:then>
+                    {newsItem.teaser -> f:format.crop(maxCharacters: '{settings.cropMaxCharacters}',
+                    respectWordBoundaries:'1') -> f:format.raw()}
+                </f:then>
+                <f:else>
+                    {newsItem.bodytext -> f:format.crop(maxCharacters: '{settings.cropMaxCharacters}',
+                    respectWordBoundaries:'1') -> f:format.raw()}
+                </f:else>
+            </f:if>
+        </n:removeMediaTags>
+    </p>
+</div>
+<div class="card-footer">
+    <n:link newsItem="{newsItem}" settings="{settings}" class="card-link news-read-more" title="{newsItem.title}">
+        <f:translate key="more-link" />
+    </n:link>
+</div>
+
+</html>

@@ -1,0 +1,15 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers" data-namespace-typo3-fluid="true">
+<!--
+=====================
+Partials/List/Item_no_img.html
+-->
+<div class="row news-list-image--left article articletype-{newsItem.type}{f:if(condition: newsItem.istopnews, then: ' topnews')}"
+    itemscope="itemscope" itemtype="https://schema.org/Article">
+    <n:excludeDisplayedNews newsItem="{newsItem}" />
+    <div class="col-12 news-list-article-wrap">
+        <f:render partial="List/ItemBody" arguments="{settings:settings,newsItem:newsItem}" />
+    </div>
+</div>
+
+</html>

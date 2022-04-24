@@ -1,0 +1,55 @@
+plugin.tx_news {
+    view {
+        templateRootPaths {
+            0 = EXT:news/Resources/Private/Templates/
+            1 = {$plugin.tx_news.view.templateRootPath.0}
+            100 = {$plugin.tx_news.view.templateRootPath.1}
+        }
+        partialRootPaths {
+            0 = EXT:news/Resources/Private/Partials/
+            1 = {$plugin.tx_news.view.partialRootPath.0}
+            100 = {$plugin.tx_news.view.partialRootPath.1}
+        }
+        layoutRootPaths {
+            0 = EXT:news/Resources/Private/Layouts/
+            1 = {$plugin.tx_news.view.layoutRootPath.0}
+            100 = {$plugin.tx_news.view.layoutRootPath.1}
+        }
+        //widget.GeorgRinger\News\ViewHelpers\Widget\PaginateViewHelper.templateRootPath = EXT:news/Resources/Private/Templates/
+
+    }
+    settings {
+        cssFile >
+        displayDummyIfNoMedia = 0
+        detail {
+            showSocialShareButtons = 0
+            media {
+                image {
+                    maxWidth = 550
+                    maxHeight = 800
+                    lightbox {
+                        enabled = 1
+                        class = {$plugin.bootstrap_package_contentelements.lightbox.cssClass}
+                        width = {$plugin.bootstrap_package_contentelements.lightbox.image.maxWidth}
+                        height = {$plugin.bootstrap_package_contentelements.lightbox.image.maxHeight}
+                        rel = {$plugin.bootstrap_package_contentelements.lightbox.prefix}
+                    }
+                }
+                video.width = 550
+            }
+        }
+    }
+    _LOCAL_LANG {
+        default {
+            more-link = more >>
+            back-link = << back
+            dateFormat = Y-m-d
+        }
+        de {
+            more-link = mehr >>
+            back-link = << zurück
+            dateFormat = d.m.Y
+            related-news = Weitere Nachrichten
+        }
+    }
+}

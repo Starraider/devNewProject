@@ -1,0 +1,36 @@
+plugin.tx_news {
+    view {
+        templateRootPath >
+        templateRootPath {
+            0 = EXT:news/Resources/Private/Templates/Styles/Twb5/Templates/
+            1 = EXT:customer_sitepackage/Resources/Private/Templates/News/
+        }
+        partialRootPath >
+        partialRootPath {
+            0 = EXT:news/Resources/Private/Templates/Styles/Twb5/Partials/
+            1 = EXT:customer_sitepackage/Resources/Private/Partials/News/
+        }
+        layoutRootPath >
+        layoutRootPath {
+            0 = EXT:news/Resources/Private/Templates/Styles/Twb5/Layouts/
+            1 = EXT:customer_sitepackage/Resources/Private/Layouts/News/
+        }
+        twb5 {
+            templateRootPath >
+            templateRootPath {
+                0 = EXT:news/Resources/Private/Templates/Styles/Twb5/Templates/
+                1 = EXT:customer_sitepackage/Resources/Private/Templates/News/Styles/Twb5/Templates/
+            }
+            partialRootPath >
+            partialRootPath {
+                0 = EXT:news/Resources/Private/Templates/Styles/Twb5/Partials/
+                1 = EXT:customer_sitepackage/Resources/Private/Templates/News/Styles/Twb5/Partials/
+            }
+            layoutRootPath >
+            layoutRootPath {
+                0 = EXT:news/Resources/Private/Templates/Styles/Twb5/Layouts/
+                1 = EXT:customer_sitepackage/Resources/Private/Templates/News/Styles/Twb5/Layouts/
+            }
+        }
+    }
+}
