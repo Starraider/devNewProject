@@ -71,15 +71,27 @@ config {
 #############################################
 lib.contentElement {
   layoutRootPaths.0 = EXT:customer_sitepackage/Resources/Private/Layouts/ContentElements/
-  layoutRootPaths.100 = EXT:customer_sitepackage/Resources/Private/Layouts/ContentElements/
+  layoutRootPaths.100 = EXT:skombase/Resources/Private/Layouts/ContentElements/
+  layoutRootPaths.200 = EXT:customer_sitepackage/Resources/Private/Layouts/ContentElements/
 }
 tt_content {
-  container_1_columns.layoutRootPaths.100. = EXT:customer_sitepackage/Resources/Private/Layouts/ContentElements/
-  container_2_columns.layoutRootPaths.100. = EXT:customer_sitepackage/Resources/Private/Layouts/ContentElements/
-  container_2_columns_right.layoutRootPaths.100. = EXT:customer_sitepackage/Resources/Private/Layouts/ContentElements/
-  container_2_columns_left.layoutRootPaths.100. = EXT:customer_sitepackage/Resources/Private/Layouts/ContentElements/
-  container_3_columns.layoutRootPaths.100. = EXT:customer_sitepackage/Resources/Private/Layouts/ContentElements/
-  container_4_columns.layoutRootPaths.100. = EXT:customer_sitepackage/Resources/Private/Layouts/ContentElements/
+  container_1_columns.layoutRootPaths.100. = EXT:skombase/Resources/Private/Layouts/ContentElements/
+  container_1_columns.layoutRootPaths.200. = EXT:customer_sitepackage/Resources/Private/Layouts/ContentElements/
+
+  container_2_columns.layoutRootPaths.100. = EXT:skombase/Resources/Private/Layouts/ContentElements/
+  container_2_columns.layoutRootPaths.200. = EXT:customer_sitepackage/Resources/Private/Layouts/ContentElements/
+
+  container_2_columns_right.layoutRootPaths.100. = EXT:skombase/Resources/Private/Layouts/ContentElements/
+  container_2_columns_right.layoutRootPaths.200. = EXT:customer_sitepackage/Resources/Private/Layouts/ContentElements/
+
+  container_2_columns_left.layoutRootPaths.100. = EXT:skombase/Resources/Private/Layouts/ContentElements/
+  container_2_columns_left.layoutRootPaths.200. = EXT:customer_sitepackage/Resources/Private/Layouts/ContentElements/
+
+  container_3_columns.layoutRootPaths.100. = EXT:skombase/Resources/Private/Layouts/ContentElements/
+  container_3_columns.layoutRootPaths.200. = EXT:customer_sitepackage/Resources/Private/Layouts/ContentElements/
+
+  container_4_columns.layoutRootPaths.100. = EXT:skombase/Resources/Private/Layouts/ContentElements/
+  container_4_columns.layoutRootPaths.200. = EXT:customer_sitepackage/Resources/Private/Layouts/ContentElements/
 }
 ################
 #### Encore ####
@@ -105,10 +117,6 @@ page {
   }
 
   includeJSLibs {
-    config = /fileadmin/typetura.config.js
-    config.forceOnTop = 1
-    typetura = /fileadmin/typetura.js
-    #head = typo3_encore:head
     modernizr >
   }
 
