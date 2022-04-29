@@ -12,11 +12,18 @@ customer_sitepackage: /Partials/News/List/ItemBodyCard.html
         </n:link>
     </h3>
 
-    <!-- date -->
-    <p class="card-text news-list-date">
-        <time itemprop="datePublished" datetime="{f:format.date(date:newsItem.datetime, format:'Y-m-d')}">
-            <f:format.date format="{f:translate(key:'dateFormat')}">{newsItem.datetime}</f:format.date>
-        </time>
+    <!-- date / category -->
+    <p class="card-text news-list-info">
+        <span class="news-list-date">
+            <time itemprop="datePublished" datetime="{f:format.date(date:newsItem.datetime, format:'Y-m-d')}">
+                <f:format.date format="{f:translate(key:'dateFormat')}">{newsItem.datetime}</f:format.date>
+            </time>
+        </span>
+        &nbsp;|&nbsp;
+        <f:if condition="{newsItem.firstCategory}">
+            <!-- first category -->
+            <span class="news-list-category badge bg-light text-dark">{newsItem.firstCategory.title}</span>
+        </f:if>
     </p>
 
     <!-- teaser -->

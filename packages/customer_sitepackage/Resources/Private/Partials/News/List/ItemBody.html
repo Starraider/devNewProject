@@ -7,16 +7,23 @@ customer_sitepackage: /Partials/News/List/ItemBody.html
 
 <!-- header -->
 <h3 class="news-list-headline">
-    <n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
+    <n:link class="news-list-headline-link" newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
         <span itemprop="headline">{newsItem.title}</span>
     </n:link>
 </h3>
 
-<!-- date -->
-<div class="news-list-date">
-    <time itemprop="datePublished" datetime="{f:format.date(date:newsItem.datetime, format:'Y-m-d')}">
-        <f:format.date format="{f:translate(key:'dateFormat')}">{newsItem.datetime}</f:format.date>
-    </time>
+<!-- date / category -->
+<div class="news-list-info">
+    <span class="news-list-date">
+        <time itemprop="datePublished" datetime="{f:format.date(date:newsItem.datetime, format:'Y-m-d')}">
+            <f:format.date format="{f:translate(key:'dateFormat')}">{newsItem.datetime}</f:format.date>
+        </time>
+    </span>
+    &nbsp;|&nbsp;
+    <f:if condition="{newsItem.firstCategory}">
+        <!-- first category -->
+        <span class="news-list-category badge bg-light text-dark">{newsItem.firstCategory.title}</span>
+    </f:if>
 </div>
 
 <!-- teaser -->
@@ -44,10 +51,6 @@ customer_sitepackage: /Partials/News/List/ItemBody.html
 <!-- footer information -->
 <div class="news-list-footer">
     <div class="news-list-info">
-        <f:if condition="{newsItem.firstCategory}">
-            <!-- first category -->
-            <span class="news-list-category">{newsItem.firstCategory.title}</span>
-        </f:if>
 
         <f:if condition="{newsItem.tags}">
             <!-- Tags -->

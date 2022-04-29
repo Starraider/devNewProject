@@ -34,7 +34,6 @@ customer_sitepackage: News/Templates/News/List.html
                         </f:if>
                     </f:then>
                     <f:else>
-                        <h3>Show Pagination</h3>
                         <f:if condition="{settings.list.paginate.insertAbove}">
                             <f:render partial="List/Pagination"
                                 arguments="{pagination: pagination.pagination, paginator: pagination.paginator}" />
