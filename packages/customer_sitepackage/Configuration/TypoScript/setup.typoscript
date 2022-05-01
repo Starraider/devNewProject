@@ -2,97 +2,61 @@
 #### DEPENDENCIES ####
 ######################
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/setup.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:skombase/Configuration/TypoScript/setup.typoscript">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:customer_sitepackage/Configuration/TypoScript/Extension/Form/setup.typoscript" condition="extension.isLoaded('form') == 1">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:customer_sitepackage/Configuration/TypoScript/Extension/News/setup.typoscript">
 
-
-
-[applicationContext == "Development"]
-  config {
-    no_cache = 1
-    sendCacheHeaders = 0
-    compressJs = 0
-    concatenateCss = 0
-    concatenateJs = 0
-    compressCss = 0
-    admPanel = 1
-  }
-  page {
-    meta.robots = noindex,nofollow
-  }
-  sourceopt {
-    enabled = 0
-    formatHtml = 4
-    removeComments = 0
-  }
-  plugin {
-    tx_min.tinysource.enable = 0
-    bootstrap_package.settings.cssSourceMapping = 1
-  }
-[END]
-[applicationContext == "Production"]
-  config {
-    no_cache = 0
-    sendCacheHeaders = 1
-    compressJs = 1
-    concatenateCss = 1
-    concatenateJs = 1
-    compressCss = 1
-    admPanel = 0
-
-  }
-  page {
-    meta.robots = index,follow
-  }
-  sourceopt {
-    enabled = 1
-    removeGenerator = 1
-    formatHtml = 2
-    removeComments = 1
-  }
-  plugin {
-    tx_min.tinysource.enable = 1
-    bootstrap_package.settings.cssSourceMapping = 0
-  }
-[END]
 
 ################
 #### config ####
 ################
 config {
-  xmlprologue = none
-  xhtml_cleaning = all
-  disablePrefixComment = 1
   headerComment = Development by Sven Kalbhenn (sven@skom.de)
+  skom.2 = customer_sitepackage
 }
 
 #############################################
 #### overwrite content_animations layout ####
 #############################################
 lib.contentElement {
-  layoutRootPaths.0 = EXT:customer_sitepackage/Resources/Private/Layouts/ContentElements/
-  layoutRootPaths.100 = EXT:skombase/Resources/Private/Layouts/ContentElements/
   layoutRootPaths.200 = EXT:customer_sitepackage/Resources/Private/Layouts/ContentElements/
+  templateRootPaths.200 = EXT:customer_sitepackage/Resources/Private/Templates/ContentElements/
+  partialRootPaths.200 = EXT:customer_sitepackage/Resources/Private/Partials/ContentElements/
 }
+
 tt_content {
-  container_1_columns.layoutRootPaths.100. = EXT:skombase/Resources/Private/Layouts/ContentElements/
-  container_1_columns.layoutRootPaths.200. = EXT:customer_sitepackage/Resources/Private/Layouts/ContentElements/
-
-  container_2_columns.layoutRootPaths.100. = EXT:skombase/Resources/Private/Layouts/ContentElements/
-  container_2_columns.layoutRootPaths.200. = EXT:customer_sitepackage/Resources/Private/Layouts/ContentElements/
-
-  container_2_columns_right.layoutRootPaths.100. = EXT:skombase/Resources/Private/Layouts/ContentElements/
-  container_2_columns_right.layoutRootPaths.200. = EXT:customer_sitepackage/Resources/Private/Layouts/ContentElements/
-
-  container_2_columns_left.layoutRootPaths.100. = EXT:skombase/Resources/Private/Layouts/ContentElements/
-  container_2_columns_left.layoutRootPaths.200. = EXT:customer_sitepackage/Resources/Private/Layouts/ContentElements/
-
-  container_3_columns.layoutRootPaths.100. = EXT:skombase/Resources/Private/Layouts/ContentElements/
-  container_3_columns.layoutRootPaths.200. = EXT:customer_sitepackage/Resources/Private/Layouts/ContentElements/
-
-  container_4_columns.layoutRootPaths.100. = EXT:skombase/Resources/Private/Layouts/ContentElements/
-  container_4_columns.layoutRootPaths.200. = EXT:customer_sitepackage/Resources/Private/Layouts/ContentElements/
+  container_1_columns {
+    layoutRootPaths.200 = EXT:customer_sitepackage/Resources/Private/Layouts/ContentElements/
+    templateRootPaths.200 = EXT:customer_sitepackage/Resources/Private/Templates/ContentElements/
+    partialRootPaths.200 = EXT:customer_sitepackage/Resources/Private/Partials/ContentElements/
+  }
+  container_2_columns {
+    layoutRootPaths.200 = EXT:customer_sitepackage/Resources/Private/Layouts/ContentElements/
+    templateRootPaths.200 = EXT:customer_sitepackage/Resources/Private/Templates/ContentElements/
+    partialRootPaths.200 = EXT:customer_sitepackage/Resources/Private/Partials/ContentElements/
+  }
+  container_2_columns_right {
+    layoutRootPaths.200 = EXT:customer_sitepackage/Resources/Private/Layouts/ContentElements/
+    templateRootPaths.200 = EXT:customer_sitepackage/Resources/Private/Templates/ContentElements/
+    partialRootPaths.200 = EXT:customer_sitepackage/Resources/Private/Partials/ContentElements/
+  }
+  container_2_columns_left {
+    layoutRootPaths.200 = EXT:customer_sitepackage/Resources/Private/Layouts/ContentElements/
+    templateRootPaths.200 = EXT:customer_sitepackage/Resources/Private/Templates/ContentElements/
+    partialRootPaths.200 = EXT:customer_sitepackage/Resources/Private/Partials/ContentElements/
+  }
+  container_3_columns {
+    layoutRootPaths.200 = EXT:customer_sitepackage/Resources/Private/Layouts/ContentElements/
+    templateRootPaths.200 = EXT:customer_sitepackage/Resources/Private/Templates/ContentElements/
+    partialRootPaths.200 = EXT:customer_sitepackage/Resources/Private/Partials/ContentElements/
+  }
+  container_4_columns {
+    layoutRootPaths.200 = EXT:customer_sitepackage/Resources/Private/Layouts/ContentElements/
+    templateRootPaths.200 = EXT:customer_sitepackage/Resources/Private/Templates/ContentElements/
+    partialRootPaths.200 = EXT:customer_sitepackage/Resources/Private/Partials/ContentElements/
+  }
 }
+
 ################
 #### Encore ####
 ################
@@ -107,6 +71,24 @@ plugin.tx_typo3encore {
 #### PAGE ####
 ##############
 page {
+  10 = FLUIDTEMPLATE
+  10 {
+    templateRootPaths {
+        0 = EXT:bootstrap_package/Resources/Private/Templates/Page/
+        1 = EXT:skombase/Resources/Private/Templates/Page/
+        2 = {$page.fluidtemplate.templateRootPath}
+    }
+    partialRootPaths {
+        0 = EXT:bootstrap_package/Resources/Private/Partials/Page/
+        1 = EXT:skombase/Resources/Private/Partials/Page/
+        2 = {$page.fluidtemplate.partialRootPath}
+    }
+    layoutRootPaths {
+        0 = EXT:bootstrap_package/Resources/Private/Layouts/Page/
+        1 = EXT:skombase/Resources/Private/Layouts/Page/
+        2 = {$page.fluidtemplate.layoutRootPath}
+    }
+  }
   includeCSS {
     theme >
     app = typo3_encore:app
