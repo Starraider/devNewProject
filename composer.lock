@@ -3083,7 +3083,7 @@
             "dist": {
                 "type": "path",
                 "url": "packages/skombase",
-                "reference": "b8829dc5b8b43565fbd6dc81560f2b37ea6bb91b"
+                "reference": "f4ca419fe7b379227f400f01656649faa3b356bf"
             },
             "require": {
                 "bk2k/bootstrap-package": "^12.0"
@@ -3096,7 +3096,7 @@
             },
             "autoload": {
                 "psr-4": {
-                    "Skom\\CustomerSitepackage\\": "Classes/"
+                    "Skom\\Skombase\\": "Classes/"
                 }
             },
             "license": [
