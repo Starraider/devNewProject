@@ -230,121 +230,55 @@
             format('svg'); /* Legacy iOS */
 }
 
-@keyframes root {
-    0% {
-        font-size: 0%;
-        line-height: 1.2;
-    }
-    100% {
-        font-size: 115%;
-        line-height: 1.5;
-    }
-}
+
 :root {
-    --tt-key: root;
-    --tt-max: 1600;
-    //--tt-ease: cubic-bezier(0, 0.75, 0.1, 0.9);
-    --tt-ease: ease-out;
-    font-size: 100%;
+    @include font-size(1rem);
     line-height: 1.4;
 }
 
 h1,
 .h1 p {
-    color: red;
-    font-size: 2.2rem;
-    --tt-key: h1;
-   // --tt-ease: ease-out;
+    color: $primary;
+    @include font-size(2.2rem);
     font-variation-settings: 'wght' 600, 'wdth' 0.7;
 }
-@keyframes h1 {
-    0%,
-    20% {
-        color: blue;
-        font-size: 1.2rem;
-        font-variation-settings: 'wght' 100, 'wdth' 1;
-    }
-}
+
 
 h2,
 .h2 p {
-    color: purple;
-    font-size: 1.4rem;
-    --tt-key: h2;
+    color: $secondary;
+    @include font-size(1.4rem);
     font-variation-settings: 'wght' 1, 'wdth' 0.9;
 }
-@keyframes h2 {
-    0%,
-    20% {
-        color: green;
-        font-size: 1rem;
-        font-variation-settings: 'wght' 1.2, 'wdth' 1;
-    }
-}
+
 
 h3,
 .h3 p {
-    color: teal;
-    font-size: 1.2rem;
-    --tt-key: h3;
+    color: $primary;
+    @include font-size(1.2rem);
     font-variation-settings: 'wght' 1, 'wdth' 0.9;
 }
-@keyframes h3 {
-    0%,
-    20% {
-        color: rebeccapurple;
-        font-size: 0.9rem;
-        font-variation-settings: 'wght' 1.2, 'wdth' 1;
-    }
-}
+
 
 h4,
 .h4 p {
-    color: orange;
+    color: $secondary;
     font-size: 1rem;
-    --tt-key: h4;
     font-variation-settings: 'wght' 1, 'wdth' 0.9;
 }
-@keyframes h4 {
-    0%,
-    20% {
-        color: darksalmon;
-        font-size: 0.75rem;
-        font-variation-settings: 'wght' 1.2, 'wdth' 1;
-    }
-}
+
 
 .frame-header {
-    --tt-key: frame-header;
     margin-bottom: 0.8rem;
 }
-@keyframes frame-header {
-    0%,
-    20% {
-        margin-bottom: 0.4rem;
-    }
-    100% {
-        margin-bottom: 0.8rem;
-    }
-}
+
 
 p {
-    --tt-key: p;
-    font-size: 1rem;
+    @include font-size(1rem);
     line-height: 1.7;
     font-weight: 100;
 }
-@keyframes p {
-    0%,
-    20% {
-        font-size: 0.8rem;
-        line-height: 1.5;
-    }
-    100% {
-        font-size: 1rem;
-        line-height: 1.7;
-    }
-}
+
 
 /* klaro cookie banner */
 .klaro {
