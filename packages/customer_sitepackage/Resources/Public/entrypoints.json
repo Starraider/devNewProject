@@ -9,18 +9,6 @@
       "css": [
         "/typo3conf/ext/customer_sitepackage/Resources/Public/app.css"
       ]
-    },
-    "head": {
-      "js": [
-        "/typo3conf/ext/customer_sitepackage/Resources/Public/runtime.js",
-        "/typo3conf/ext/customer_sitepackage/Resources/Public/head.js"
-      ]
-    },
-    "config": {
-      "js": [
-        "/typo3conf/ext/customer_sitepackage/Resources/Public/runtime.js",
-        "/typo3conf/ext/customer_sitepackage/Resources/Public/config.js"
-      ]
     }
   }
 }

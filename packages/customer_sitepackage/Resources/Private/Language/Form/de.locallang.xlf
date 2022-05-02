@@ -9,8 +9,7 @@
                 <source>Submit</source>
 				<target>Abschicken</target>
             </trans-unit>
-
-             <trans-unit id="contactform.element.mandatory.properties.label">
+            <trans-unit id="contactform.element.mandatory.properties.label">
                 <source>Contact Form</source>
 				<target>Kontakt Formular</target>
             </trans-unit>
@@ -69,6 +68,14 @@
             <trans-unit id="contactform.element.summary.properties.label">
                 <source>Summary</source>
 				<target>Zusammenfassung</target>
+            </trans-unit>
+			<trans-unit id="contactform.element.summary.properties.firstname">
+                <source>First name</source>
+				<target>Vorname</target>
+            </trans-unit>
+			<trans-unit id="contactform.element.summary.properties.lastname">
+                <source>Last name</source>
+				<target>Nachname</target>
             </trans-unit>
 
 

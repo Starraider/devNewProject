@@ -1,4 +1,4 @@
-# TYPO3 Development Site for demonstrating Webpack Encore
+# TYPO3-Project-Template with webpack encore
 
 This project was build, to test and demonstrate the use of Webpack Encore with TYPO3-CMS.
 
@@ -29,6 +29,7 @@ git submodule update --init --recursive
 ```bash
 git remote rm origin
 rm -rf .git
+rm .gitmodules
 ```
 
 4. Initialize your own git repository
@@ -39,36 +40,144 @@ git init
 
 5. Push your git repository to Github
 
-6. Change project name from newProject to your own name
+Usually VS Code asks you to generate a new Github repository when you make your first git commit.
 
-7. Install node dependencies
+6. Change project name from devNewProject to your own project name
+
+Replace "devNewProject" with your own project name in these files:
+
+- .ddev/config.yaml
+- composer.json
+- public/typo3conf/LocalConfiguration.php
+- Build/package.json
+
+7. Change repository URL
+
+Replace the repository URL "https://github.com/Starraider/devNewProject.git" with your own repository URL in these files:
+
+- composer.json
+- Build/package.json
+
+8. Install node dependencies
 
 ```bash
 cd Build
 yarn install
 ```
 
-8. Start DDEV and install dependencies
+9. Start DDEV and install dependencies
 
 ```bash
+ddev start
 ddev composer install
 ```
-9. Restore database and files
+
+10. Change settings in .env
+
+Open file ```.env``` in your editor.
+Change ```SITE_BASE=``` to the generated URL, which is shown after ```ddev start```.
+Change ```TYPO3__DB__Connections__Default__host=``` to the generated db container name, which is shown during ```ddev start```.
+Restart ```ddev restart```.
+
+11. Restore database and files
 
 ```bash
 ddev db-restore
 ddev fileadmin-restore
 ```
-10. Launch website
+
+12. Generate webpack files
 
 ```bash
-ddev start
+cd Build/
+yarn encore dev
+```
+If you get an error message, maybe you have to change your node.js version with ```nvm use system```.
+
+13. Launch local website
+
+```bash
+ddev restart
 ddev launch typo3
 ```
-11. Login
+
+14. Login
 
 Username:
 Passwort:
+
+15. If you see the error message "zuncompress(): need dictionary ..."
+
+This is currently a bug in DDEV.
+Open file ```public/typo3conf/AdditionalConfiguration.php``` in your editor.
+Remove the comment "#ddev-generated" on the top of the file (otherwise it will be overwriten on every start).
+Change ```'driver' => 'pdo_mysql',``` into ```'driver' => 'mysqli',```.
+Restore DB again with ```ddev db-restore```.
+Restart with ```ddev restart```.
+Now the error message should be gone.
+
+16. Change local development URL
+
+Replace the development URL "https://devnewproject.ddev.site" with the generated URL, which is shown after ```ddev start```, in these files:
+
+- Build/js/app.js
+- Build/cypress.json
+
+17. Change deployment credentials
+
+Change all credentials in deploy.php to your own deployment data.
+
+18. Setup GitHub Action for automated deployment
+
+a. Generate ssh keys for cloning of your private repository to your server
+
+Generate ssh keys on your server with:
+
+```bash
+ssh-keygen -t rsa -b 4096
+```
+
+Leave password empty!
+Use the public key on GitHub for "Settings -> Deployment Keys -> Add deploy key" (name doesn't matter).
+Make a test connection to GitHub to update the known_hosts file, with:
+
+```bash
+ssh -T git@github.com
+```
+
+b. Generate ssh keys for the deployment from GitHub to your server
+
+Generate ssh keys on your local machine:
+
+```bash
+ssh-keygen -t rsa -b 4096 -f ~/.ssh/id_github -C "your_email@example.com"
+```
+
+Leave password empty and use the email address, which you used for your GitHub account.
+If you alreade have a local ssh keys without password, you can use this instead.
+
+Upload the public key to your server with:
+
+```bash
+ssh-copy-id -f -i ~/.ssh/id_github pxxxxxx@pxxxxxx.mittwaldserver.info
+```
+
+Make a test connection to your server to update the known_hosts file, with:
+
+```bash
+ssh -i ~/.ssh/id_github pxxxxxx@pxxxxxx.mittwaldserver.info
+```
+
+Open the private key and use it on GitHub for generating "Settings -> Secrets -> Actions -> New repository secret" with Name "PRIVATE_KEY".
+
+Get your entry from known_hosts on your local machine, with:
+
+```bash
+ssh-keyscan pxxxxxx.mittwaldserver.info
+```
+
+Copy the line which looks like "pxxxxxx.mittwaldserver.info ssh-rsa AAA..." and use it on GitHub for generating "Settings -> Secrets -> Actions -> New repository secret" with Name "KNOWN_HOSTS". (Without it ssh would ask if you want to add your server to the known_hosts).
+
 
 
 ## How to use DDEV
@@ -86,7 +195,7 @@ ddev describe
 ddev launch
 ```
 
-or go to [https://devwebpack.ddev.site](https://devwebpack.ddev.site)
+or go to [https://devnewproject.ddev.site](https://devnewproject.ddev.site)
 
 ### How to use Webpack Encore
 

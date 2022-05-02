@@ -1,8 +1,6 @@
 {
   "typo3conf/ext/customer_sitepackage/Resources/Public/app.css": "/typo3conf/ext/customer_sitepackage/Resources/Public/app.css",
   "typo3conf/ext/customer_sitepackage/Resources/Public/app.js": "/typo3conf/ext/customer_sitepackage/Resources/Public/app.js",
-  "typo3conf/ext/customer_sitepackage/Resources/Public/head.js": "/typo3conf/ext/customer_sitepackage/Resources/Public/head.js",
-  "typo3conf/ext/customer_sitepackage/Resources/Public/config.js": "/typo3conf/ext/customer_sitepackage/Resources/Public/config.js",
   "typo3conf/ext/customer_sitepackage/Resources/Public/runtime.js": "/typo3conf/ext/customer_sitepackage/Resources/Public/runtime.js",
   "typo3conf/ext/customer_sitepackage/Resources/Public/vendors-node_modules_bootstrap_dist_js_bootstrap_esm_js-node_modules_jquery_dist_jquery_js-no-74c5b1.js": "/typo3conf/ext/customer_sitepackage/Resources/Public/vendors-node_modules_bootstrap_dist_js_bootstrap_esm_js-node_modules_jquery_dist_jquery_js-no-74c5b1.js",
   "typo3conf/ext/customer_sitepackage/Resources/Public/./sprite.svg": "/typo3conf/ext/customer_sitepackage/Resources/Public/./sprite.svg",
@@ -56,6 +54,8 @@
   "typo3conf/ext/customer_sitepackage/Resources/Public/fonts/montserrat-v23-latin-regular.woff2": "/typo3conf/ext/customer_sitepackage/Resources/Public/fonts/montserrat-v23-latin-regular.5d169d5e.woff2",
   "typo3conf/ext/customer_sitepackage/Resources/Public/fonts/montserrat-v23-latin-600.woff2": "/typo3conf/ext/customer_sitepackage/Resources/Public/fonts/montserrat-v23-latin-600.83c45f4b.woff2",
   "typo3conf/ext/customer_sitepackage/Resources/Public/Images/youtube-placeholder.png": "/typo3conf/ext/customer_sitepackage/Resources/Public/Images/youtube-placeholder.png",
+  "typo3conf/ext/customer_sitepackage/Resources/Public/Images/Logo_machwerk.svg": "/typo3conf/ext/customer_sitepackage/Resources/Public/Images/Logo_machwerk.svg",
+  "typo3conf/ext/customer_sitepackage/Resources/Public/Images/Logo_machwerk_klein.svg": "/typo3conf/ext/customer_sitepackage/Resources/Public/Images/Logo_machwerk_klein.svg",
   "typo3conf/ext/customer_sitepackage/Resources/Public/Images/logo.svg": "/typo3conf/ext/customer_sitepackage/Resources/Public/Images/logo.svg",
   "typo3conf/ext/customer_sitepackage/Resources/Public/Images/default-skin.svg": "/typo3conf/ext/customer_sitepackage/Resources/Public/Images/default-skin.svg",
   "typo3conf/ext/customer_sitepackage/Resources/Public/Images/preloader.gif": "/typo3conf/ext/customer_sitepackage/Resources/Public/Images/preloader.gif",

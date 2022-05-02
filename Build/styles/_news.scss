@@ -1,0 +1,29 @@
+.news-list-view {
+    .article {
+        margin-bottom: 1rem;
+
+        .news-list-info {
+            font-size: 0.8rem;
+            color: $gray-600;
+        }
+        .news-list-teaser {
+            p {
+                --tt-key: news-list-p;
+                font-size: 0.9rem;
+                margin-bottom: 0.5rem;
+            }
+            @keyframes news-list-p {
+                0%,
+                20% {
+                    font-size: 0.8rem;
+                }
+                100% {
+                    font-size: 0.9rem;
+                }
+            }
+        }
+        .news-list-more {
+            font-size: 0.9rem;
+        }
+    }
+}

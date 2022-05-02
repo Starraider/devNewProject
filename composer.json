@@ -2,7 +2,7 @@
 	"name": "typo3/cms-base-distribution",
 	"description": "TYPO3 CMS Base Distribution",
 	"license": "GPL-2.0-or-later",
-	"version": "11.0.0",
+	"version": "11.1.0",
 	"authors": [
 		{
 			"name": "Sven Kalbhenn",
@@ -21,12 +21,14 @@
 		"bk2k/bootstrap-package": "^12.0",
 		"causal/image_autoresize": "^2.1",
 		"christophlehmann/imageoptimizer": "^3.1",
+		"georgringer/news": "^9.3",
 		"helhum/dotenv-connector": "^3.0",
 		"helhum/typo3-console": "^7.0.2",
 		"jweiland/sync-crop-areas": "^2.2",
 		"lochmueller/sourceopt": "^4.0",
 		"skom/customer-sitepackage": "@dev",
 		"skom/klaro-video": "@dev",
+		"skom/skombase": "@dev",
 		"sourcebroker/deployer-extended-typo3": "^18.0",
 		"ssch/typo3-encore": "^4.0",
 		"tritum/form-element-linked-checkbox": "^2.3",
@@ -97,21 +99,21 @@
 			"@ci:static",
 			"@ci:dynamic"
 		],
+		"ci:composer:normalize": "@composer normalize --dry-run",
 		"ci:dynamic": [
 			"@ci:tests"
 		],
-		"ci:composer:normalize": "@composer normalize --dry-run",
+		"ci:json:lint": "find . ! -path '*public/*' ! -path '*vendor/*' ! -path '*.vscode/*' ! -path '*var/*' ! -path '*Build/node_modules/*' -name '*.json' | xargs -r php vendor/bin/jsonlint -q",
 		"ci:static": [
 			"@ci:composer:normalize",
 			"@ci:ts:lint",
 			"@ci:json:lint"
 		],
-		"ci:tests:accept": "php vendor/bin/codecept run --steps",
 		"ci:tests": [
 			"@ci:tests:accept"
 		],
+		"ci:tests:accept": "php vendor/bin/codecept run --steps",
 		"ci:ts:lint": "exec tslint -c Build/TsLint.yml --ansi -n --fail-on-warnings -vvv packages",
-		"ci:json:lint": "find . ! -path '*public/*' ! -path '*vendor/*' ! -path '*.vscode/*' ! -path '*var/*' ! -path '*Build/node_modules/*' -name '*.json' | xargs -r php vendor/bin/jsonlint -q",
 		"dep:beta": "exec php ./vendor/bin/dep deploy beta",
 		"dep:live": "exec php ./vendor/bin/dep deploy live",
 		"typo3-cms-scripts": [

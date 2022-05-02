@@ -58,8 +58,13 @@
 @import "../../public/typo3conf/ext/bootstrap_package/Resources/Public/Scss/plugins/cookieconsent";
 @import "../../public/typo3conf/ext/bootstrap_package/Resources/Public/Scss/plugins/photoswipe";
 
+
+// Todo: Change to public folder and import from there
+@import "../../public/typo3conf/ext/skombase/Resources/Public/Scss/main";
+
 //
 // My own Styles
 //
 @import "bootstrappackageicon";
+@import "news";
 @import "mystyles";

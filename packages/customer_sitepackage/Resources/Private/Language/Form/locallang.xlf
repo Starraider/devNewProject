@@ -8,7 +8,7 @@
             <trans-unit id="element.contactform.renderingOptions.submitButtonLabel">
                 <source>Submit</source>
             </trans-unit>
-             <trans-unit id="contactform.element.mandatory.properties.label">
+            <trans-unit id="contactform.element.mandatory.properties.label">
                 <source>Contact Form</source>
             </trans-unit>
             <trans-unit id="contactform.element.mandatory.properties.text">
@@ -53,7 +53,12 @@
             <trans-unit id="contactform.element.summary.properties.label">
                 <source>Summary</source>
             </trans-unit>
-
+			<trans-unit id="contactform.element.summary.properties.firstname">
+                <source>First name</source>
+            </trans-unit>
+			<trans-unit id="contactform.element.summary.properties.lastname">
+                <source>Last name</source>
+            </trans-unit>
 
         </body>
     </file>
