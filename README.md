@@ -1,4 +1,4 @@
-# TYPO3 Development Site for demonstrating Webpack Encore
+# TYPO3-Project-Template with webpack encore
 
 This project was build, to test and demonstrate the use of Webpack Encore with TYPO3-CMS.
 
