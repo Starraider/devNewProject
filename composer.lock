@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1381549a25cd46b687928b736ef6e730",
+    "content-hash": "df038f3f2cddea81624b5d5d23eec1fc",
     "packages": [
         {
             "name": "b13/container",
@@ -2995,11 +2995,11 @@
         },
         {
             "name": "skom/customer-sitepackage",
-            "version": "11.0.0",
+            "version": "11.1.0",
             "dist": {
                 "type": "path",
                 "url": "packages/customer_sitepackage",
-                "reference": "2956026e1a3e3a411ca3540f093d90ca2d2286f0"
+                "reference": "8c5b7adf7beedd817b56e61e72e13602d706cbdf"
             },
             "require": {
                 "bk2k/bootstrap-package": "^12.0"
