@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "df038f3f2cddea81624b5d5d23eec1fc",
+    "content-hash": "0d2fdfa4423471b8390bf3e8c6a9df88",
     "packages": [
         {
             "name": "b13/container",
@@ -6842,21 +6842,21 @@
         },
         {
             "name": "typo3/cms-composer-installers",
-            "version": "v3.1.2",
+            "version": "dev-main",
             "source": {
                 "type": "git",
                 "url": "https://github.com/TYPO3/CmsComposerInstallers.git",
-                "reference": "1483e434946cf68b6589cdd61c760b19d0988d62"
+                "reference": "d9b4e06432a233809487cd2299df1d5bef02e079"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TYPO3/CmsComposerInstallers/zipball/1483e434946cf68b6589cdd61c760b19d0988d62",
-                "reference": "1483e434946cf68b6589cdd61c760b19d0988d62",
+                "url": "https://api.github.com/repos/TYPO3/CmsComposerInstallers/zipball/d9b4e06432a233809487cd2299df1d5bef02e079",
+                "reference": "d9b4e06432a233809487cd2299df1d5bef02e079",
                 "shasum": ""
             },
             "require": {
-                "composer-plugin-api": "^1.0.0 || ^2.0.0",
-                "php": "^7.2 || ^8.0"
+                "composer-plugin-api": "^2.1.0",
+                "php": "^7.4 || ^8.0"
             },
             "conflict": {
                 "composer/installers": "<2.0.0"
@@ -6866,16 +6866,17 @@
                 "netresearch/composer-installers": "*"
             },
             "require-dev": {
-                "composer/composer": "1.2.*@dev || 2.0.*@dev",
+                "composer/composer": "^2.1",
                 "friendsofphp/php-cs-fixer": "^2.18",
                 "overtrue/phplint": "^2.0",
                 "phpunit/phpunit": "^8.5"
             },
+            "default-branch": true,
             "type": "composer-plugin",
             "extra": {
                 "class": "TYPO3\\CMS\\Composer\\Installer\\Plugin",
                 "branch-alias": {
-                    "dev-master": "3.1.x-dev"
+                    "dev-main": "4.0.x-dev"
                 }
             },
             "autoload": {
@@ -6911,9 +6912,9 @@
             "support": {
                 "general": "https://typo3.org/support/",
                 "issues": "https://github.com/TYPO3/CmsComposerInstallers/issues",
-                "source": "https://github.com/TYPO3/CmsComposerInstallers/tree/v3.1.2"
+                "source": "https://github.com/TYPO3/CmsComposerInstallers/tree/v4.0.0-RC1"
             },
-            "time": "2021-07-26T22:16:58+00:00"
+            "time": "2021-12-08T20:11:23+00:00"
         },
         {
             "name": "typo3/cms-core",
@@ -9260,7 +9261,8 @@
     "stability-flags": {
         "skom/customer-sitepackage": 20,
         "skom/klaro-video": 20,
-        "skom/skombase": 20
+        "skom/skombase": 20,
+        "typo3/cms-composer-installers": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
