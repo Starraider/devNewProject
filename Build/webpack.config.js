@@ -46,8 +46,14 @@ Encore
       pattern: /\.(png|jpg|jpeg|svg)$/,
     },
     {
+      from: '../public/typo3conf/ext/skombase/Resources/Public/Images',
+      to: 'Images/skombase/[name].[ext]',
+      includeSubdirectories: false,
+      pattern: /\.(png|jpg|jpeg|svg)$/,
+    },
+    {
       from: './node_modules/photoswipe/dist/default-skin/',
-      to: 'Images/[path][name].[ext]',
+      to: 'Images/photoswipe/[name].[ext]',
       includeSubdirectories: false,
       pattern: /\.(png|jpg|gif|svg)$/,
     },
