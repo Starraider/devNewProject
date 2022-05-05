@@ -1,0 +1,15 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    xmlns:be="http://typo3.org/ns/TYPO3/CMS/Backend/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:asset.css identifier="content-block-hoverimage-be" href="CB:hoverimage/dist/EditorPreview.css" />
+
+<be:link.editRecord uid="{data.uid}" table="tt_content" id="element-tt_content-{data.uid}">
+    <div class="hoverimage">
+        <f:link.typolink parameter="{imagelink}">
+            <img src="<f:uri.image image='{image_normal}' />" onmouseover=src="<f:uri.image image='{image_hover}' />"
+                onmouseout=src="<f:uri.image image='{image_normal}' />" />
+        </f:link.typolink>
+    </div>
+</be:link.editRecord>
+
+</html>

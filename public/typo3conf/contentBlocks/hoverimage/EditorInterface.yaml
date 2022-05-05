@@ -1,0 +1,22 @@
+group: common
+fields:
+    - identifier: image_normal
+      type: Image
+      properties:
+          minItems: '1'
+          maxItems: '1'
+    - identifier: image_hover
+      type: Image
+      properties:
+          minItems: '1'
+          maxItems: '1'
+    - identifier: imagelink
+      type: Url
+      properties:
+          max: '700'
+          size: '50'
+          default: ''
+          placeholder: 'http://'
+          required: true
+          autocomplete: false
+          trim: true
