@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0d2fdfa4423471b8390bf3e8c6a9df88",
+    "content-hash": "49d03e68b876ef59e894b27377bd5a08",
     "packages": [
         {
             "name": "b13/container",
@@ -732,21 +732,21 @@
         },
         {
             "name": "doctrine/dbal",
-            "version": "2.13.8",
+            "version": "2.13.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/dbal.git",
-                "reference": "dc9b3c3c8592c935a6e590441f9abc0f9eba335b"
+                "reference": "c480849ca3ad6706a39c970cdfe6888fa8a058b8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/dbal/zipball/dc9b3c3c8592c935a6e590441f9abc0f9eba335b",
-                "reference": "dc9b3c3c8592c935a6e590441f9abc0f9eba335b",
+                "url": "https://api.github.com/repos/doctrine/dbal/zipball/c480849ca3ad6706a39c970cdfe6888fa8a058b8",
+                "reference": "c480849ca3ad6706a39c970cdfe6888fa8a058b8",
                 "shasum": ""
             },
             "require": {
                 "doctrine/cache": "^1.0|^2.0",
-                "doctrine/deprecations": "^0.5.3",
+                "doctrine/deprecations": "^0.5.3|^1",
                 "doctrine/event-manager": "^1.0",
                 "ext-pdo": "*",
                 "php": "^7.1 || ^8"
@@ -821,7 +821,7 @@
             ],
             "support": {
                 "issues": "https://github.com/doctrine/dbal/issues",
-                "source": "https://github.com/doctrine/dbal/tree/2.13.8"
+                "source": "https://github.com/doctrine/dbal/tree/2.13.9"
             },
             "funding": [
                 {
@@ -837,29 +837,29 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-03-09T15:25:46+00:00"
+            "time": "2022-05-02T20:28:55+00:00"
         },
         {
             "name": "doctrine/deprecations",
-            "version": "v0.5.3",
+            "version": "v1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/deprecations.git",
-                "reference": "9504165960a1f83cc1480e2be1dd0a0478561314"
+                "reference": "0e2a4f1f8cdfc7a92ec3b01c9334898c806b30de"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/deprecations/zipball/9504165960a1f83cc1480e2be1dd0a0478561314",
-                "reference": "9504165960a1f83cc1480e2be1dd0a0478561314",
+                "url": "https://api.github.com/repos/doctrine/deprecations/zipball/0e2a4f1f8cdfc7a92ec3b01c9334898c806b30de",
+                "reference": "0e2a4f1f8cdfc7a92ec3b01c9334898c806b30de",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.1|^8.0"
             },
             "require-dev": {
-                "doctrine/coding-standard": "^6.0|^7.0|^8.0",
-                "phpunit/phpunit": "^7.0|^8.0|^9.0",
-                "psr/log": "^1.0"
+                "doctrine/coding-standard": "^9",
+                "phpunit/phpunit": "^7.5|^8.5|^9.5",
+                "psr/log": "^1|^2|^3"
             },
             "suggest": {
                 "psr/log": "Allows logging deprecations via PSR-3 logger implementation"
@@ -878,9 +878,9 @@
             "homepage": "https://www.doctrine-project.org/",
             "support": {
                 "issues": "https://github.com/doctrine/deprecations/issues",
-                "source": "https://github.com/doctrine/deprecations/tree/v0.5.3"
+                "source": "https://github.com/doctrine/deprecations/tree/v1.0.0"
             },
-            "time": "2021-03-21T12:59:47+00:00"
+            "time": "2022-05-02T15:47:09+00:00"
         },
         {
             "name": "doctrine/event-manager",
@@ -6556,6 +6556,159 @@
             "time": "2022-01-12T09:12:23+00:00"
         },
         {
+            "name": "typo3-contentblocks/composer-plugin",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/TYPO3-Initiatives/content-blocks-composer-plugin.git",
+                "reference": "f314e6077b0cfd0a6a6e1b90bc9a86c75e399376"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/TYPO3-Initiatives/content-blocks-composer-plugin/zipball/f314e6077b0cfd0a6a6e1b90bc9a86c75e399376",
+                "reference": "f314e6077b0cfd0a6a6e1b90bc9a86c75e399376",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.0 || ^2.0",
+                "symfony/filesystem": "^4.4 || ^5.0"
+            },
+            "require-dev": {
+                "composer/composer": "^2.0",
+                "ergebnis/composer-normalize": "2.7.0",
+                "friendsofphp/php-cs-fixer": "^2.16"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "Typo3Contentblocks\\ComposerPlugin\\Plugin"
+            },
+            "autoload": {
+                "psr-4": {
+                    "Typo3Contentblocks\\ComposerPlugin\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Structured Content Initiative"
+                }
+            ],
+            "description": "This composer plugin manages registration of Content Blocks for the Content Blocks API",
+            "keywords": [
+                "content-blocks",
+                "typo3"
+            ],
+            "support": {
+                "issues": "https://github.com/TYPO3-Initiatives/content-blocks-composer-plugin/issues",
+                "source": "https://github.com/TYPO3-Initiatives/content-blocks-composer-plugin"
+            },
+            "time": "2020-11-10T00:43:41+00:00"
+        },
+        {
+            "name": "typo3-contentblocks/contentblocks-reg-api",
+            "version": "v2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/TYPO3-Initiatives/content-block-registration-api.git",
+                "reference": "a68ce4110cd5193a1466e04121fe465229c90f8b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/TYPO3-Initiatives/content-block-registration-api/zipball/a68ce4110cd5193a1466e04121fe465229c90f8b",
+                "reference": "a68ce4110cd5193a1466e04121fe465229c90f8b",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "php": "^7.2 || ~8.0.0",
+                "typo3-contentblocks/composer-plugin": "*",
+                "typo3/cms-core": "^10.4 || ^11.5",
+                "typo3/cms-filelist": "^10.4 || ^11.5"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.16",
+                "helhum/typo3-console": " ^6.6 || ^7.0",
+                "rector/rector": "^0.12.19",
+                "roave/security-advisories": "dev-master",
+                "typo3-contentblocks/call-to-action-local": "@dev",
+                "typo3-contentblocks/counter-local": "@dev",
+                "typo3-contentblocks/example-local": "@dev",
+                "typo3-contentblocks/fluid-styled-content-example-local": "@dev",
+                "typo3-contentblocks/slider-local": "@dev",
+                "typo3/cms-about": "^10.4 || ^11.5",
+                "typo3/cms-adminpanel": "^10.4 || ^11.5",
+                "typo3/cms-backend": "^10.4 || ^11.5",
+                "typo3/cms-belog": "^10.4 || ^11.5",
+                "typo3/cms-beuser": "^10.4 || ^11.5",
+                "typo3/cms-dashboard": "^10.4 || ^11.5",
+                "typo3/cms-extbase": "^10.4 || ^11.5",
+                "typo3/cms-extensionmanager": "^10.4 || ^11.5",
+                "typo3/cms-felogin": "^10.4 || ^11.5",
+                "typo3/cms-filemetadata": "^10.4 || ^11.5",
+                "typo3/cms-fluid": "^10.4 || ^11.5",
+                "typo3/cms-fluid-styled-content": "^10.4 || ^11.5",
+                "typo3/cms-form": "^10.4 || ^11.5",
+                "typo3/cms-frontend": "^10.4 || ^11.5",
+                "typo3/cms-impexp": "^10.4 || ^11.5",
+                "typo3/cms-indexed-search": "^10.4 || ^11.5",
+                "typo3/cms-info": "^10.4 || ^11.5",
+                "typo3/cms-install": "^10.4 || ^11.5",
+                "typo3/cms-linkvalidator": "^10.4 || ^11.5",
+                "typo3/cms-lowlevel": "^10.4 || ^11.5",
+                "typo3/cms-opendocs": "^10.4 || ^11.5",
+                "typo3/cms-recordlist": "^10.4 || ^11.5",
+                "typo3/cms-recycler": "^10.4 || ^11.5",
+                "typo3/cms-redirects": "^10.4 || ^11.5",
+                "typo3/cms-reports": "^10.4 || ^11.5",
+                "typo3/cms-rte-ckeditor": "^10.4 || ^11.5",
+                "typo3/cms-scheduler": "^10.4 || ^11.5",
+                "typo3/cms-seo": "^10.4 || ^11.5",
+                "typo3/cms-setup": "^10.4 || ^11.5",
+                "typo3/cms-sys-note": "^10.4 || ^11.5",
+                "typo3/cms-t3editor": "^10.4 || ^11.5",
+                "typo3/cms-tstemplate": "^10.4 || ^11.5",
+                "typo3/cms-viewpage": "^10.4 || ^11.5",
+                "typo3/cms-workspaces": "^10.4 || ^11.5",
+                "typo3/tailor": "^1.3",
+                "typo3/testing-framework": "^6.4"
+            },
+            "type": "typo3-cms-extension",
+            "extra": {
+                "typo3/cms": {
+                    "extension-key": "contentblocks_reg_api",
+                    "web-dir": ".typo3/public",
+                    "app-dir": ".typo3"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Typo3Contentblocks\\ContentblocksRegApi\\": "Classes/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "TYPO3 Structured Content Initiative"
+                }
+            ],
+            "description": "This API provides an easy and reliable way to register content blocks as standalone packages.",
+            "keywords": [
+                "content-blocks",
+                "typo3"
+            ],
+            "support": {
+                "issues": "https://github.com/TYPO3-Initiatives/content-block-registration-api/issues",
+                "source": "https://github.com/TYPO3-Initiatives/content-block-registration-api"
+            },
+            "time": "2022-04-07T10:44:06+00:00"
+        },
+        {
             "name": "typo3/class-alias-loader",
             "version": "v1.1.3",
             "source": {
@@ -8658,16 +8811,16 @@
     "packages-dev": [
         {
             "name": "ergebnis/composer-normalize",
-            "version": "2.25.2",
+            "version": "2.26.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ergebnis/composer-normalize.git",
-                "reference": "854ca6746fbc23e285da01aa963b9c61266d56eb"
+                "reference": "0045faef573b0cfcfece793bd9d28aa62b82f575"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ergebnis/composer-normalize/zipball/854ca6746fbc23e285da01aa963b9c61266d56eb",
-                "reference": "854ca6746fbc23e285da01aa963b9c61266d56eb",
+                "url": "https://api.github.com/repos/ergebnis/composer-normalize/zipball/0045faef573b0cfcfece793bd9d28aa62b82f575",
+                "reference": "0045faef573b0cfcfece793bd9d28aa62b82f575",
                 "shasum": ""
             },
             "require": {
@@ -8729,7 +8882,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-04-20T07:53:13+00:00"
+            "time": "2022-05-02T11:07:37+00:00"
         },
         {
             "name": "ergebnis/json-normalizer",

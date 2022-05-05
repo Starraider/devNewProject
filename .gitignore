@@ -54,6 +54,7 @@
 !/public/typo3conf/LocalConfiguration.php
 !/public/typo3conf/AdditionalConfiguration.php
 !/public/typo3conf/PackageStates.php
+!/public/typo3conf/contentBlocks
 !/public/.htaccess
 
 /packages/customer_sitepackage/Resources/Public/*

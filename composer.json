@@ -32,6 +32,7 @@
 		"sourcebroker/deployer-extended-typo3": "^18.0",
 		"ssch/typo3-encore": "^4.0",
 		"tritum/form-element-linked-checkbox": "^2.3",
+		"typo3-contentblocks/contentblocks-reg-api": "^2.0",
 		"typo3/cms-backend": "^11.5.0",
 		"typo3/cms-belog": "^11.5.0",
 		"typo3/cms-beuser": "^11.5.0",
@@ -85,7 +86,8 @@
 			"phpstan/extension-installer": true,
 			"typo3/class-alias-loader": true,
 			"typo3/cms-composer-installers": true,
-			"helhum/dotenv-connector": true
+			"helhum/dotenv-connector": true,
+			"typo3-contentblocks/composer-plugin": true
 		},
 		"platform": {
 			"php": "7.4.1"
