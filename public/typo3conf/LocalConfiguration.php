@@ -27,11 +27,11 @@ return [
     'EXTENSIONS' => [
         'backend' => [
             'backendFavicon' => '',
-            'backendLogo' => '',
+            'backendLogo' => 'EXT:skombase/Resources/Public/Images/Logo_machwerk_klein.svg',
             'loginBackgroundImage' => '',
             'loginFootnote' => '',
             'loginHighlightColor' => '',
-            'loginLogo' => '',
+            'loginLogo' => 'EXT:skombase/Resources/Public/Images/Logo_machwerk.svg',
             'loginLogoAlt' => '',
         ],
         'bootstrap_package' => [
@@ -48,6 +48,11 @@ return [
             'disableAddAnimationsTab' => '0',
             'extendedAnimationSettings' => '0',
             'hideFooterAnimationLabel' => '0',
+        ],
+        'contentblocks_reg_api' => [
+            'contentBlockDefinition' => '0',
+            'enableLayoutOptions' => '1',
+            'showBackendModule' => '1',
         ],
         'extensionmanager' => [
             'automaticInstallation' => '1',
