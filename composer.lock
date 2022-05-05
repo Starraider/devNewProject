@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "49d03e68b876ef59e894b27377bd5a08",
+    "content-hash": "de5eb832456bb861c1cdba583bdf0796",
     "packages": [
         {
             "name": "b13/container",
@@ -1874,74 +1874,6 @@
             "time": "2022-04-11T09:56:57+00:00"
         },
         {
-            "name": "jweiland/sync-crop-areas",
-            "version": "2.2.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/jweiland-net/sync_crop_areas.git",
-                "reference": "4b30132bc60eacc76b7775c74b24540f0ac09b1d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/jweiland-net/sync_crop_areas/zipball/4b30132bc60eacc76b7775c74b24540f0ac09b1d",
-                "reference": "4b30132bc60eacc76b7775c74b24540f0ac09b1d",
-                "shasum": ""
-            },
-            "require": {
-                "ext-json": "*",
-                "php": "^7.4 || ^8.0",
-                "typo3/cms-core": "^10.4.19 || ^11.5.0"
-            },
-            "require-dev": {
-                "friendsofphp/php-cs-fixer": "^3.0",
-                "nimut/testing-framework": "^6.0",
-                "phpspec/prophecy-phpunit": "^2.0",
-                "roave/security-advisories": "dev-latest"
-            },
-            "type": "typo3-cms-extension",
-            "extra": {
-                "typo3/cms": {
-                    "extension-key": "sync_crop_areas",
-                    "app-dir": ".build",
-                    "web-dir": ".build/public"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "JWeiland\\SyncCropAreas\\": "Classes"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Stefan Froemken",
-                    "email": "sfroemken@jweiland.net",
-                    "role": "Lead Developer"
-                }
-            ],
-            "description": "Sync first found crop area to all other CropVariants",
-            "homepage": "http://www.jweiland.net",
-            "keywords": [
-                "TYPO3 CMS",
-                "area",
-                "crop",
-                "jweiland.net",
-                "sync",
-                "synchronize",
-                "typo3",
-                "variants"
-            ],
-            "support": {
-                "email": "projects@jweiland.net",
-                "issues": "https://github.com/jweiland-net/sync_crop_areas/issues",
-                "source": "https://github.com/jweiland-net/sync_crop_areas/tree/2.2.1"
-            },
-            "time": "2022-02-04T12:48:19+00:00"
-        },
-        {
             "name": "lochmueller/sourceopt",
             "version": "4.0.4",
             "source": {
@@ -2351,6 +2283,62 @@
                 "source": "https://github.com/phpDocumentor/TypeResolver/tree/1.6.1"
             },
             "time": "2022-03-15T21:29:03+00:00"
+        },
+        {
+            "name": "plan2net/webp",
+            "version": "4.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/plan2net/webp.git",
+                "reference": "5aca9210e5e183e984b2ca4585ccbc3bbfed79a1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/plan2net/webp/zipball/5aca9210e5e183e984b2ca4585ccbc3bbfed79a1",
+                "reference": "5aca9210e5e183e984b2ca4585ccbc3bbfed79a1",
+                "shasum": ""
+            },
+            "require": {
+                "ext-gd": "*",
+                "php": ">=7.2.0",
+                "typo3/cms-core": "^10.4|^11.5"
+            },
+            "type": "typo3-cms-extension",
+            "extra": {
+                "typo3/cms": {
+                    "extension-key": "webp"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Plan2net\\Webp\\": "Classes/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Wolfgang Klinger",
+                    "role": "Lead Developer"
+                },
+                {
+                    "name": "Martin Kutschker",
+                    "role": "reStructuredText Documentation"
+                },
+                {
+                    "name": "Team Wonderland",
+                    "role": "Support and review"
+                }
+            ],
+            "description": "Creates WebP copies for images (TYPO3 CMS)",
+            "homepage": "https://www.plan2.net/",
+            "support": {
+                "issues": "https://github.com/plan2net/webp/issues",
+                "source": "https://github.com/plan2net/webp/tree/4.1.2"
+            },
+            "time": "2022-02-18T12:15:13+00:00"
         },
         {
             "name": "psr/cache",
@@ -3083,7 +3071,7 @@
             "dist": {
                 "type": "path",
                 "url": "packages/skombase",
-                "reference": "f4ca419fe7b379227f400f01656649faa3b356bf"
+                "reference": "af37c2d3cb85ab077b98e0a9977f0de8f7035e0b"
             },
             "require": {
                 "bk2k/bootstrap-package": "^12.0"
@@ -3098,6 +3086,11 @@
                 "psr-4": {
                     "Skom\\Skombase\\": "Classes/"
                 }
+            },
+            "scripts": {
+                "zip": [
+                    "grep -Po \"(?<='version' => ')([0-9]+\\.[0-9]+\\.[0-9]+)\" ext_emconf.php | xargs -I {version} sh -c 'mkdir -p ../zip; git archive -v -o \"../zip/${PWD##*/}_{version}.zip\" v{version}'"
+                ]
             },
             "license": [
                 "GPL-2.0-or-later"
@@ -3411,16 +3404,16 @@
         },
         {
             "name": "ssch/typo3-encore",
-            "version": "v4.0.2",
+            "version": "v4.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sabbelasichon/typo3_encore.git",
-                "reference": "c3b693ba3bf08a40831fa7c9faf3cb7415bc39b9"
+                "reference": "8ccbc69af5ed68c1d6ad73ee10b8825c46f27862"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sabbelasichon/typo3_encore/zipball/c3b693ba3bf08a40831fa7c9faf3cb7415bc39b9",
-                "reference": "c3b693ba3bf08a40831fa7c9faf3cb7415bc39b9",
+                "url": "https://api.github.com/repos/sabbelasichon/typo3_encore/zipball/8ccbc69af5ed68c1d6ad73ee10b8825c46f27862",
+                "reference": "8ccbc69af5ed68c1d6ad73ee10b8825c46f27862",
                 "shasum": ""
             },
             "require": {
@@ -3487,7 +3480,7 @@
             ],
             "support": {
                 "issues": "https://github.com/sabbelasichon/typo3_encore/issues",
-                "source": "https://github.com/sabbelasichon/typo3_encore/tree/v4.0.2"
+                "source": "https://github.com/sabbelasichon/typo3_encore/tree/v4.0.3"
             },
             "funding": [
                 {
@@ -3499,7 +3492,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-02-11T13:50:47+00:00"
+            "time": "2022-05-04T10:00:59+00:00"
         },
         {
             "name": "symfony/asset",
