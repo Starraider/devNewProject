@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "de5eb832456bb861c1cdba583bdf0796",
+    "content-hash": "990b5880039c7a4f1dda25f511d50d53",
     "packages": [
         {
             "name": "b13/container",
@@ -3016,48 +3016,6 @@
             ],
             "description": "This is the default customer sitepackage",
             "homepage": "https://www.skom.de",
-            "keywords": [
-                "TYPO3 CMS"
-            ],
-            "transport-options": {
-                "relative": true
-            }
-        },
-        {
-            "name": "skom/klaro-video",
-            "version": "1.0.0",
-            "dist": {
-                "type": "path",
-                "url": "packages/klaro_video",
-                "reference": "a828395561c029134db44058c0114797baef2058"
-            },
-            "require": {
-                "typo3/cms-core": "^9.5 || ^10.4 || ^11.5"
-            },
-            "replace": {
-                "typo3-ter/klaro-video": "self.version"
-            },
-            "type": "typo3-cms-extension",
-            "extra": {
-                "typo3/cms": {
-                    "extension-key": "klaro_video"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "SKom\\KlaroVideo\\": "Classes/"
-                }
-            },
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Sven Kalbhenn",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Embed YouTube- and Vimeo-Videos compatible with the klaro cookiebanner",
             "keywords": [
                 "TYPO3 CMS"
             ],
@@ -6504,22 +6462,32 @@
         },
         {
             "name": "tritum/form-element-linked-checkbox",
-            "version": "2.3.0",
+            "version": "3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tritum/form_element_linked_checkbox.git",
-                "reference": "4fcd2bfdda3aaf888c10bfd4f8c52a33b9bcc79a"
+                "reference": "2f75fd8e27e905b2959472470516bb60b1311de8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tritum/form_element_linked_checkbox/zipball/4fcd2bfdda3aaf888c10bfd4f8c52a33b9bcc79a",
-                "reference": "4fcd2bfdda3aaf888c10bfd4f8c52a33b9bcc79a",
+                "url": "https://api.github.com/repos/tritum/form_element_linked_checkbox/zipball/2f75fd8e27e905b2959472470516bb60b1311de8",
+                "reference": "2f75fd8e27e905b2959472470516bb60b1311de8",
                 "shasum": ""
             },
             "require": {
+                "php": "^7.2 || ^8.0",
+                "symfony/polyfill-php80": "^1.15",
                 "typo3/cms-core": "^9.5.30 || ^10.4.20 || ^11.5.0",
                 "typo3/cms-form": "^9.5.30 || ^10.4.20 || ^11.5.0",
                 "typo3/cms-frontend": "^9.5.30 || ^10.4.20 || ^11.5.0"
+            },
+            "require-dev": {
+                "armin/editorconfig-cli": "^1.5",
+                "ergebnis/composer-normalize": "^2.23",
+                "helmich/typo3-typoscript-lint": "^2.5",
+                "phpstan/phpstan": "^1.3",
+                "saschaegerer/phpstan-typo3": "^1.0",
+                "typo3/coding-standards": "^0.5.0"
             },
             "type": "typo3-cms-extension",
             "extra": {
@@ -6538,15 +6506,24 @@
             ],
             "authors": [
                 {
-                    "name": "Björn Jacob TRITUM GmbH",
-                    "email": "bjoern.jacob@tritum.de"
+                    "name": "Björn Jacob",
+                    "email": "bjoern.jacob@tritum.de",
+                    "homepage": "https://www.tritum.de",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Elias Häußler",
+                    "email": "elias@haeussler.dev",
+                    "homepage": "https://haeussler.dev",
+                    "role": "Developer"
                 }
             ],
+            "description": "Adds a new form element which allows the editor to create a checkbox with a linked label text. This is an extension for TYPO3 CMS.",
             "support": {
                 "issues": "https://github.com/tritum/form_element_linked_checkbox/issues",
-                "source": "https://github.com/tritum/form_element_linked_checkbox/tree/2.3.0"
+                "source": "https://github.com/tritum/form_element_linked_checkbox/tree/3.0.0"
             },
-            "time": "2022-01-12T09:12:23+00:00"
+            "time": "2022-04-12T15:34:59+00:00"
         },
         {
             "name": "typo3-contentblocks/composer-plugin",
@@ -9406,7 +9383,6 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "skom/customer-sitepackage": 20,
-        "skom/klaro-video": 20,
         "skom/skombase": 20,
         "typo3/cms-composer-installers": 20
     },
