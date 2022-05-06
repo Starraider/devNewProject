@@ -62,8 +62,8 @@ tt_content {
 ################
 plugin.tx_typo3encore {
   settings {
-    entrypointJsonPath = EXT:customer_sitepackage/Resources/Public/entrypoints.json
-    manifestJsonPath = EXT:customer_sitepackage/Resources/Public/manifest.json
+    entrypointJsonPath = build/entrypoints.json
+    manifestJsonPath = build/manifest.json
   }
 }
 

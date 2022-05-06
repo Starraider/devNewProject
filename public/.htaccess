@@ -406,3 +406,9 @@ FileETag None
 
 
 # Add your own rules here.
+# Secure contentBlocks
+<If "%{REQUEST_URI} =~ m#^/typo3conf/contentBlocks/.*\.(yaml|html|xlf|json)#">
+    Order allow,deny
+    Deny from all
+    Satisfy All
+</If>
