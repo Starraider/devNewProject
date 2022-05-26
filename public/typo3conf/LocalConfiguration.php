@@ -27,11 +27,11 @@ return [
     'EXTENSIONS' => [
         'backend' => [
             'backendFavicon' => '',
-            'backendLogo' => '',
+            'backendLogo' => 'EXT:skombase/Resources/Public/Images/Logo_machwerk_klein.svg',
             'loginBackgroundImage' => '',
             'loginFootnote' => '',
             'loginHighlightColor' => '',
-            'loginLogo' => '',
+            'loginLogo' => 'EXT:skombase/Resources/Public/Images/Logo_machwerk.svg',
             'loginLogoAlt' => '',
         ],
         'bootstrap_package' => [
@@ -48,6 +48,11 @@ return [
             'disableAddAnimationsTab' => '0',
             'extendedAnimationSettings' => '0',
             'hideFooterAnimationLabel' => '0',
+        ],
+        'contentblocks_reg_api' => [
+            'contentBlockDefinition' => '0',
+            'enableLayoutOptions' => '1',
+            'showBackendModule' => '1',
         ],
         'extensionmanager' => [
             'automaticInstallation' => '1',
@@ -102,6 +107,13 @@ return [
             'slash_replacement' => '1',
             'synchronize' => '1',
             'whitelist' => '',
+        ],
+        'webp' => [
+            'convert_all' => '1',
+            'converter' => 'Plan2net\\Webp\\Converter\\MagickConverter',
+            'mime_types' => 'image/jpeg,image/png,image/gif',
+            'parameters' => 'image/jpeg::-quality 85 -define webp:lossless=false|image/png::-quality 75 -define webp:lossless=true|image/gif::-quality 85 -define webp:lossless=true',
+            'silent' => '0',
         ],
     ],
     'FE' => [

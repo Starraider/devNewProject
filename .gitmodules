@@ -1,6 +1,6 @@
-[submodule "packages/klaro_video"]
-	path = packages/klaro_video
-	url = https://github.com/Starraider/klaro_video.git
 [submodule "packages/skombase"]
 	path = packages/skombase
 	url = https://github.com/Starraider/skombase.git
+[submodule "public/typo3conf/contentBlocks"]
+	path = public/typo3conf/contentBlocks
+	url = https://github.com/Starraider/contentBlocks.git

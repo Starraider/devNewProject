@@ -6,12 +6,10 @@ const path = require('path')
 
 Encore
   // the directory where compiled assets will be stored
-  .setOutputPath(
-    '../public/typo3conf/ext/customer_sitepackage/Resources/Public/'
-  )
+  .setOutputPath('../public/build')
 
   // public path used by the web server to access the output path
-  .setPublicPath('/typo3conf/ext/customer_sitepackage/Resources/Public/')
+  .setPublicPath('/build')
 
   // only needed for CDN's or sub-directory deploy
   // .setManifestKeyPrefix('build/')
@@ -46,8 +44,14 @@ Encore
       pattern: /\.(png|jpg|jpeg|svg)$/,
     },
     {
+      from: '../vendor/skom/skombase/Resources/Public/Images',
+      to: 'Images/skombase/[name].[ext]',
+      includeSubdirectories: false,
+      pattern: /\.(png|jpg|jpeg|svg)$/,
+    },
+    {
       from: './node_modules/photoswipe/dist/default-skin/',
-      to: 'Images/[path][name].[ext]',
+      to: 'Images/photoswipe/[name].[ext]',
       includeSubdirectories: false,
       pattern: /\.(png|jpg|gif|svg)$/,
     },

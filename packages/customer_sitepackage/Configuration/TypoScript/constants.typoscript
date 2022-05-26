@@ -14,6 +14,13 @@
 ### PAGE ###
 ############
 page {
+  theme {
+    copyright.text = &copy; 2022 SKom
+    navigation {
+      style = default
+      type = top
+    }
+  }
   logo {
     file = EXT:customer_sitepackage/Resources/Public/Images/logo.svg
     fileInverted = EXT:customer_sitepackage/Resources/Public/Images/logo-inverted.svg

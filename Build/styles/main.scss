@@ -10,57 +10,57 @@
 //
 // Compat
 //
-@import "../../public/typo3conf/ext/bootstrap_package/Resources/Public/Scss/bootstrap5/compat/text";
-@import "../../public/typo3conf/ext/bootstrap_package/Resources/Public/Scss/bootstrap5/compat/form";
-@import "../../public/typo3conf/ext/bootstrap_package/Resources/Public/Scss/bootstrap5/compat/embed";
+@import "../../vendor/bk2k/bootstrap-package/Resources/Public/Scss/bootstrap5/compat/text";
+@import "../../vendor/bk2k/bootstrap-package/Resources/Public/Scss/bootstrap5/compat/form";
+@import "../../vendor/bk2k/bootstrap-package/Resources/Public/Scss/bootstrap5/compat/embed";
 
 //
 // Components
 //
-@import "../../public/typo3conf/ext/bootstrap_package/Resources/Public/Scss/components/button";
-@import "../../public/typo3conf/ext/bootstrap_package/Resources/Public/Scss/components/navbar";
-@import "../../public/typo3conf/ext/bootstrap_package/Resources/Public/Scss/components/backendlayout";
-@import "../../public/typo3conf/ext/bootstrap_package/Resources/Public/Scss/components/section";
-@import "../../public/typo3conf/ext/bootstrap_package/Resources/Public/Scss/components/frame";
-@import "../../public/typo3conf/ext/bootstrap_package/Resources/Public/Scss/components/breadcrumb";
-@import "../../public/typo3conf/ext/bootstrap_package/Resources/Public/Scss/components/subnav";
-@import "../../public/typo3conf/ext/bootstrap_package/Resources/Public/Scss/components/footer";
-@import "../../public/typo3conf/ext/bootstrap_package/Resources/Public/Scss/components/carousel";
-@import "../../public/typo3conf/ext/bootstrap_package/Resources/Public/Scss/components/accordion";
-@import "../../public/typo3conf/ext/bootstrap_package/Resources/Public/Scss/components/tab";
-@import "../../public/typo3conf/ext/bootstrap_package/Resources/Public/Scss/components/card";
-@import "../../public/typo3conf/ext/bootstrap_package/Resources/Public/Scss/components/audio";
-@import "../../public/typo3conf/ext/bootstrap_package/Resources/Public/Scss/components/link";
-@import "../../public/typo3conf/ext/bootstrap_package/Resources/Public/Scss/components/figure";
-@import "../../public/typo3conf/ext/bootstrap_package/Resources/Public/Scss/components/gallery";
-@import "../../public/typo3conf/ext/bootstrap_package/Resources/Public/Scss/components/address";
-@import "../../public/typo3conf/ext/bootstrap_package/Resources/Public/Scss/components/table";
-@import "../../public/typo3conf/ext/bootstrap_package/Resources/Public/Scss/components/list";
-@import "../../public/typo3conf/ext/bootstrap_package/Resources/Public/Scss/components/filelink";
-@import "../../public/typo3conf/ext/bootstrap_package/Resources/Public/Scss/components/blockquote";
-@import "../../public/typo3conf/ext/bootstrap_package/Resources/Public/Scss/components/icongroup";
-@import "../../public/typo3conf/ext/bootstrap_package/Resources/Public/Scss/components/timeline";
-@import "../../public/typo3conf/ext/bootstrap_package/Resources/Public/Scss/components/textpic";
-@import "../../public/typo3conf/ext/bootstrap_package/Resources/Public/Scss/components/textteaser";
-@import "../../public/typo3conf/ext/bootstrap_package/Resources/Public/Scss/components/texticon";
-@import "../../public/typo3conf/ext/bootstrap_package/Resources/Public/Scss/components/text";
-@import "../../public/typo3conf/ext/bootstrap_package/Resources/Public/Scss/components/thumbnail-menu";
-@import "../../public/typo3conf/ext/bootstrap_package/Resources/Public/Scss/components/sociallink";
-@import "../../public/typo3conf/ext/bootstrap_package/Resources/Public/Scss/components/well";
-@import "../../public/typo3conf/ext/bootstrap_package/Resources/Public/Scss/components/pagination";
-@import "../../public/typo3conf/ext/bootstrap_package/Resources/Public/Scss/components/scrolltop";
-@import "../../public/typo3conf/ext/bootstrap_package/Resources/Public/Scss/components/misc";
-@import "../../public/typo3conf/ext/bootstrap_package/Resources/Public/Scss/components/contentcontainer";
+@import "../../vendor/bk2k/bootstrap-package/Resources/Public/Scss/components/button";
+@import "../../vendor/bk2k/bootstrap-package/Resources/Public/Scss/components/navbar";
+@import "../../vendor/bk2k/bootstrap-package/Resources/Public/Scss/components/backendlayout";
+@import "../../vendor/bk2k/bootstrap-package/Resources/Public/Scss/components/section";
+@import "../../vendor/bk2k/bootstrap-package/Resources/Public/Scss/components/frame";
+@import "../../vendor/bk2k/bootstrap-package/Resources/Public/Scss/components/breadcrumb";
+@import "../../vendor/bk2k/bootstrap-package/Resources/Public/Scss/components/subnav";
+@import "../../vendor/bk2k/bootstrap-package/Resources/Public/Scss/components/footer";
+@import "../../vendor/bk2k/bootstrap-package/Resources/Public/Scss/components/carousel";
+@import "../../vendor/bk2k/bootstrap-package/Resources/Public/Scss/components/accordion";
+@import "../../vendor/bk2k/bootstrap-package/Resources/Public/Scss/components/tab";
+@import "../../vendor/bk2k/bootstrap-package/Resources/Public/Scss/components/card";
+@import "../../vendor/bk2k/bootstrap-package/Resources/Public/Scss/components/audio";
+@import "../../vendor/bk2k/bootstrap-package/Resources/Public/Scss/components/link";
+@import "../../vendor/bk2k/bootstrap-package/Resources/Public/Scss/components/figure";
+@import "../../vendor/bk2k/bootstrap-package/Resources/Public/Scss/components/gallery";
+@import "../../vendor/bk2k/bootstrap-package/Resources/Public/Scss/components/address";
+@import "../../vendor/bk2k/bootstrap-package/Resources/Public/Scss/components/table";
+@import "../../vendor/bk2k/bootstrap-package/Resources/Public/Scss/components/list";
+@import "../../vendor/bk2k/bootstrap-package/Resources/Public/Scss/components/filelink";
+@import "../../vendor/bk2k/bootstrap-package/Resources/Public/Scss/components/blockquote";
+@import "../../vendor/bk2k/bootstrap-package/Resources/Public/Scss/components/icongroup";
+@import "../../vendor/bk2k/bootstrap-package/Resources/Public/Scss/components/timeline";
+@import "../../vendor/bk2k/bootstrap-package/Resources/Public/Scss/components/textpic";
+@import "../../vendor/bk2k/bootstrap-package/Resources/Public/Scss/components/textteaser";
+@import "../../vendor/bk2k/bootstrap-package/Resources/Public/Scss/components/texticon";
+@import "../../vendor/bk2k/bootstrap-package/Resources/Public/Scss/components/text";
+@import "../../vendor/bk2k/bootstrap-package/Resources/Public/Scss/components/thumbnail-menu";
+@import "../../vendor/bk2k/bootstrap-package/Resources/Public/Scss/components/sociallink";
+@import "../../vendor/bk2k/bootstrap-package/Resources/Public/Scss/components/well";
+@import "../../vendor/bk2k/bootstrap-package/Resources/Public/Scss/components/pagination";
+@import "../../vendor/bk2k/bootstrap-package/Resources/Public/Scss/components/scrolltop";
+@import "../../vendor/bk2k/bootstrap-package/Resources/Public/Scss/components/misc";
+@import "../../vendor/bk2k/bootstrap-package/Resources/Public/Scss/components/contentcontainer";
 
 //
 // Plugins
 //
-@import "../../public/typo3conf/ext/bootstrap_package/Resources/Public/Scss/plugins/cookieconsent";
-@import "../../public/typo3conf/ext/bootstrap_package/Resources/Public/Scss/plugins/photoswipe";
+@import "../../vendor/bk2k/bootstrap-package/Resources/Public/Scss/plugins/cookieconsent";
+@import "../../vendor/bk2k/bootstrap-package/Resources/Public/Scss/plugins/photoswipe";
 
 
 // Todo: Change to public folder and import from there
-@import "../../public/typo3conf/ext/skombase/Resources/Public/Scss/main";
+@import "../../vendor/skom/skombase/Resources/Public/Scss/main";
 
 //
 // My own Styles
