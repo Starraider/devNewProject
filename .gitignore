@@ -49,6 +49,7 @@
 
 ### TYPO3 ###
 /public/*
+!/public/build/
 !/public/typo3conf
 /public/typo3conf/*
 !/public/typo3conf/LocalConfiguration.php
