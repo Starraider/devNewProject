@@ -22,8 +22,8 @@ page {
     }
   }
   logo {
-    file = EXT:customer_sitepackage/Resources/Public/Images/logo.svg
-    fileInverted = EXT:customer_sitepackage/Resources/Public/Images/logo-inverted.svg
+    file = build/Images/logo.svg
+    fileInverted = build/Images/logo-inverted.svg
     height = 52
     width = 192
     alt = Customer Sitepackage
