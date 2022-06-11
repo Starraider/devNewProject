@@ -16,8 +16,15 @@ TCEMAIN {
             disableHideAtCopy = 1
         }
     }
-    permissions {
-        userid = 1
-        groupid = 1
-    }
 }
+#The PID is the uid of the upper most page of the branch where the assigned groups should have full editing permissions.
+# Standard
+[1 in tree.rootLineIds]
+    TCEMAIN.permissions.groupid = 3
+    TCEMAIN.permissions.userid = 1
+[end]
+# News
+[14 in tree.rootLineIds]
+    TCEMAIN.permissions.groupid = 4
+    TCEMAIN.permissions.userid = 1
+[end]
