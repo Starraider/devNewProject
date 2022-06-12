@@ -2,6 +2,35 @@
 
 This project was build, to test and demonstrate the use of Webpack Encore with TYPO3-CMS.
 
+## Table of contents
+
+- [TYPO3-Project-Template with webpack encore](#typo3-project-template-with-webpack-encore)
+  - [Table of contents](#table-of-contents)
+  - [System requirements](#system-requirements)
+  - [How to start a new project](#how-to-start-a-new-project)
+  - [Contributing](#contributing)
+  - [How to use DDEV](#how-to-use-ddev)
+  - [Opening the website](#opening-the-website)
+    - [How to use Webpack Encore](#how-to-use-webpack-encore)
+      - [compile assets once](#compile-assets-once)
+      - [or, recompile assets automatically when files change](#or-recompile-assets-automatically-when-files-change)
+      - [on deploy, create a production build](#on-deploy-create-a-production-build)
+    - [Backup](#backup)
+  - [typo3-console](#typo3-console)
+  - [TYPO3 CLI Commands](#typo3-cli-commands)
+    - [Debug Mode](#debug-mode)
+  - [Testing & Linting](#testing--linting)
+    - [Static Linters](#static-linters)
+      - [Prettier](#prettier)
+      - [PHP CS Fixer](#php-cs-fixer)
+      - [PHPStan](#phpstan)
+      - [TypoScript Lint](#typoscript-lint)
+      - [Normalize composer.json](#normalize-composerjson)
+    - [Acceptance Tests](#acceptance-tests)
+      - [Prerequisite](#prerequisite)
+      - [Run the tests](#run-the-tests)
+  - [License](#license)
+
 ## System requirements
 
 - Docker installed and running
