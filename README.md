@@ -178,7 +178,9 @@ ssh-keyscan pxxxxxx.mittwaldserver.info
 
 Copy the line which looks like "pxxxxxx.mittwaldserver.info ssh-rsa AAA..." and use it on GitHub for generating "Settings -> Secrets -> Actions -> New repository secret" with Name "KNOWN_HOSTS". (Without it ssh would ask if you want to add your server to the known_hosts).
 
+## Contributing
 
+What you should know about [Git & GitHub](Documentation/git-and-github.md)
 
 ## How to use DDEV
 
