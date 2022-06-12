@@ -1,0 +1,30 @@
+style: github
+template: CHANGELOG.tpl.md
+info:
+    title: CHANGELOG
+    repository_url: https://github.com/Starraider/devNewProject
+options:
+    commits:
+    # filters:
+    #   Type:
+    #     - feat
+    #     - fix
+    #     - perf
+    #     - refactor
+    commit_groups:
+        title_maps:
+            FEATURE: New Features
+            BUGFIX: Bug Fixes
+            DOCS: Documentation
+            TASK: Tasks
+            SECURITY: Security
+            RELEASE: Release Notes
+    header:
+        pattern: "^\\[(\\w*)\\](?:\\(([\\w\\$\\.\\-\\*\\s]*)\\))?\\:\\s(.*)$"
+        pattern_maps:
+            - Type
+            - Scope
+            - Subject
+    notes:
+        keywords:
+            - BREAKING CHANGE
