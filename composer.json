@@ -24,6 +24,7 @@
 		"georgringer/news": "^9.3",
 		"helhum/dotenv-connector": "^3.0",
 		"helhum/typo3-console": "^7.0.2",
+		"lavitto/typo3-form-to-database": "^2.1",
 		"lochmueller/sourceopt": "^4.0",
 		"plan2net/webp": "^4.1",
 		"skom/customer-sitepackage": "@dev",

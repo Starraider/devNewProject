@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bcf298e88bde4c180ee2b84437e2cb0f",
+    "content-hash": "14a0cfc4ca4885e111ae7e16dd0037c0",
     "packages": [
         {
             "name": "b13/container",
@@ -1867,6 +1867,67 @@
                 }
             ],
             "time": "2022-05-31T06:51:43+00:00"
+        },
+        {
+            "name": "lavitto/typo3-form-to-database",
+            "version": "2.1.2",
+            "source": {
+                "type": "git",
+                "url": "git@gitlab.com:lavitto/typo3-form-to-database.git",
+                "reference": "e4534700706f6bf90661d8d16e5d1c8880fedee4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://gitlab.com/api/v4/projects/lavitto%2Ftypo3-form-to-database/repository/archive.zip?sha=e4534700706f6bf90661d8d16e5d1c8880fedee4",
+                "reference": "e4534700706f6bf90661d8d16e5d1c8880fedee4",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "ext-pdo": "*",
+                "php": ">=7.4.0",
+                "typo3/cms-backend": "^10.4 || ^11.5",
+                "typo3/cms-core": "^10.4 || ^11.5",
+                "typo3/cms-extbase": "^10.4 || ^11.5",
+                "typo3/cms-fluid": "^10.4 || ^11.5",
+                "typo3/cms-form": "^10.4 || ^11.5",
+                "typo3/cms-frontend": "^10.4 || ^11.5"
+            },
+            "type": "typo3-cms-extension",
+            "extra": {
+                "typo3/cms": {
+                    "extension-key": "form_to_database",
+                    "cms-package-dir": "{$vendor-dir}/typo3/cms",
+                    "web-dir": ".Build/Web"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Lavitto\\FormToDatabase\\": "Classes"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Philipp Mueller",
+                    "email": "philipp.mueller@lavitto.ch",
+                    "homepage": "https://www.lavitto.ch"
+                }
+            ],
+            "description": "Extends the TYPO3 form with a database finisher, to save every form-result in the database.",
+            "homepage": "https://www.lavitto.ch/typo3-ext-form-to-database",
+            "keywords": [
+                "extension",
+                "form",
+                "form to database",
+                "save form",
+                "typo3",
+                "typo3 form"
+            ],
+            "time": "2022-05-17T11:57:35+00:00"
         },
         {
             "name": "lochmueller/sourceopt",

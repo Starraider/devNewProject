@@ -58,6 +58,11 @@ return [
             'automaticInstallation' => '1',
             'offlineMode' => '0',
         ],
+        'form_to_database' => [
+            'csvDelimiter' => ';',
+            'csvOnlyFilenameOfUploadFields' => '0',
+            'hideLocationInList' => '0',
+        ],
         'imageoptimizer' => [
             'gifBinary' => 'gifsicle',
             'gifCheck' => 'gif',
