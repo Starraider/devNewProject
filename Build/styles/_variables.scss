@@ -87,6 +87,7 @@ $display-font-sizes: (
 //
 // Links
 // --------------------------------------------------
+$link-color:                        $primary;
 $link-decoration:                   none;
 $link-hover-decoration:             underline;
 
@@ -137,3 +138,23 @@ $accordion-padding-y:               1rem;
 $accordion-padding-x:               1.25rem;
 $accordion-body-padding-y:          $accordion-padding-x;
 $accordion-body-padding-x:          $accordion-padding-x;
+
+//
+// Footer
+// --------------------------------------------------
+$footer-sections: ();
+$footer-sections: map-merge(
+    (
+        'content': (
+            'background':   $quaternary,
+            'color':        color-contrast($black),
+            'link-color':   $link-color
+        ),
+        'meta': (
+            'background':   $white,
+            'color':        color-contrast($black),
+            'link-color':   $link-color
+        )
+    ),
+    $footer-sections
+);
