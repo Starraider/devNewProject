@@ -1,23 +1,22 @@
 plugin.tx_news {
-    view {
-        templateRootPaths {
-            0 = EXT:news/Resources/Private/Templates/
-            1 = {$plugin.tx_news.view.templateRootPath.0}
-            100 = {$plugin.tx_news.view.templateRootPath.1}
-            200 = {$plugin.tx_news.view.templateRootPath.2}
-        }
-        partialRootPaths {
-            0 = EXT:news/Resources/Private/Partials/
-            1 = {$plugin.tx_news.view.partialRootPath.0}
-            100 = {$plugin.tx_news.view.partialRootPath.1}
-            200 = {$plugin.tx_news.view.partialRootPath.2}
-        }
-        layoutRootPaths {
-            0 = EXT:news/Resources/Private/Layouts/
-            1 = {$plugin.tx_news.view.layoutRootPath.0}
-            100 = {$plugin.tx_news.view.layoutRootPath.1}
-            200 = {$plugin.tx_news.view.layoutRootPath.2}
-        }
-
+  view {
+    templateRootPaths {
+      0 = EXT:news/Resources/Private/Templates/
+      1 = {$plugin.tx_news.view.templateRootPath.0}
+      100 = {$plugin.tx_news.view.templateRootPath.1}
+      200 = {$plugin.tx_news.view.templateRootPath.2}
     }
+    partialRootPaths {
+      0 = EXT:news/Resources/Private/Partials/
+      1 = {$plugin.tx_news.view.partialRootPath.0}
+      100 = {$plugin.tx_news.view.partialRootPath.1}
+      200 = {$plugin.tx_news.view.partialRootPath.2}
+    }
+    layoutRootPaths {
+      0 = EXT:news/Resources/Private/Layouts/
+      1 = {$plugin.tx_news.view.layoutRootPath.0}
+      100 = {$plugin.tx_news.view.layoutRootPath.1}
+      200 = {$plugin.tx_news.view.layoutRootPath.2}
+    }
+  }
 }

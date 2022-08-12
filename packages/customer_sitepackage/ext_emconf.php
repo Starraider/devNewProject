@@ -1,8 +1,10 @@
 <?php
 
-/**
- * Extension Manager/Repository config file for ext "customer_sitepackage".
+/*
+ * Copyright by Sven Kalbhenn (sven@skom.de).
+ * See LICENSE that was shipped with this package.
  */
+
 $EM_CONF[$_EXTKEY] = [
     'title' => 'Customer Sitepackage',
     'description' => 'This is the default customer sitepackage',

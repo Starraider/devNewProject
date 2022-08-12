@@ -74,19 +74,19 @@ page {
   10 = FLUIDTEMPLATE
   10 {
     templateRootPaths {
-        0 = EXT:bootstrap_package/Resources/Private/Templates/Page/
-        1 = EXT:skombase/Resources/Private/Templates/Page/
-        2 = {$page.fluidtemplate.templateRootPath}
+      0 = EXT:bootstrap_package/Resources/Private/Templates/Page/
+      1 = EXT:skombase/Resources/Private/Templates/Page/
+      2 = {$page.fluidtemplate.templateRootPath}
     }
     partialRootPaths {
-        0 = EXT:bootstrap_package/Resources/Private/Partials/Page/
-        1 = EXT:skombase/Resources/Private/Partials/Page/
-        2 = {$page.fluidtemplate.partialRootPath}
+      0 = EXT:bootstrap_package/Resources/Private/Partials/Page/
+      1 = EXT:skombase/Resources/Private/Partials/Page/
+      2 = {$page.fluidtemplate.partialRootPath}
     }
     layoutRootPaths {
-        0 = EXT:bootstrap_package/Resources/Private/Layouts/Page/
-        1 = EXT:skombase/Resources/Private/Layouts/Page/
-        2 = {$page.fluidtemplate.layoutRootPath}
+      0 = EXT:bootstrap_package/Resources/Private/Layouts/Page/
+      1 = EXT:skombase/Resources/Private/Layouts/Page/
+      2 = {$page.fluidtemplate.layoutRootPath}
     }
   }
   includeCSS {
