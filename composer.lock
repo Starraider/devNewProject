@@ -9917,16 +9917,16 @@
         },
         {
             "name": "typo3/coding-standards",
-            "version": "v0.5.4",
+            "version": "v0.5.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/TYPO3/coding-standards.git",
-                "reference": "6a3326289d782646bc16f025b07c6145669bca56"
+                "reference": "8a286905610ed3dee051626875e44aa5f3efd54e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TYPO3/coding-standards/zipball/6a3326289d782646bc16f025b07c6145669bca56",
-                "reference": "6a3326289d782646bc16f025b07c6145669bca56",
+                "url": "https://api.github.com/repos/TYPO3/coding-standards/zipball/8a286905610ed3dee051626875e44aa5f3efd54e",
+                "reference": "8a286905610ed3dee051626875e44aa5f3efd54e",
                 "shasum": ""
             },
             "require": {
@@ -9991,7 +9991,7 @@
                 "issues": "https://github.com/TYPO3/coding-standards/issues",
                 "source": "https://github.com/TYPO3/coding-standards"
             },
-            "time": "2022-08-09T16:24:44+00:00"
+            "time": "2022-08-12T19:10:45+00:00"
         }
     ],
     "aliases": [],
