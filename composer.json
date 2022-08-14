@@ -92,7 +92,7 @@
 			"typo3-contentblocks/composer-plugin": true
 		},
 		"platform": {
-			"php": "7.4.1"
+			"php": "8.0.21"
 		},
 		"sort-packages": true
 	},
