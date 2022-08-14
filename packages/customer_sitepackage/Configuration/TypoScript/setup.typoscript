@@ -23,6 +23,11 @@ lib.contentElement {
   templateRootPaths.200 = EXT:customer_sitepackage/Resources/Private/Templates/ContentElements/
   partialRootPaths.200 = EXT:customer_sitepackage/Resources/Private/Partials/ContentElements/
 }
+lib.contentContainer {
+  layoutRootPaths.200 = EXT:customer_sitepackage/Resources/Private/Layouts/ContentElements/
+  templateRootPaths.200 = EXT:customer_sitepackage/Resources/Private/Templates/ContentElements/
+  partialRootPaths.200 = EXT:customer_sitepackage/Resources/Private/Partials/ContentElements/
+}
 
 tt_content {
   container_1_columns {

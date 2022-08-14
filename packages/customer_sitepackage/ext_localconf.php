@@ -5,7 +5,7 @@
  * See LICENSE that was shipped with this package.
  */
 
-defined('TYPO3') or die('Access denied.');
+defined('TYPO3') || die('Access denied.');
 /***************
  * Add default RTE configuration
  */
