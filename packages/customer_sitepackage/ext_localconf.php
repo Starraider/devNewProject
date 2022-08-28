@@ -38,6 +38,7 @@ if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('form')) {
 }
 
 /***************
- * PageTS
+ * Load TSConfig
  */
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig('<INCLUDE_TYPOSCRIPT: source="FILE:EXT:customer_sitepackage/Configuration/TsConfig/Page/All.tsconfig">');
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addUserTSConfig('<INCLUDE_TYPOSCRIPT: source="FILE:EXT:customer_sitepackage/Configuration/TsConfig/User/All.tsconfig">');

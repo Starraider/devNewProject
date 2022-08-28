@@ -1,0 +1,12 @@
+TCAdefaults {
+  #You can set any default value, by searching for the table and the col and set default value
+  tt_content {
+    header_layout = 1
+  }
+  tx_bootstrappackage_carousel_item {
+    item_type = image
+  }
+  pages {
+    keywords = list of keywords, TCAdefaults.tsconfig
+  }
+}

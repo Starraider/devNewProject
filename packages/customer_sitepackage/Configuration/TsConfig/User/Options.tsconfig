@@ -1,0 +1,10 @@
+options {
+  pageTree {
+    # Show PIDs in page tree
+    showPageIdWithTitle = 1
+    # Background color for page tree
+    backgroundColor {
+      13 = rgba(177, 106, 24, 0.3)
+    }
+  }
+}
