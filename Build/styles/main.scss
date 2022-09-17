@@ -1,22 +1,27 @@
 /* Build/styles/main.scss */
 
-// customized Bootstrap variables
-@import "variables";
+//
+// abstracts
+// contains no actual styles
+//
+@import "abstracts/variables";
+@import 'abstracts/mixins';
 
+//
+// vendors
+// third-party stylesheets
+//
 // the ~ allows you to reference things in node_modules
 @import "~bootstrap/scss/bootstrap";
 @import "~klaro/src/scss/klaro";
+@import "vendors/klaro";
 
-//
-// Compat
-//
+// Bootstrap Compat
 @import "../../vendor/bk2k/bootstrap-package/Resources/Public/Scss/bootstrap5/compat/text";
 @import "../../vendor/bk2k/bootstrap-package/Resources/Public/Scss/bootstrap5/compat/form";
 @import "../../vendor/bk2k/bootstrap-package/Resources/Public/Scss/bootstrap5/compat/embed";
 
-//
-// Components
-//
+// Bootstrap Components
 @import "../../vendor/bk2k/bootstrap-package/Resources/Public/Scss/components/button";
 @import "../../vendor/bk2k/bootstrap-package/Resources/Public/Scss/components/navbar";
 @import "../../vendor/bk2k/bootstrap-package/Resources/Public/Scss/components/backendlayout";
@@ -52,19 +57,39 @@
 @import "../../vendor/bk2k/bootstrap-package/Resources/Public/Scss/components/misc";
 @import "../../vendor/bk2k/bootstrap-package/Resources/Public/Scss/components/contentcontainer";
 
-//
-// Plugins
-//
+// Bootstrap Plugins
 @import "../../vendor/bk2k/bootstrap-package/Resources/Public/Scss/plugins/cookieconsent";
 @import "../../vendor/bk2k/bootstrap-package/Resources/Public/Scss/plugins/photoswipe";
 
+// Bootstrap package icons (modified)
+@import "vendors/bootstrappackageicon";
 
+// skombase
 // Todo: Change to public folder and import from there
 @import "../../vendor/skom/skombase/Resources/Public/Scss/main";
 
 //
-// My own Styles
+// base
+// boilerplate used throughout the entire site
 //
-@import "bootstrappackageicon";
-@import "news";
-@import "mystyles";
+@import "base/typography";
+
+//
+// layout
+// structural layout
+//
+@import "layout/navigation";
+@import "layout/container";
+@import "layout/footer";
+
+//
+// plugins
+// TYPO3 plugins
+//
+@import "plugins/news";
+
+//
+// components
+// reusable components
+//
+@import "components/buttons";

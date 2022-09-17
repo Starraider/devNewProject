@@ -1,0 +1,16 @@
+/* klaro cookie banner */
+.klaro {
+    .cookie-modal {
+        .title {
+            .text-primary {
+                color: $headings-color !important;
+            }
+        }
+    }
+    &.cm-as-context-notice {
+        height: 170px;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+    }
+}

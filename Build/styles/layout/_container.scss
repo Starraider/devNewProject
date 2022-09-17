@@ -1,0 +1,39 @@
+
+/* SVG Waves */
+svg.layout-svg {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.frame-container {
+    z-index: 10;
+}
+.frame-background-primary,
+.frame-background-secondary,
+.frame-background-tertiary,
+.frame-background-quaternary,
+.frame-background-light,
+.frame-background-dark,
+.frame-has-backgroundimage {
+    padding-bottom: 3px;
+}
+.custom-shape-divider-bottom-1645791247 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1645791247 svg {
+    position: relative;
+    display: block;
+    width: calc(148% + 1.3px);
+    height: 116px;
+}
+
+.custom-shape-divider-bottom-1645791247 .shape-fill {
+    fill: $white;
+}
