@@ -18,6 +18,7 @@ timezone: Europe/Berlin
 composer_version: '2'
 web_environment:
     - TYPO3_CONTEXT=Development
+    - LANG=en_US.UTF-8
 nodejs_version: '16'
 # Key features of ddev's config.yaml:
 
