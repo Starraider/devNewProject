@@ -1,5 +1,54 @@
 
 /* SVG Waves */
+@svg wave1 {
+    id: wave1;
+    width: 100%;
+	height: 100%;
+	viewBox: 0 0 1440 320;
+	preserveAspectRatio: xMidYMid meet;
+    @path {
+        d: M0,288L48,272C96,256,192,224,288,197.3C384,171,480,149,576,165.3C672,181,768,235,864,250.7C960,267,1056,245,1152,250.7C1248,256,1344,288,1392,304L1440,320L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z;
+        fill: var(--color, white);
+        fill-opacity: 1;
+    }
+}
+@svg wave2 {
+    id: wave2;
+    width: 100%;
+	height: 100%;
+	viewBox: 0 0 1920 146;
+	preserveAspectRatio: xMidYMid meet;
+    @g {
+        transform: matrix(1,0,0,1,0,-311);
+        @path {
+            d: M1920,0L0,0L0,359C0,359 1102,567 1920,313L1920,0Z;
+            fill: var(--color, white);
+            fill-opacity: 1;
+        }
+    }
+
+}
+
+.bg-layout-1 {
+    position: absolute;
+    z-index: 999999;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    min-height: 320px;
+    background: svg(wave1 param(--color $white)) no-repeat bottom;
+}
+.bg-layout-2 {
+    position: absolute;
+    z-index: 999999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 146px;
+    background: svg(wave2 param(--color $white)) no-repeat bottom;
+}
+
+
 svg.layout-svg {
     position: absolute;
     left: 0;
