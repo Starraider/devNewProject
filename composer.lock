@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "513d217514fd35f6d258d02c74ad4bd0",
+    "content-hash": "7c008fe78e8871ae61a9fd5f268b693d",
     "packages": [
         {
             "name": "b13/container",
@@ -275,6 +275,101 @@
                 }
             ],
             "time": "2022-04-22T12:43:14+00:00"
+        },
+        {
+            "name": "brotkrueml/schema",
+            "version": "v2.5.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/brotkrueml/schema.git",
+                "reference": "bdf20a7be9bf5a3ab1ea94cacced40f3c0c04699"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/brotkrueml/schema/zipball/bdf20a7be9bf5a3ab1ea94cacced40f3c0c04699",
+                "reference": "bdf20a7be9bf5a3ab1ea94cacced40f3c0c04699",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "php": ">=7.4",
+                "symfony/polyfill-php80": "^1.17",
+                "typo3/cms-core": "^10.4.11 || ^11.5",
+                "typo3/cms-frontend": "^10.4.11 || ^11.5"
+            },
+            "conflict": {
+                "brotkrueml/sdbreadcrumb": "*"
+            },
+            "require-dev": {
+                "brotkrueml/coding-standards": "~2.0.2",
+                "ergebnis/composer-normalize": "~2.28.0",
+                "ext-sqlite3": "*",
+                "infection/infection": "^0.26",
+                "mikey179/vfsstream": "^1.6",
+                "php-coveralls/php-coveralls": "^2.5",
+                "phpstan/extension-installer": "^1.1",
+                "phpstan/phpstan": "1.8.2",
+                "phpunit/phpunit": "^9.5",
+                "rector/rector": "0.13.5",
+                "saschaegerer/phpstan-typo3": "^1.1",
+                "symfony/yaml": "^5.4 || ^6.0",
+                "symplify/phpstan-rules": "^10.1",
+                "typo3/cms-adminpanel": "^10.4.11 || ^11.5",
+                "typo3/cms-lowlevel": "^10.4.11 || ^11.5",
+                "typo3/testing-framework": "^6.16"
+            },
+            "suggest": {
+                "brotkrueml/schema-auto": "Provides additional terms related to auto",
+                "brotkrueml/schema-bib": "Provides additional terms related to bibliography",
+                "brotkrueml/schema-health": "Provides additional terms related to health and lifesciences",
+                "brotkrueml/schema-pending": "Provides pending terms which have yet to be accepted into the core vocabulary",
+                "brotkrueml/schema-rector": "Instant upgrade and refactoring for the TYPO3 schema extension code by using Rector",
+                "brotkrueml/schema-virtuallocation": "Provides pending type VirtualLocation for events",
+                "typo3/cms-adminpanel": "Display schema.org types and properties on a page in Admin Panel",
+                "typo3/cms-lowlevel": "Display available schema.org types in the Configuration module"
+            },
+            "type": "typo3-cms-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "2.5.x-dev"
+                },
+                "typo3/cms": {
+                    "app-dir": ".Build",
+                    "extension-key": "schema",
+                    "web-dir": ".Build/web"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Brotkrueml\\Schema\\": "Classes/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Chris Müller",
+                    "role": "Developer"
+                }
+            ],
+            "description": "API and view helpers for schema.org markup",
+            "keywords": [
+                "JSON-LD",
+                "TYPO3 CMS",
+                "TYPO3 Extension",
+                "schema.org",
+                "seo",
+                "structured data"
+            ],
+            "support": {
+                "docs": "https://docs.typo3.org/p/brotkrueml/schema/main/en-us/",
+                "forum": "https://github.com/brotkrueml/schema/discussions",
+                "issues": "https://github.com/brotkrueml/schema/issues",
+                "source": "https://github.com/brotkrueml/schema"
+            },
+            "time": "2022-09-02T09:12:19+00:00"
         },
         {
             "name": "causal/image_autoresize",
@@ -6644,27 +6739,27 @@
         },
         {
             "name": "typo3-contentblocks/contentblocks-reg-api",
-            "version": "v2.0.0",
+            "version": "v3.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/TYPO3-Initiatives/content-block-registration-api.git",
-                "reference": "a68ce4110cd5193a1466e04121fe465229c90f8b"
+                "reference": "dac200c47d56ba94b450efce15926459cd00a508"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TYPO3-Initiatives/content-block-registration-api/zipball/a68ce4110cd5193a1466e04121fe465229c90f8b",
-                "reference": "a68ce4110cd5193a1466e04121fe465229c90f8b",
+                "url": "https://api.github.com/repos/TYPO3-Initiatives/content-block-registration-api/zipball/dac200c47d56ba94b450efce15926459cd00a508",
+                "reference": "dac200c47d56ba94b450efce15926459cd00a508",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
-                "php": "^7.2 || ~8.0.0",
-                "typo3-contentblocks/composer-plugin": "*",
+                "php": "^7.2 || ^8.0",
+                "typo3-contentblocks/composer-plugin": "^2.0",
                 "typo3/cms-core": "^10.4 || ^11.5",
                 "typo3/cms-filelist": "^10.4 || ^11.5"
             },
             "require-dev": {
-                "friendsofphp/php-cs-fixer": "^2.16",
+                "friendsofphp/php-cs-fixer": "^3.0.0",
                 "helhum/typo3-console": " ^6.6 || ^7.0",
                 "rector/rector": "^0.12.19",
                 "roave/security-advisories": "dev-master",
@@ -6707,6 +6802,7 @@
                 "typo3/cms-tstemplate": "^10.4 || ^11.5",
                 "typo3/cms-viewpage": "^10.4 || ^11.5",
                 "typo3/cms-workspaces": "^10.4 || ^11.5",
+                "typo3/coding-standards": "^0.4.0",
                 "typo3/tailor": "^1.3",
                 "typo3/testing-framework": "^6.4"
             },
@@ -6741,7 +6837,7 @@
                 "issues": "https://github.com/TYPO3-Initiatives/content-block-registration-api/issues",
                 "source": "https://github.com/TYPO3-Initiatives/content-block-registration-api"
             },
-            "time": "2022-04-07T10:44:06+00:00"
+            "time": "2022-09-06T16:00:12+00:00"
         },
         {
             "name": "typo3/class-alias-loader",

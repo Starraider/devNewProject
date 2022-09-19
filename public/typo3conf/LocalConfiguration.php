@@ -106,6 +106,13 @@ return [
             'storageUidImporter' => '1',
             'tagPid' => '1',
         ],
+        'schema' => [
+            'automaticBreadcrumbExcludeAdditionalDoktypes' => '',
+            'automaticBreadcrumbSchemaGeneration' => '0',
+            'automaticWebPageSchemaGeneration' => '1',
+            'embedMarkupInBodySection' => '0',
+            'embedMarkupOnNoindexPages' => '1',
+        ],
         'sluggi' => [
             'last_segment_only' => '0',
             'pages_fields' => '[["nav_title","title"]]',
