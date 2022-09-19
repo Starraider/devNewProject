@@ -61,6 +61,9 @@ $enable-responsive-font-sizes:      true;
 // --------------------------------------------------
 $font-family-sans-serif:            'Open Sans', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 $font-size-base:                    1rem;
+$font-size-sm:                      $font-size-base * .875;
+$font-size-lg:                      $font-size-base * 1.25;
+
 $h1-font-size:                      $font-size-base * 2;
 $h2-font-size:                      $font-size-base * 1.75;
 $h3-font-size:                      $font-size-base * 1.5;
@@ -141,6 +144,14 @@ $accordion-body-padding-y:          $accordion-padding-x;
 $accordion-body-padding-x:          $accordion-padding-x;
 
 //
+// Blockquotes
+//
+$blockquote-margin-y:         0;
+$blockquote-font-size:        $font-size-base * 1.6;
+$blockquote-footer-color:     null;
+$blockquote-footer-font-size: $font-size-sm;
+
+//
 // Footer
 // --------------------------------------------------
 $footer-sections: ();
@@ -148,12 +159,12 @@ $footer-sections: map-merge(
     (
         'content': (
             'background':   $quaternary,
-            'color':        color-contrast($black),
+            'color':        color-contrast($quaternary),
             'link-color':   $link-color
         ),
         'meta': (
             'background':   $white,
-            'color':        color-contrast($black),
+            'color':        color-contrast($white),
             'link-color':   $link-color
         )
     ),
