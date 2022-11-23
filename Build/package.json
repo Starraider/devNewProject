@@ -10,7 +10,7 @@
 		"@symfony/webpack-encore": "^1.7.0",
 		"@testing-library/cypress": "^8.0.2",
 		"autoprefixer": "^10.4.2",
-		"bootstrap": "^5.2.2",
+		"bootstrap": "^5.2.3",
 		"cypress": "^10.9.0",
 		"cypress-plugin-snapshots": "^1.4.4",
 		"file-loader": "^6.0.0",
