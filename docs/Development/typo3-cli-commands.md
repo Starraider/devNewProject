@@ -15,6 +15,12 @@ ddev typo3 cache:warmup
 # Clear all caches
 ddev typo3 cache:flush
 
+# Check redirects
+ddev typo3 redirects:checkintegrity
+
+# Remove all redirects with less than 50 hits and older than 60 days.
+typo3 redirects:cleanup -c 50 -a 60
+
 # Shows the list of extensions available to the system
 ddev typo3 extension:list
 
