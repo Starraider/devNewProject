@@ -22,6 +22,7 @@
 		"brotkrueml/schema": "^2.5",
 		"causal/image_autoresize": "dev-master",
 		"christophlehmann/imageoptimizer": "^3.1",
+		"friendsoftypo3/tt-address": "^7.0",
 		"georgringer/news": "^9.3",
 		"helhum/dotenv-connector": "^3.0",
 		"helhum/typo3-console": "^7.0.2",

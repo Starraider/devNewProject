@@ -1,4 +1,10 @@
 <?php
+
+/*
+ * Copyright by Sven Kalbhenn (sven@skom.de).
+ * See LICENSE that was shipped with this package.
+ */
+
 return [
     'BE' => [
         'debug' => true,
@@ -120,12 +126,20 @@ return [
             'synchronize' => '1',
             'whitelist' => '',
         ],
+        'tt_address' => [
+            'backwardsCompatFormat' => '%1$s %3$s',
+            'newPagination' => '1',
+            'readOnlyNameField' => '1',
+            'storeBackwardsCompatName' => '1',
+        ],
         'webp' => [
             'convert_all' => '1',
             'converter' => 'Plan2net\\Webp\\Converter\\MagickConverter',
+            'hide_webp' => '1',
             'mime_types' => 'image/jpeg,image/png,image/gif',
             'parameters' => 'image/jpeg::-quality 85 -define webp:lossless=false|image/png::-quality 75 -define webp:lossless=true|image/gif::-quality 85 -define webp:lossless=true',
             'silent' => '0',
+            'use_system_settings' => '1',
         ],
     ],
     'FE' => [
